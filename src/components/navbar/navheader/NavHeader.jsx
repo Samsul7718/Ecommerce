@@ -12,19 +12,21 @@ const NavHeader = () => {
     const [selectedCity,setSelectedCity]=useState("")
     const [selectedLanguage,setSelectedLanguage]=useState("")
     const [selectedItem,setSelectedItem]=useState("")
-    const [leftPadding, setLeftPadding] = useState(0); // default padding
+    const [leftPadding, setLeftPadding] = useState(50); // default padding
      const leftBlockRef = useRef(null);
 
        // Measure width of "All + dropdown" and set padding
     useEffect(() => {
-    if (leftBlockRef.current) {
-      setLeftPadding(leftBlockRef.current.offsetWidth + 4); // add extra gap
-    }
+       if (leftBlockRef.current) {
+    const textWidth = leftBlockRef.current.offsetWidth; 
+    // dynamic padding = text width + small buffer
+    setLeftPadding(textWidth + 40); 
+  }
   }, [selectedItem]);
   return (
     <>
      <div className='w-full h-16 gap-8 flex items-center justify-between shadow-md fixed 
-     top-0 left-0 right-0 z-50  px-6'>
+     top-0 left-0 right-0 z-50 px-6'>
             {/* logo */}
             <div className='flex-shrink-0 cursor-pointer'>
                 <img className="w-18 h-18 rounded-full" src={logo} alt="Logo" />
@@ -56,10 +58,10 @@ const NavHeader = () => {
             <div className='relative w-full max-w-md mx-auto flex items-center '>
                {/* all item menu */}
              <div
-              ref={leftBlockRef}
+           
              className='absolute left-2 top-1/2 -translate-y-1/2 text-sm flex items-center font-sm  gap-1'>
               {selectedItem ? (
-              <span className="text-sm text-blue-600">{selectedItem}</span>
+              <span   ref={leftBlockRef} className="text-sm text-blue-600 whitespace-nowrap">{selectedItem}</span>
                 ) : (
                "All"
                )}
@@ -80,9 +82,10 @@ const NavHeader = () => {
                 <input 
                 type="text"
                 placeholder='Search for products'
-                style={{ paddingLeft: `${leftPadding}px` }}
-                className='w-full pr-10 py-2 rounded-xl bg-gray-100 text-gray-700 
+             
+                className='w-full pl-20 pr-10 py-2 rounded-xl bg-gray-100 text-gray-700 
                    focus:outline-none focus:ring-1 focus:ring-blue-500 transition'
+                     style={{ paddingLeft: `${leftPadding}px` }}
                 />
                 {/* Search Icon */}
                 <FiSearch className='absolute right-2 top-1/2 -translate-y-1/2 text-gray-500'
