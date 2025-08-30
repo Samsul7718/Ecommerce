@@ -33,7 +33,7 @@ const NavHeader = () => {
                 <img className="w-18 h-18 rounded-full" src={logo} alt="Logo" />
             </div>
             {/* location */}
-            <div className='text-sm font-base flex items-center gap-1'>
+            <div className='hidden text-sm font-base md:flex items-center gap-1'>
                 <div>location</div>
                 
                 {/* Dropdown */}
@@ -89,11 +89,15 @@ const NavHeader = () => {
                      style={{ paddingLeft: `${leftPadding}px` }}
                 />
                 {/* Search Icon */}
-                <FiSearch className='absolute right-2 top-1/2 -translate-y-1/2 text-gray-500'
+                <div className='absolute right-2 top-1/2 -translate-y-1/2 bg-yellow-400 border 
+                border-gray-300 rounded p-1 flex items-center justify-center'>
+                  <FiSearch className='text-gray-500'
                 size={20}/>
+                </div>
+                
             </div>
             {/* language */}
-               <div className='hidden md:text-sm font-base flex items-center gap-1'>
+               <div className='hidden text-sm font-base md:flex items-center gap-1'>
                 <div>language</div>
               {/* Dropdown */}
                 <select
@@ -131,18 +135,6 @@ const NavHeader = () => {
             </span>
           </div>
         </div>
-
-          {/* Desktop Menu (hidden on mobile) */}
-      {/* <div className="hidden md:flex gap-6 items-center">
-        <FiUser className="w-5 h-6 hover:text-sky-600 duration-200 cursor-pointer" />
-        <div>Return & Order</div>
-        <div className="relative">
-          <FiShoppingCart className="w-7 h-7 hover:text-sky-600 duration-200 cursor-pointer" />
-          <span className="inline-flex items-center justify-center bg-red-500 text-white absolute -top-1 -right-2 text-[10px] rounded-full w-5 h-5">
-            0
-          </span>
-        </div>
-      </div> */}
 
          {/* Mobile Hamburger Icon (hidden on desktop) */}
             <button
