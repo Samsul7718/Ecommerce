@@ -1,10 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { logo } from '../../../assets'
 import { IoClose, IoSearchOutline } from "react-icons/io5";
-import { FiSearch, FiShoppingCart, FiStar, FiUser } from "react-icons/fi";
+import { FiMenu, FiSearch, FiShoppingCart, FiStar, FiUser, FiX } from "react-icons/fi";
 // import { FaChevronDown } from "react-icons/fa";
 
 const NavHeader = () => {
+    const [menuOpen, setMenuOpen] = useState(false);
     const cities = ["Kolkata","Hyderabad","Pune","vizaj","Amedabad","Kashmir", "Mumbai", "Delhi", "Chennai", "Bangalore"];
     const languages = ["English","Hindi","Spanish","French","German","Chinese","Japanese"];
     const allItems = ["Baby","Beauty","Electronics","Fashion","Home & Furniture","Grocery","Books & More"];
@@ -92,7 +93,7 @@ const NavHeader = () => {
                 size={20}/>
             </div>
             {/* language */}
-               <div className='text-sm font-base flex items-center gap-1'>
+               <div className='hidden md:text-sm font-base flex items-center gap-1'>
                 <div>language</div>
               {/* Dropdown */}
                 <select
@@ -115,10 +116,8 @@ const NavHeader = () => {
             </div>
           
             {/* menu bar */}
-        <div className="flex flex-row justify-between items-center text-base px-4 gap-6">
+        <div className="hidden md:flex flex-row justify-between items-center text-base px-4 gap-6">
           <FiUser className="w-5 h-6 hover:text-skyText duration-200 cursor-pointer" />
-         
-            {/* <FiStar className="hover:text-skyText duration-200 cursor-pointer" /> */}
            
            <div>Return & Order</div>
          
@@ -132,6 +131,61 @@ const NavHeader = () => {
             </span>
           </div>
         </div>
+
+          {/* Desktop Menu (hidden on mobile) */}
+      {/* <div className="hidden md:flex gap-6 items-center">
+        <FiUser className="w-5 h-6 hover:text-sky-600 duration-200 cursor-pointer" />
+        <div>Return & Order</div>
+        <div className="relative">
+          <FiShoppingCart className="w-7 h-7 hover:text-sky-600 duration-200 cursor-pointer" />
+          <span className="inline-flex items-center justify-center bg-red-500 text-white absolute -top-1 -right-2 text-[10px] rounded-full w-5 h-5">
+            0
+          </span>
+        </div>
+      </div> */}
+
+         {/* Mobile Hamburger Icon (hidden on desktop) */}
+            <button
+              className="md:hidden text-2xl"
+              onClick={() => setMenuOpen(true)}
+            >
+              <FiMenu />
+            </button>
+
+             {/* Mobile Menu Overlay */}
+        <div
+        className={`md:hidden fixed top-0 right-0 bottom-0 left-0 bg-black/50 transition-opacity duration-300 ${
+          menuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
+        onClick={() => setMenuOpen(false)}>
+
+        </div>
+
+           {/* Mobile Slide-in Menu */}
+              <div
+                className={`md:hidden fixed top-0 right-0 w-2/4 h-full bg-white shadow-lg transition-transform duration-300 z-50 ${
+                  menuOpen ? "translate-x-0" : "translate-x-full"
+                }`}
+              >
+                {/* Close Button */}
+                <button
+                  className="absolute top-4 right-4 text-2xl"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  <FiX />
+                </button>
+        
+                {/* Menu Items */}
+                <div className="mt-16 flex flex-col gap-6 px-6">
+                  <div className="flex items-center gap-2">
+                    <FiUser /> <span>Profile</span>
+                  </div>
+                  <div>Return & Order</div>
+                  <div className="flex items-center gap-2">
+                    <FiShoppingCart /> <span>Cart (0)</span>
+                  </div>
+                </div>
+              </div>
         </div>
     </>
        
