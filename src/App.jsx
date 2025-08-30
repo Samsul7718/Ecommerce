@@ -21,6 +21,9 @@ function App() {
         <Route  path="/electric" element="" />
         <Route  path="/releases" element="" />
         <Route  path="/book" element="" />
+        <Route  path="/login" element="" />
+        <Route  path="/returnorder" element="" />
+        <Route  path="/cart" element="" />
        </Routes>
       </Router>   
      

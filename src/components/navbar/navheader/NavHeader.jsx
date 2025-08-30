@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { logo } from '../../../assets'
-import { IoClose, IoSearchOutline } from "react-icons/io5";
+// import { IoClose, IoSearchOutline } from "react-icons/io5";
 import { FiMenu, FiSearch, FiShoppingCart, FiStar, FiUser, FiX } from "react-icons/fi";
+import { Link } from 'react-router-dom';
 // import { FaChevronDown } from "react-icons/fa";
 
 const NavHeader = () => {
@@ -121,18 +122,29 @@ const NavHeader = () => {
           
             {/* menu bar */}
         <div className="hidden md:flex flex-row justify-between items-center text-base px-4 gap-6">
-          <FiUser className="w-5 h-6 hover:text-skyText duration-200 cursor-pointer" />
+          <Link
+            to="/login">
+           <FiUser className="w-5 h-6 hover:text-blue-600 duration-200 cursor-pointer" />
+          </Link>
+         
            
-           <div>Return & Order</div>
+           <div className='cursor-pointer hover:text-blue-600'>
+            <Link to={"/returnorder"}>
+            Return & Order
+            </Link>
+            </div>
          
           <div className="relative block">
-            <FiShoppingCart className=" w-7 h-7 hover:text-skyText duration-200 cursor-pointer" />
+            <Link to="/cart">
+             <FiShoppingCart className=" w-7 h-7 hover:text-blue-600 duration-200 cursor-pointer" />
             <span
               className="inline-flex items-center justify-center bg-red-500 text-white absolute 
             -top-1 -right-2 text-[10px] rounded-full w-5 h-5"
             >
               0
             </span>
+            </Link>
+           
           </div>
         </div>
 

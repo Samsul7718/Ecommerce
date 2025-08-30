@@ -10,4 +10,7 @@ export const navbarData = [
     { name: "Electric", path: "/electric" },
     { name: "New Releses", path: "/releases" },
     { name: "Book", path: "/book" },
+    { name: "Login", path: "/login" },
+    { name: "Return & Order", path: "/returnorder" },
+    { name: "Cart", path: "/cart" },
 ];
