@@ -1,13 +1,17 @@
 import React from 'react'
 import NavHeader from './navheader/NavHeader'
-import NavFooter from  './navFooter/NavFooter'
+import NavFooter from './navFooter/NavFooter'
+
 
 
 const Navbar = () => {
   return (
-    <div>
+      <div className="w-full flex flex-col">
       <NavHeader />
-      <NavFooter/>
+      {/* push footer below fixed header */}
+      <div className="mt-15">  
+        <NavFooter />
+      </div>
     </div>
   )
 }

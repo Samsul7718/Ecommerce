@@ -26,7 +26,7 @@ const NavHeader = () => {
   }, [selectedItem]);
   return (
     <>
-     <div className='w-full h-16 gap-8 flex items-center justify-between shadow-md fixed 
+     <section className='w-full h-16 gap-8 flex items-center justify-between shadow-md fixed 
      top-0 left-0 right-0 z-50 px-6'>
             {/* logo */}
             <div className='flex-shrink-0 cursor-pointer'>
@@ -178,7 +178,7 @@ const NavHeader = () => {
                   </div>
                 </div>
               </div>
-        </div>
+        </section>
     </>
        
        
