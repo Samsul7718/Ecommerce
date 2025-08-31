@@ -7,7 +7,8 @@ const NavFooter = () => {
    const [menuOpen, setMenuOpen] = useState(false);
     const location=useLocation();
   return (
-    <section className='w-full bg-gray-100 h-14 flex items-center justify-between font-bold my-2  px-4 shadow-md'>
+    <section className=' w-full bg-gray-65 h-16 '>
+      <div className='hidden md:flex flex-row items-center justify-between font-bold py-4 px-4 shadow-sm '>
          {/* only for "All" */}
         <div className="flex items-center gap-1 cursor-pointer hover:text-blue-600">
           <FiMenu size={18} />
@@ -36,17 +37,37 @@ const NavFooter = () => {
             </Link>
         )
         : null)}
+       
+      </div>
+             {/* Mobile Hamburger Icon (hidden on desktop) */}
+                    <button
+                      className="md:hidden text-black-300  text-xl"
+                      onClick={() => setMenuOpen(true)}
+                    >
+                    <div className="flex items-center pt-5 px-2 cursor-pointer hover:text-blue-400">
+                      <FiMenu /><span>All</span>
+                      </div>
+                    </button>
+        
+                     {/* Mobile Menu Overlay */}
+                <div
+                className={`md:hidden fixed top-0 left-0 bottom-0 right-0 transition-opacity duration-300  ${
+                  menuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+                }`}
+                onClick={() => setMenuOpen(false)}>
+        
+                </div>
 
-      {/* Mobile Slide-in Menu */}
+            {/* Mobile Slide-in Menu */}
                    <div
-                     className={`md:hidden fixed top-0 right-0 w-2/6 h-1/2 bg-black/65 backdrop-blur-md border-l 
+                     className={`md:hidden fixed top-0 left-0 w-3/5 h-1/2 bg-black/65 backdrop-blur-sm border-r
                        border-white/10  shadow-lg transition-transform duration-300 z-50 ${
-                       menuOpen ? "translate-x-0" : "translate-x-full"
+                       menuOpen ? "translate-x-0" : "-translate-x-full"
                      }`}
                    >
                      {/* Close Button */}
                      <button
-                       className="absolute  text-orange-200 top-4 left-4 text-3xl border hover:border-white hover:bg-yellow-400 transition"
+                       className="absolute  text-orange-200 top-4 right-4 text-3xl border hover:border-white hover:bg-yellow-400 transition"
                        onClick={() => setMenuOpen(false)}
                      >
                        {/* border hover:border-white transition */}
@@ -64,13 +85,13 @@ const NavFooter = () => {
                        <div className='cursor-pointer'><Link to="/returnorder">Return & Order</Link></div>
                          <Link to="/cart">
                        <div className="flex items-center gap-2">
-                         <FiShoppingCart /> <span>Cart (0)</span>
+                         <FiShoppingCart /><span>Cart (0)</span>
                        </div>
                         </Link>
                      </div>
                
                    </div>
-
+ {/* </div> */}
     </section>
   )
 }

@@ -17,7 +17,7 @@ const NavHeader = () => {
     const [leftPadding, setLeftPadding] = useState(50); // default padding
      const leftBlockRef = useRef(null);
 
-       // Measure width of "All + dropdown" and set padding
+       // Measure width of "All + dropdown" and set padding in searching bar
     useEffect(() => {
        if (leftBlockRef.current) {
     const textWidth = leftBlockRef.current.offsetWidth; 
@@ -168,7 +168,7 @@ const NavHeader = () => {
            {/* Mobile Slide-in Menu */}
               <div
                 className={`md:hidden fixed top-0 right-0 w-2/6 h-1/2 bg-black/65 backdrop-blur-md border-l 
-                  border-white/10  shadow-lg transition-transform duration-300 z-50 ${
+                  border-white/10  shadow-lg transition-transform duration-300  ${
                   menuOpen ? "translate-x-0" : "translate-x-full"
                 }`}
               >
