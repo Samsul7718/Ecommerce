@@ -3,7 +3,7 @@ import { logo } from '../../../assets'
 // import { IoClose, IoSearchOutline } from "react-icons/io5";
 import { FiMenu, FiSearch, FiShoppingCart, FiStar, FiUser, FiX } from "react-icons/fi";
 import { Link } from 'react-router-dom';
-// import { FaChevronDown } from "react-icons/fa";
+
 
 const NavHeader = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -188,7 +188,7 @@ const NavHeader = () => {
                   <div className="flex items-center gap-2">
                     <FiUser /> <span>Profile</span>
                   </div>
-                     </Link>
+                   </Link>
                   <div className='cursor-pointer'><Link to="/returnorder">Return & Order</Link></div>
                     <Link to="/cart">
                   <div className="flex items-center gap-2">
