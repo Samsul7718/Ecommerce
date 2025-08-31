@@ -1,1 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 @import "tailwindcss";
+
+
+@theme {
+  --font-bodyFont: "Poppins", "sans-serif";
+  --font-titleFont: "Montserrat", "sans-serif";
+  
+  --color-bodyColor: #212428;
+  --color-lightText: #c4cfde;
+  /* --color-boxBg: 'linear-gradient(145deg,#1e2024,#23272b)'; */
+  /* --color-designColor: #ff014f; */
+  
+    --ease-shadowOne: '10px 10px 19px #1c1e22,-10px -10px 19px #262a2e';
+
+ 
+}
+
+
+/* @layer components {
+  .navbar {
+    @apply  bg-black/700 text-white/200 text-2xl inline-flex items-center 
+      justify-center rounded-md shadow-sm hover:bg-black/40 hover:-translate-y-1 
+      transition-all  cursor-pointer duration-300;
+  }
+} */

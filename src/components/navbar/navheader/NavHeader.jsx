@@ -27,19 +27,19 @@ const NavHeader = () => {
   }, [selectedItem]);
   return (
     <>
-     <section className='w-full h-16 gap-8 flex items-center justify-between shadow-md fixed 
+     <section className='w-full h-16 gap-8 bg-bodyColor flex items-center justify-between shadow-md fixed 
      top-0 left-0 right-0 z-50 px-6'>
             {/* logo */}
-            <div className='flex-shrink-0 cursor-pointer'>
-                <img className="w-18 h-18 rounded-full" src={logo} alt="Logo" />
+            <div className='flex-shrink-0 cursor-pointer  bg-white  rounded-full'>
+                <img className="w-15 h-15 rounded-full" src={logo} alt="Logo" />
             </div>
             {/* location */}
-            <div className='hidden text-sm font-base md:flex items-center gap-1'>
+            <div className='hidden text-sm text-gray-300 font-base md:flex items-center gap-1'>
                 <div>location</div>
                 
                 {/* Dropdown */}
                 <select
-                className="w-[9%] h-4 border bg-green-200 rounded-sm p-0 outline-none focus:ring-2 focus:ring-blue-200"
+                className="w-[9%] h-4 border bg-dark-200 rounded-sm p-0 outline-none focus:ring-2 focus:ring-blue-200"
                  value={selectedCity}
                  onChange={(e) => setSelectedCity(e.target.value)}
                  name="" id="">
@@ -98,11 +98,11 @@ const NavHeader = () => {
                 
             </div>
             {/* language */}
-               <div className='hidden text-sm font-base md:flex items-center gap-1'>
+               <div className='hidden text-sm text-gray-300 font-base md:flex items-center gap-1'>
                 <div>language</div>
               {/* Dropdown */}
                 <select
-                className="w-[9%] h-4 border bg-orange-200 rounded-sm p-0 outline-none focus:ring-2 focus:ring-blue-200"
+                className="w-[9%] h-4 border bg-dark-200 rounded-sm p-0 outline-none focus:ring-2 focus:ring-blue-200"
                  value={selectedLanguage}
                  onChange={(e) => setSelectedLanguage(e.target.value)}
                  name="" id="">
@@ -121,14 +121,14 @@ const NavHeader = () => {
             </div>
           
             {/* menu bar */}
-        <div className="hidden md:flex flex-row justify-between items-center text-base px-4 gap-6">
+        <div className="hidden md:flex flex-row justify-between text-gray-300 items-center text-base px-4 gap-6">
           <Link
             to="/login">
            <FiUser className="w-5 h-6 hover:text-blue-600 duration-200 cursor-pointer" />
           </Link>
          
            
-           <div className='cursor-pointer hover:text-blue-600'>
+           <div className='cursor-pointer text-gray-300 hover:text-blue-600'>
             <Link to={"/returnorder"}>
             Return & Order
             </Link>
@@ -136,7 +136,7 @@ const NavHeader = () => {
          
           <div className="relative block">
             <Link to="/cart">
-             <FiShoppingCart className=" w-7 h-7 hover:text-blue-600 duration-200 cursor-pointer" />
+             <FiShoppingCart className=" w-7 h-7 text-gray-300 hover:text-blue-600 duration-200 cursor-pointer" />
             <span
               className="inline-flex items-center justify-center bg-red-500 text-white absolute 
             -top-1 -right-2 text-[10px] rounded-full w-5 h-5"
@@ -182,7 +182,9 @@ const NavHeader = () => {
                 {/* Menu Items */}
                 <div className="mt-16 flex flex-col gap-6 px-6">
                   <div className="flex items-center gap-2">
+                    <Link to="/login">
                     <FiUser /> <span>Profile</span>
+                    </Link>
                   </div>
                   <div>Return & Order</div>
                   <div className="flex items-center gap-2">
