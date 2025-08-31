@@ -150,7 +150,7 @@ const NavHeader = () => {
 
          {/* Mobile Hamburger Icon (hidden on desktop) */}
             <button
-              className="md:hidden text-2xl"
+              className="md:hidden text-gray-300  text-2xl"
               onClick={() => setMenuOpen(true)}
             >
               <FiMenu />
@@ -158,7 +158,7 @@ const NavHeader = () => {
 
              {/* Mobile Menu Overlay */}
         <div
-        className={`md:hidden fixed top-0 right-0 bottom-0 left-0 bg-black/50 transition-opacity duration-300 ${
+        className={`md:hidden fixed top-0 right-0 bottom-0 left-0 transition-opacity duration-300 ${
           menuOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
         onClick={() => setMenuOpen(false)}>
@@ -167,30 +167,36 @@ const NavHeader = () => {
 
            {/* Mobile Slide-in Menu */}
               <div
-                className={`md:hidden fixed top-0 right-0 w-2/4 h-full bg-white shadow-lg transition-transform duration-300 z-50 ${
+                className={`md:hidden fixed top-0 right-0 w-2/6 h-1/2 bg-black/65 backdrop-blur-md border-l 
+                  border-white/10  shadow-lg transition-transform duration-300 z-50 ${
                   menuOpen ? "translate-x-0" : "translate-x-full"
                 }`}
               >
                 {/* Close Button */}
                 <button
-                  className="absolute top-4 right-4 text-2xl"
+                  className="absolute  text-orange-200 top-4 left-4 text-3xl border hover:border-white hover:bg-yellow-400 transition"
                   onClick={() => setMenuOpen(false)}
                 >
+                  {/* border hover:border-white transition */}
                   <FiX />
                 </button>
         
                 {/* Menu Items */}
-                <div className="mt-16 flex flex-col gap-6 px-6">
+              
+                <div className="mt-16 flex flex-col  text-gray-300 gap-6 px-6">
+                  <Link to="/login">
                   <div className="flex items-center gap-2">
-                    <Link to="/login">
                     <FiUser /> <span>Profile</span>
-                    </Link>
                   </div>
-                  <div>Return & Order</div>
+                     </Link>
+                  <div className='cursor-pointer'><Link to="/returnorder">Return & Order</Link></div>
+                    <Link to="/cart">
                   <div className="flex items-center gap-2">
                     <FiShoppingCart /> <span>Cart (0)</span>
                   </div>
+                   </Link>
                 </div>
+          
               </div>
         </section>
     </>
