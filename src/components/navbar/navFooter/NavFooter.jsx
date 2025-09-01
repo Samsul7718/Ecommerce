@@ -67,7 +67,8 @@ const NavFooter = () => {
                    >
                      {/* Close Button */}
                      <button
-                       className="absolute  text-orange-200 top-4 bg-black -right-10 text-4xl border hover:border-white hover:bg-yellow-400 "
+                       className={`absolute  text-orange-200 top-4 bg-black -right-10 text-4xl border hover:border-white 
+                        hover:bg-yellow-400 ${menuOpen ? "visible" : "invisible"}`}
                        onClick={() => setMenuOpen(false)}
                      >
                        {/* border hover:border-white transition */}
@@ -80,12 +81,24 @@ const NavFooter = () => {
                          <FiUser  className='text-3xl'/> <span className='text-xl'>Hello, sign in</span>
                        </div>
                         </Link>
-                     <div className="mt-8 flex flex-col  text-gray-300 gap-6 px-6">
+                     <div className="mt-8 flex flex-col  text-gray-300 gap-6 ">
                        <div className=' flex flex-col w-full gap-2'>
-                       <div className='cursor-pointer text-xl font-base'>Trending</div>
-                       <div className='cursor-pointer text-md hover:bg-gray-100 px-2 py-2'>Bestsellers</div>
-                       <div className='cursor-pointer text-md hover:bg-gray-100 px-2 py-2'>New Releases</div>
-                       <div className='cursor-pointer text-md hover:bg-gray-100 px-2 py-2'>Movers and Shakers</div>
+                       <div className='cursor-pointer text-2xl font-base px-6'>Trending</div>
+                       <Link to="/login">
+                       <div className='cursor-pointer text-md  hover:text-black hover:bg-gray-100 px-2 py-2'>
+                        <span className='px-6'>Bestsellers</span>
+                        </div>
+                        </Link>
+                         <Link to="/login">
+                       <div className='cursor-pointer text-md  hover:text-black hover:bg-gray-100 px-2 py-2'>
+                        <span className='px-6'>New Releases</span>
+                        </div>
+                        </Link>
+                        <Link to="/login">
+                       <div className='cursor-pointer text-md  hover:text-black hover:bg-gray-100 px-2 py-2'>
+                        <span className='px-6'>Movers and Shakers</span>
+                        </div>
+                        </Link>
                        </div>
                        <div className='cursor-pointer text-xl font-base'>Digital Content and Devices</div>
                        <div className='cursor-pointer text-xl font-base'>Shop by Category</div>
