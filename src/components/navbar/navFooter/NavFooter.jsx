@@ -60,14 +60,14 @@ const NavFooter = () => {
 
             {/* Mobile Slide-in Menu */}
                    <div
-                     className={`md:hidden fixed top-0 left-0 w-3/5 h-1/2 bg-black/65 backdrop-blur-sm border-r
+                     className={`md:hidden fixed top-0 left-0 w-3/5 h-3/4 bg-black/65 backdrop-blur-sm border-r
                        border-white/10  shadow-lg transition-transform duration-300 z-50 ${
                        menuOpen ? "translate-x-0" : "-translate-x-full"
                      }`}
                    >
                      {/* Close Button */}
                      <button
-                       className="absolute  text-orange-200 top-4 right-4 text-3xl border hover:border-white hover:bg-yellow-400 transition"
+                       className="absolute  text-orange-200 top-4 bg-black -right-10 text-4xl border hover:border-white hover:bg-yellow-400 "
                        onClick={() => setMenuOpen(false)}
                      >
                        {/* border hover:border-white transition */}
@@ -75,19 +75,26 @@ const NavFooter = () => {
                      </button>
              
                      {/* Menu Items */}
-                   
-                     <div className="mt-16 flex flex-col  text-gray-300 gap-6 px-6">
-                       <Link to="/login">
-                       <div className="flex items-center gap-2">
-                         <FiUser /> <span>Profile</span>
+                   <Link to="/login">
+                       <div className="w-full h-10 bg-bodyColor text-white flex items-center space-between gap-8 px-8">
+                         <FiUser  className='text-3xl'/> <span className='text-xl'>Hello, sign in</span>
                        </div>
                         </Link>
-                       <div className='cursor-pointer'><Link to="/returnorder">Return & Order</Link></div>
-                         <Link to="/cart">
+                     <div className="mt-8 flex flex-col  text-gray-300 gap-6 px-6">
+                       <div className=' flex flex-col w-full gap-2'>
+                       <div className='cursor-pointer text-xl font-base'>Trending</div>
+                       <div className='cursor-pointer text-md hover:bg-gray-100 px-2 py-2'>Bestsellers</div>
+                       <div className='cursor-pointer text-md hover:bg-gray-100 px-2 py-2'>New Releases</div>
+                       <div className='cursor-pointer text-md hover:bg-gray-100 px-2 py-2'>Movers and Shakers</div>
+                       </div>
+                       <div className='cursor-pointer text-xl font-base'>Digital Content and Devices</div>
+                       <div className='cursor-pointer text-xl font-base'>Shop by Category</div>
+                       <div className='cursor-pointer text-xl font-base'>Help & Settings</div>
+                       
                        <div className="flex items-center gap-2">
                          <FiShoppingCart /><span>Cart (0)</span>
                        </div>
-                        </Link>
+                      
                      </div>
                
                    </div>

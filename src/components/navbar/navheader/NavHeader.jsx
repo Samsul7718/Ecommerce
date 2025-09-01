@@ -171,6 +171,8 @@ const NavHeader = () => {
                   border-white/10  shadow-lg transition-transform duration-300  ${
                   menuOpen ? "translate-x-0" : "translate-x-full"
                 }`}
+
+                
               >
                 {/* Close Button */}
                 <button
