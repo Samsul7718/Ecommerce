@@ -177,13 +177,14 @@ const NavFooter = () => {
                <div className="px-0">
                  {showMore ? 
                  <span className="px-6 flex items-center gap-2">
-               See less <FiChevronUp />
-                </span> : <span className="px-6 flex items-center gap-2">
-               
-                     See all <FiChevronDown />
-              </span>}
-               </div>
-             </div>
+                    See less <FiChevronUp />
+                 </span> 
+                   : 
+                  <span className="px-6 flex items-center gap-2">
+                    See all <FiChevronDown />
+                </span>}
+                  </div>
+                </div>
                        </div>
                        <div className='cursor-pointer text-xl font-base'>Help & Settings</div>
                        
