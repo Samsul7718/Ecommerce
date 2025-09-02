@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { logo } from '../../../assets'
 // import { IoClose, IoSearchOutline } from "react-icons/io5";
-import { FiMenu, FiSearch, FiShoppingCart, FiStar, FiUser, FiX } from "react-icons/fi";
+import { FiMenu, FiSearch, FiShoppingCart, FiUser, FiX } from "react-icons/fi";
 import { Link } from 'react-router-dom';
 
 

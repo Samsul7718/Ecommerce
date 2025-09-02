@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import {Link,useLocation} from 'react-router-dom'
 import { navbarData } from '../../../data/navbarData'
-import { FiMenu,FiShoppingCart,FiUser,FiX } from 'react-icons/fi';
+import { FiChevronDown, FiChevronUp, FiMenu,FiShoppingCart,FiUser,FiX } from 'react-icons/fi';
 
 const NavFooter = () => {
    const [menuOpen, setMenuOpen] = useState(false);
+     const [showMore, setShowMore] = useState(false);
     const location=useLocation();
   return (
     <section className=' w-full bg-gray-65 h-16 '>
@@ -60,7 +61,7 @@ const NavFooter = () => {
 
             {/* Mobile Slide-in Menu */}
                    <div
-                     className={`md:hidden fixed top-0 left-0 w-3/5 h-3/4 bg-black/65 backdrop-blur-sm border-r
+                     className={`md:hidden fixed top-0 left-0 w-4/6 h-4/5 bg-black/65 backdrop-blur-sm border-r
                        border-white/10  shadow-lg transition-transform duration-300 z-50 ${
                        menuOpen ? "translate-x-0" : "-translate-x-full"
                      }`}
@@ -84,7 +85,7 @@ const NavFooter = () => {
                          <span className='text-xl'>Hello, sign in</span>
                        </div>
                        
-                     <div className="mt-8 flex flex-col  text-gray-300 gap-6 ">
+                     <div className=" h-96 overflow-y-auto mt-8 flex flex-col  text-gray-300 gap-6 ">
                        <div className=' flex flex-col w-full gap-2'>
                        <div className='cursor-pointer text-2xl font-base px-6'>Trending</div>
                        <Link to="/login">
@@ -121,7 +122,69 @@ const NavFooter = () => {
                         </div>
                         </Link>
                        </div>
-                       <div className='cursor-pointer text-xl font-base'>Shop by Category</div>
+                         <div className=' flex flex-col w-full gap-2'>
+                       <div className='cursor-pointer text-2xl font-base px-6'>Shop by Category</div>
+                          <Link to="/login">
+                       <div className='cursor-pointer text-md  hover:text-black hover:bg-gray-100 px-2 py-2'>
+                        <span className='px-6'>Mobiles, Computers</span>
+                        </div>
+                        </Link>
+                         <Link to="/login">
+                       <div className='cursor-pointer text-md  hover:text-black hover:bg-gray-100 px-2 py-2'>
+                        <span className='px-6'>TV, Appliances, Electronics</span>
+                        </div>
+                        </Link>
+                        <Link to="/login">
+                       <div className='cursor-pointer text-md  hover:text-black hover:bg-gray-100 px-2 py-2'>
+                        <span className='px-6'>Men's Fashion</span>
+                        </div>
+                        </Link>
+                        <Link to="/login">
+                       <div className='cursor-pointer text-md  hover:text-black hover:bg-gray-100 px-2 py-2'>
+                        <span className='px-6'>Women's Fashion</span>
+                        </div>
+                        </Link>
+                    {/* Show More Items */}
+                     {showMore && (
+                     <>
+                       <Link to="/login">
+                     <div className="cursor-pointer text-md hover:text-black hover:bg-gray-100 px-2 py-2">
+                     <span className="px-6">Kids' Fashion</span>
+                   </div>
+                     </Link>
+                      <Link to="/login">
+                       <div className="cursor-pointer text-md hover:text-black hover:bg-gray-100 px-2 py-2">
+                      <span className="px-6">Footwear</span>
+                   </div>
+                   </Link>
+                     <Link to="/login">
+                     <div className="cursor-pointer text-md hover:text-black hover:bg-gray-100 px-2 py-2">
+                     <span className="px-6">Watches & Accessories</span>
+                   </div>
+                   </Link>
+                    <Link to="/login">
+                    <div className="cursor-pointer text-md hover:text-black hover:bg-gray-100 px-2 py-2">
+                     <span className="px-6">Jewellery</span>
+                     </div>
+                   </Link>
+                 </>
+                 )}
+               {/* Toggle Button */}
+             <div
+               onClick={() => setShowMore(!showMore)}
+               className="cursor-pointer text-md hover:text-black hover:bg-gray-100 px-2 py-2 text-blue-400"
+             >
+               <div className="px-0">
+                 {showMore ? 
+                 <span className="px-6 flex items-center gap-2">
+               See less <FiChevronUp />
+                </span> : <span className="px-6 flex items-center gap-2">
+               
+                     See all <FiChevronDown />
+              </span>}
+               </div>
+             </div>
+                       </div>
                        <div className='cursor-pointer text-xl font-base'>Help & Settings</div>
                        
                        <div className="flex items-center gap-2">
