@@ -76,11 +76,14 @@ const NavFooter = () => {
                      </button>
              
                      {/* Menu Items */}
-                   <Link to="/login">
-                       <div className="w-full h-10 bg-bodyColor text-white flex items-center space-between gap-8 px-8">
-                         <FiUser  className='text-3xl'/> <span className='text-xl'>Hello, sign in</span>
+                  
+                       <div className="w-full h-12 bg-bodyColor text-white flex items-center space-between gap-8 px-8">
+                         <Link to="/login">
+                         <FiUser  className='text-3xl'/> 
+                          </Link>
+                         <span className='text-xl'>Hello, sign in</span>
                        </div>
-                        </Link>
+                       
                      <div className="mt-8 flex flex-col  text-gray-300 gap-6 ">
                        <div className=' flex flex-col w-full gap-2'>
                        <div className='cursor-pointer text-2xl font-base px-6'>Trending</div>
@@ -100,7 +103,24 @@ const NavFooter = () => {
                         </div>
                         </Link>
                        </div>
-                       <div className='cursor-pointer text-xl font-base'>Digital Content and Devices</div>
+                          <div className=' flex flex-col w-full gap-2'>
+                       <div className='cursor-pointer text-2xl font-base px-6'>Digital Content and Devices</div>
+                        <Link to="/login">
+                       <div className='cursor-pointer text-md  hover:text-black hover:bg-gray-100 px-2 py-2'>
+                        <span className='px-6'>Fire TV</span>
+                        </div>
+                        </Link>
+                         <Link to="/login">
+                       <div className='cursor-pointer text-md  hover:text-black hover:bg-gray-100 px-2 py-2'>
+                        <span className='px-6'>Kindle E-Readers & eBooks</span>
+                        </div>
+                        </Link>
+                        <Link to="/login">
+                       <div className='cursor-pointer text-md  hover:text-black hover:bg-gray-100 px-2 py-2'>
+                        <span className='px-6'>Audiable Audiobooks</span>
+                        </div>
+                        </Link>
+                       </div>
                        <div className='cursor-pointer text-xl font-base'>Shop by Category</div>
                        <div className='cursor-pointer text-xl font-base'>Help & Settings</div>
                        
