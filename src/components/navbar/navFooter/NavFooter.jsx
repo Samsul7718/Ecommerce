@@ -1,15 +1,16 @@
 import React, { useState } from 'react'
 import {Link,useLocation} from 'react-router-dom'
 import { navbarData } from '../../../data/navbarData'
-import { FiChevronDown, FiChevronUp, FiMenu,FiShoppingCart,FiUser,FiX } from 'react-icons/fi';
+import { FiArrowLeft, FiChevronDown, FiChevronUp, FiMenu,FiShoppingCart,FiUser,FiX } from 'react-icons/fi';
 
 const NavFooter = () => {
    const [menuOpen, setMenuOpen] = useState(false);
      const [showMore, setShowMore] = useState(false);
+      const [activeMenu, setActiveMenu] = useState("main"); 
     const location=useLocation();
   return (
     <section className=' w-full bg-gray-65 h-16 '>
-      <div className='hidden md:flex flex-row items-center justify-between font-bold py-4 px-4 shadow-sm '>
+      <div className=' hidden md:flex flex-row items-center justify-between font-bold py-4 px-4 shadow-sm '>
          {/* only for "All" */}
         <div className="flex items-center gap-1 cursor-pointer hover:text-blue-600">
           <FiMenu size={18} />
@@ -61,7 +62,7 @@ const NavFooter = () => {
 
             {/* Mobile Slide-in Menu */}
                    <div
-                     className={`md:hidden fixed top-0 left-0 w-4/6 h-4/5 bg-black/65 backdrop-blur-sm border-r
+                     className={` md:hidden fixed top-0 left-0 w-4/6 h-5/6 bg-black/65 backdrop-blur-sm overflow-x-hidden border-r
                        border-white/10  shadow-lg transition-transform duration-300 z-50 ${
                        menuOpen ? "translate-x-0" : "-translate-x-full"
                      }`}
@@ -124,11 +125,37 @@ const NavFooter = () => {
                        </div>
                          <div className=' flex flex-col w-full gap-2'>
                        <div className='cursor-pointer text-2xl font-base px-6'>Shop by Category</div>
-                          <Link to="/login">
-                       <div className='cursor-pointer text-md  hover:text-black hover:bg-gray-100 px-2 py-2'>
+                         
+                       <div 
+                       onClick={()=>setActiveMenu("mobiles")}
+                       className='relative overflow-x-hidden cursor-pointer text-md  hover:text-black hover:bg-gray-100 px-2 py-2 '>
                         <span className='px-6'>Mobiles, Computers</span>
-                        </div>
-                        </Link>
+                          </div>
+                          {/* SUB MENU (Mobiles, Computers) */}
+      <div
+        className={`absolute top-0 right-0 w-full h-full bg-black/90 transition-transform duration-300 ${
+          activeMenu === "mobiles" ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div className="flex items-center gap-3 px-6 py-4 border-b border-gray-700">
+          <button onClick={() => setActiveMenu("main")} className="text-xl">
+            <FiArrowLeft />
+          </button>
+          <span className="text-2xl font-bold">Main menu </span>
+        </div>
+
+        <div className="flex flex-col gap-4 px-6 py-6 overflow-y-auto">
+          <div className="cursor-pointer hover:text-yellow-400">Smartphones</div>
+          <div className="cursor-pointer hover:text-yellow-400">Laptops</div>
+          <div className="cursor-pointer hover:text-yellow-400">Tablets</div>
+          <div className="cursor-pointer hover:text-yellow-400">Computer Accessories</div>
+          <div className="cursor-pointer hover:text-yellow-400">Storage Devices</div>
+          <div className="cursor-pointer hover:text-yellow-400">Networking Devices</div>
+          <div className="cursor-pointer hover:text-yellow-400">Gaming Consoles</div>
+        </div>
+      </div>
+    
+                    
                          <Link to="/login">
                        <div className='cursor-pointer text-md  hover:text-black hover:bg-gray-100 px-2 py-2'>
                         <span className='px-6'>TV, Appliances, Electronics</span>
