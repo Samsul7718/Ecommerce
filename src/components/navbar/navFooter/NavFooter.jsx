@@ -132,12 +132,12 @@ const NavFooter = () => {
                         <span className='px-6'>Mobiles, Computers</span>
                           </div>
                           {/* SUB MENU (Mobiles, Computers) */}
-      <div
-        className={`absolute top-0 right-0 w-full h-full bg-black/90 transition-transform duration-300 ${
-          activeMenu === "mobiles" ? "translate-x-0" : "translate-x-full"
-        }`}
-      >
-        <div className="flex items-center gap-3 px-6 py-4 border-b border-gray-700">
+                  <div
+                   className={`absolute top-0 right-0 w-full h-full bg-black/85 backdrop-blur-sm transition-transform duration-300 ${
+                    activeMenu === "mobiles" ? "translate-x-0" : "translate-x-full"
+                 }`}
+             >
+             <div className="flex items-center gap-3 px-6 py-4 border-b border-gray-300">
           <button onClick={() => setActiveMenu("main")} className="text-xl">
             <FiArrowLeft />
           </button>
