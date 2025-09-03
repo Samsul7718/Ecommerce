@@ -62,20 +62,22 @@ const NavFooter = () => {
 
             {/* Mobile Slide-in Menu */}
                    <div
-                     className={` md:hidden fixed top-0 left-0 w-4/6 h-5/6 bg-black/65 backdrop-blur-sm overflow-x-hidden border-r
-                       border-white/10  shadow-lg transition-transform duration-300 z-50 ${
+                     className={` md:hidden fixed top-0 left-0 w-4/6 h-5/6 bg-black/65 backdrop-blur-sm 
+                      overflow-x-hidden  border-r border-white/10  shadow-lg transition-transform duration-300 z-50 ${
                        menuOpen ? "translate-x-0" : "-translate-x-full"
                      }`}
                    >
                      {/* Close Button */}
-                     <button
-                       className={`absolute  text-orange-200 top-4 bg-black -right-10 text-4xl border hover:border-white 
+
+
+                     {/* <button
+                       className={`absolute  text-orange-200 top-4 bg-black left-100 text-4xl border hover:border-white 
                         hover:bg-yellow-400 ${menuOpen ? "visible" : "invisible"}`}
                        onClick={() => setMenuOpen(false)}
                      >
                        {/* border hover:border-white transition */}
-                       <FiX />
-                     </button>
+                       {/* <FiX />
+                     </button>    */}
              
                      {/* Menu Items */}
                   
@@ -133,18 +135,18 @@ const NavFooter = () => {
                           </div>
                           {/* SUB MENU (Mobiles, Computers) */}
                   <div
-                   className={`absolute top-0 right-0 w-full h-full bg-black/85 backdrop-blur-sm transition-transform duration-300 ${
+                   className={`absolute top-0 right-0 w-full h-full sidebar-bg transition-transform duration-300 ${
                     activeMenu === "mobiles" ? "translate-x-0" : "translate-x-full"
                  }`}
              >
-             <div className="flex items-center gap-3 px-6 py-4 border-b border-gray-300">
+             <div className="flex items-center text-black gap-3 px-6 py-4 border-b border-gray-300">
           <button onClick={() => setActiveMenu("main")} className="text-xl">
             <FiArrowLeft />
           </button>
           <span className="text-2xl font-bold">Main menu </span>
         </div>
 
-        <div className="flex flex-col gap-4 px-6 py-6 overflow-y-auto">
+        <div className="flex flex-col text-black gap-4 px-6 py-6 overflow-y-auto">
           <div className="cursor-pointer hover:text-yellow-400">Smartphones</div>
           <div className="cursor-pointer hover:text-yellow-400">Laptops</div>
           <div className="cursor-pointer hover:text-yellow-400">Tablets</div>
@@ -222,7 +224,16 @@ const NavFooter = () => {
                      </div>
                
                    </div>
- {/* </div> */}
+                   {menuOpen && (
+                    <button
+                      className="fixed top-4 right-40 text-orange-200 bg-black text-4xl border 
+                      hover:border-white hover:bg-yellow-400 z-[60]"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                  <FiX />
+                  </button>
+                  )}
+               {/* </div> */}
     </section>
   )
 }
