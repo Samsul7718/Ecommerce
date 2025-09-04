@@ -6,8 +6,8 @@ import { FiArrowLeft, FiChevronDown, FiChevronUp, FiMenu,FiShoppingCart,FiUser,F
 const NavFooter = () => {
    const [menuOpen, setMenuOpen] = useState(false);
      const [showMore, setShowMore] = useState(false);
-      const [activeMenu1, setActiveMenu1] = useState("main1"); 
-      const [activeMenu2, setActiveMenu2] = useState("main2"); 
+      const [activeMenu, setActiveMenu] = useState("main"); 
+      // const [activeMenu2, setActiveMenu2] = useState("main2"); 
     const location=useLocation();
   return (
     <section className=' w-full bg-gray-65 h-16 '>
@@ -71,14 +71,15 @@ const NavFooter = () => {
              
                      {/* Menu Items */}
                   
-                       <div className="w-full h-12 bg-bodyColor text-white flex items-center space-between gap-8 px-8">
+                       <div className=" sticky top-0 left-0 w-full h-12 bg-bodyColor text-white flex items-center space-between
+                        gap-8 px-8 z-50 shadow-md">
                          <Link to="/login">
                          <FiUser  className='text-3xl'/> 
                           </Link>
                          <span className='text-xl'>Hello, sign in</span>
                        </div>
                        
-                     <div className=" h-96 overflow-y-auto mt-8 flex flex-col  text-gray-300 gap-6 ">
+                     <div className=" h-96 mt-8 flex flex-col  text-gray-300 gap-6 ">
                        <div className=' flex flex-col w-full gap-2'>
                        <div className='cursor-pointer text-2xl font-base px-6'>Trending</div>
                        <Link to="/login">
@@ -116,55 +117,25 @@ const NavFooter = () => {
                         </Link>
                        </div>
                          <div className=' flex flex-col w-full gap-2'>
+                          {activeMenu === "main" && (
+                        <>
                        <div className='cursor-pointer text-2xl font-base px-6'>Shop by Category</div>
                          
                        <div 
-                       onClick={()=>setActiveMenu1("mobiles")}
+                       onClick={()=>setActiveMenu("mobiles")}
                        className='relative overflow-x-hidden cursor-pointer text-md  hover:text-black hover:bg-gray-100 px-2 py-2 '>
                         <span className='px-6'>Mobiles, Computers</span>
-                          </div>
-                          {/* SUB MENU (Mobiles, Computers) */}
-                  <div
-                   className={`absolute h-96 overflow-y-auto top-0 right-0 w-full h-full sidebar-bg transition-transform duration-300 ${
-                    activeMenu1 === "mobiles" ? "translate-x-0" : "translate-x-full"
-                 }`}
-             >
-             <div className="flex items-center text-black gap-3 px-6 py-4 border-b border-gray-300">
-          <button onClick={() => setActiveMenu1("main1")} className="text-xl">
-            <FiArrowLeft />
-          </button>
-          <span className="text-2xl font-bold">MAIN MENU </span>
-        </div>
-
-        <div className="flex flex-col text-black gap-4 px-6 py-4 overflow-y-auto">
-          <div className='cursor-pointer text-xl font-base px-6'>Mobiles Tablets & More</div>
-          <div className="cursor-pointer hover:text-yellow-400"><span className='px-6'>All Mobile Phones</span></div>
-          <div className="cursor-pointer hover:text-yellow-400"><span className='px-6'>All Mobile Accessories</span></div>
-          <div className="cursor-pointer hover:text-yellow-400"><span className='px-6'>Cases & Cover</span></div>
-          <div className="cursor-pointer hover:text-yellow-400"><span className='px-6'>Power Banks</span></div>
-          <div className="cursor-pointer hover:text-yellow-400"><span className='px-6'>Tablets</span></div>
-          <div className="cursor-pointer hover:text-yellow-400"><span className='px-6'>Smart Home</span></div>
-        </div>
-          <div className="flex flex-col text-black gap-4 px-6 py-4 overflow-y-auto">
-          <div className='cursor-pointer text-xl font-base px-6'>Computers & Accessories</div>
-          <div className="cursor-pointer hover:text-yellow-400"><span className='px-6'>All Computers & Accessories</span></div>
-          <div className="cursor-pointer hover:text-yellow-400"><span className='px-6'>Laptops</span></div>
-          <div className="cursor-pointer hover:text-yellow-400"><span className='px-6'>Printer & Ink</span></div>
-          <div className="cursor-pointer hover:text-yellow-400"><span className='px-6'>Networking Devices</span></div>
-          <div className="cursor-pointer hover:text-yellow-400"><span className='px-6'>Monitors</span></div>
-          <div className="cursor-pointer hover:text-yellow-400"><span className='px-6'>Desktops</span></div>
-        </div>
-      </div>
-    
-                    
+                      </div> 
+             
+                      
                     
                        <div 
-                        onClick={()=>setActiveMenu2("tv")}
+                        // onClick={()=>setActiveMenu2("tv")}
                        className='cursor-pointer text-md  hover:text-black hover:bg-gray-100 px-2 py-2'>
                         <span className='px-6'>TV, Appliances, Electronics</span>
                         </div>
                                      {/* SUB MENU (Mobiles, Computers) */}
-                  <div
+                  {/* <div
                    className={`absolute top-0 right-0 w-full h-full sidebar-bg transition-transform duration-300 ${
                     activeMenu2 === "tv" ? "translate-x-0" : "translate-x-full"
                  }`}
@@ -185,7 +156,7 @@ const NavFooter = () => {
           <div className="cursor-pointer hover:text-yellow-400">Networking Devices</div>
           <div className="cursor-pointer hover:text-yellow-400">Gaming Consoles</div>
         </div>
-      </div>
+      </div> */}
                        
                         <Link to="/login">
                        <div className='cursor-pointer text-md  hover:text-black hover:bg-gray-100 px-2 py-2'>
@@ -238,6 +209,8 @@ const NavFooter = () => {
                 </span>}
                   </div>
                 </div>
+                </>
+                          )}
                        </div>
                        <div className='cursor-pointer text-xl font-base'>Help & Settings</div>
                        
@@ -248,6 +221,52 @@ const NavFooter = () => {
                      </div>
                
                    </div>
+
+                 {/* SUB MENU: Mobiles */}
+    {activeMenu === "mobiles" && (
+      <div className="fixed top-0 left-0 w-4/6 h-5/6 bg-white z-50 overflow-y-auto transition-transform duration-300">
+       
+           {/* Menu Items */}
+                  
+           <div className=" sticky top-0 left-0 w-full h-12 bg-bodyColor text-white flex items-center space-between
+             gap-8 px-8 z-50 shadow-md">
+              <Link to="/login">
+              <FiUser  className='text-3xl'/> 
+               </Link>
+                <span className='text-xl'>Hello, sign in</span>
+              </div>
+                        {/* Header with Back Button */}
+        <div className="flex items-center text-black gap-3 px-6 py-4 border-b border-gray-300">
+          <button onClick={() => setActiveMenu("main")} className="text-xl">
+            <FiArrowLeft />
+          </button>
+          <span className="text-xl font-bold">MAIN MENU</span>
+        </div>
+
+        {/* Submenu Items */}
+        <div className="flex flex-col text-black gap-4 px-6 py-6">
+          <div className="cursor-pointer text-xl font-base px-6">Mobiles Tablets & More</div>
+          <div className="cursor-pointer hover:text-yellow-400 px-6">All Mobile Phones</div>
+          <div className="cursor-pointer hover:text-yellow-400 px-6">All Mobile Accessories</div>
+          <div className="cursor-pointer hover:text-yellow-400 px-6">Cases & Cover</div>
+          <div className="cursor-pointer hover:text-yellow-400 px-6">Power Banks</div>
+          <div className="cursor-pointer hover:text-yellow-400 px-6">Tablets</div>
+          <div className="cursor-pointer hover:text-yellow-400 px-6">Smart Home</div>
+        </div>
+
+        <div className="flex flex-col text-black gap-4 px-6 py-4">
+          <div className="cursor-pointer text-xl font-base px-6">Computers & Accessories</div>
+          <div className="cursor-pointer hover:text-yellow-400 px-6">All Computers & Accessories</div>
+          <div className="cursor-pointer hover:text-yellow-400 px-6">Laptops</div>
+          <div className="cursor-pointer hover:text-yellow-400 px-6">Printer & Ink</div>
+          <div className="cursor-pointer hover:text-yellow-400 px-6">Networking Devices</div>
+          <div className="cursor-pointer hover:text-yellow-400 px-6">Monitors</div>
+          <div className="cursor-pointer hover:text-yellow-400 px-6">Desktops</div>
+        </div>
+      </div>
+    )}
+
+
                    {menuOpen && (
                     <button
                       className="fixed top-4 right-40 text-orange-200 bg-black text-4xl border 
@@ -257,7 +276,6 @@ const NavFooter = () => {
                   <FiX />
                   </button>
                   )}
-               {/* </div> */}
     </section>
   )
 }
