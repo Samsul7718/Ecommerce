@@ -224,7 +224,7 @@ const NavFooter = () => {
 
                  {/* SUB MENU: Mobiles */}
     {activeMenu === "mobiles" && (
-      <div className="fixed top-0 left-0 w-4/6 h-5/6 bg-white z-50 overflow-y-auto transition-transform duration-300">
+      <div className="fixed top-0 left-0 w-4/6 h-5/6 bg-black/90 z-50 overflow-y-auto transition-transform duration-300">
        
            {/* Menu Items */}
                   
@@ -236,7 +236,7 @@ const NavFooter = () => {
                 <span className='text-xl'>Hello, sign in</span>
               </div>
                         {/* Header with Back Button */}
-        <div className="flex items-center text-black gap-3 px-6 py-4 border-b border-gray-300">
+        <div className="flex items-center text-white  gap-3 px-6 py-4 border-b border-gray-300">
           <button onClick={() => setActiveMenu("main")} className="text-xl">
             <FiArrowLeft />
           </button>
@@ -244,24 +244,24 @@ const NavFooter = () => {
         </div>
 
         {/* Submenu Items */}
-        <div className="flex flex-col text-black gap-4 px-6 py-6">
+        <div className="flex flex-col text-white gap-4  py-4">
           <div className="cursor-pointer text-xl font-base px-6">Mobiles Tablets & More</div>
-          <div className="cursor-pointer hover:text-yellow-400 px-6">All Mobile Phones</div>
-          <div className="cursor-pointer hover:text-yellow-400 px-6">All Mobile Accessories</div>
-          <div className="cursor-pointer hover:text-yellow-400 px-6">Cases & Cover</div>
-          <div className="cursor-pointer hover:text-yellow-400 px-6">Power Banks</div>
-          <div className="cursor-pointer hover:text-yellow-400 px-6">Tablets</div>
-          <div className="cursor-pointer hover:text-yellow-400 px-6">Smart Home</div>
+          <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>All Mobile Phones</span></div>
+          <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>All Mobile Accessories</span></div>
+          <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>Cases & Cover</span></div>
+          <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>Power Banks</span></div>
+          <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>Tablets</span></div>
+          <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>Smart Home</span></div>
         </div>
 
-        <div className="flex flex-col text-black gap-4 px-6 py-4">
+        <div className="flex flex-col text-white gap-4  py-4">
           <div className="cursor-pointer text-xl font-base px-6">Computers & Accessories</div>
-          <div className="cursor-pointer hover:text-yellow-400 px-6">All Computers & Accessories</div>
-          <div className="cursor-pointer hover:text-yellow-400 px-6">Laptops</div>
-          <div className="cursor-pointer hover:text-yellow-400 px-6">Printer & Ink</div>
-          <div className="cursor-pointer hover:text-yellow-400 px-6">Networking Devices</div>
-          <div className="cursor-pointer hover:text-yellow-400 px-6">Monitors</div>
-          <div className="cursor-pointer hover:text-yellow-400 px-6">Desktops</div>
+          <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>All Computers & Accessories</span></div>
+          <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>Laptops</span></div>
+          <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>Printer & Ink</span></div>
+          <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>Networking Devices</span></div>
+          <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>Monitors</span></div>
+          <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>Desktops</span></div>
         </div>
       </div>
     )}
