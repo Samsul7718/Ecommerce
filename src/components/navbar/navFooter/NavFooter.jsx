@@ -187,11 +187,19 @@ const NavFooter = () => {
                 </>
                           )}
                        </div>
-                       <div className='cursor-pointer text-xl font-base'>Help & Settings</div>
-                       
-                       <div className="flex items-center gap-2">
+                       <div className='cursor-pointer text-2xl font-base px-6'>Help & Settings</div>
+                        <div className='cursor-pointer py-2 text-gray-300 hover:text-black hover:bg-gray-100 px-6'>
+                                   <Link to={"/returnorder"}>
+                                   Return & Order
+                                   </Link>
+                          </div>
+                        
+                       <div className="flex items-center hover:text-black hover:bg-gray-100 gap-2 px-6 py-2">
+                          <Link to="/cart" className="flex items-center gap-2">
                          <FiShoppingCart /><span>Cart (0)</span>
+                           </Link>
                        </div>
+                      
                       
                      </div>
                
@@ -265,20 +273,22 @@ const NavFooter = () => {
         {/* Submenu Items */}
         <div className="flex flex-col text-white gap-4  py-4">
           <div className="cursor-pointer text-xl font-base px-6">TV, Audios & Cameras</div>
-          <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>All Mobile Phones</span></div>
-          <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>All Mobile Accessories</span></div>
-          <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>Cases & Cover</span></div>
-          <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>Power Banks</span></div>
-          <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>Tablets</span></div>
-          <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>Smart Home</span></div>
+          <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>Televisions</span></div>
+          <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>Home Entertainment system</span></div>
+          <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>Headphones</span></div>
+          <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>Speakers</span></div>
+          <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>Cameras</span></div>
+          <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>Camera Accessories</span></div>
+          <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>Musical Instruments</span></div>
+          <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>All Electronics</span></div>
         </div>
 
         <div className="flex flex-col text-white gap-4  py-4">
           <div className="cursor-pointer text-xl font-base px-6">Appliances</div>
-          <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>All Computers & Accessories</span></div>
-          <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>Laptops</span></div>
-          <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>Printer & Ink</span></div>
-          <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>Networking Devices</span></div>
+          <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>Air Conditioners</span></div>
+          <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>Refrigerators</span></div>
+          <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>Washing Machines</span></div>
+          <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>Kitchen & Home Appliances</span></div>
           <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>Monitors</span></div>
           <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>Desktops</span></div>
         </div>
