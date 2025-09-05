@@ -127,36 +127,11 @@ const NavFooter = () => {
                         <span className='px-6'>Mobiles, Computers</span>
                       </div> 
              
-                      
-                    
                        <div 
                         onClick={()=>setActiveMenu("TV")}
                        className='cursor-pointer text-md  hover:text-black hover:bg-gray-100 px-2 py-2'>
                         <span className='px-6'>TV, Appliances, Electronics</span>
                         </div>
-                                     {/* SUB MENU (Mobiles, Computers) */}
-                  {/* <div
-                   className={`absolute top-0 right-0 w-full h-full sidebar-bg transition-transform duration-300 ${
-                    activeMenu2 === "tv" ? "translate-x-0" : "translate-x-full"
-                 }`}
-             >
-             <div className="flex items-center text-black gap-3 px-6 py-4 border-b border-gray-300">
-          <button onClick={() => setActiveMenu2("main2")} className="text-xl">
-            <FiArrowLeft />
-          </button>
-          <span className="text-2xl font-bold">MAIN MENU </span>
-        </div>
-
-        <div className="flex flex-col text-black gap-4 px-6 py-6 overflow-y-auto">
-          <div className="cursor-pointer hover:text-yellow-400">Smartphones4</div>
-          <div className="cursor-pointer hover:text-yellow-400">Laptops</div>
-          <div className="cursor-pointer hover:text-yellow-400">Tablets</div>
-          <div className="cursor-pointer hover:text-yellow-400">Computer Accessories</div>
-          <div className="cursor-pointer hover:text-yellow-400">Storage Devices</div>
-          <div className="cursor-pointer hover:text-yellow-400">Networking Devices</div>
-          <div className="cursor-pointer hover:text-yellow-400">Gaming Consoles</div>
-        </div>
-      </div> */}
                        
                         <Link to="/login">
                        <div className='cursor-pointer text-md  hover:text-black hover:bg-gray-100 px-2 py-2'>
@@ -194,7 +169,7 @@ const NavFooter = () => {
                  </>
                  )}
                {/* Toggle Button */}
-             <div
+                   <div
                onClick={() => setShowMore(!showMore)}
                className="cursor-pointer text-md hover:text-black hover:bg-gray-100 px-2 py-2 text-blue-400"
              >
@@ -208,7 +183,7 @@ const NavFooter = () => {
                     See all <FiChevronDown />
                 </span>}
                   </div>
-                </div>
+                  </div>
                 </>
                           )}
                        </div>
