@@ -289,8 +289,8 @@ const NavFooter = () => {
           <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>Refrigerators</span></div>
           <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>Washing Machines</span></div>
           <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>Kitchen & Home Appliances</span></div>
-          <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>Monitors</span></div>
-          <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>Desktops</span></div>
+          <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>Heating & Cooling Appliances</span></div>
+          <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>All Appliances</span></div>
         </div>
       </div>
     )}
