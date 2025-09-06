@@ -19,16 +19,11 @@ const NavFooter = () => {
             }`}
           >
         <div className="flex items-center gap-1 cursor-pointer">
-          
-            {/* <div> */}
                <FiMenu size={18} />
-            {/* </div> */}
-            {/* <div> */}
               All
-            {/* </div>  */}
-        
         </div>
           </Link>
+          
         {navbarData
         .filter((item) => item.name !== "All") 
         .map((data,index)=>
