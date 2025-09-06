@@ -1,4 +1,5 @@
 import logo from '../../src/assets/images/s-logo.png';
+import hero from '../../src/assets/images/heroimg2.jpeg';
 
 
 
@@ -7,5 +8,6 @@ import logo from '../../src/assets/images/s-logo.png';
 
 
 export{
-    logo
+    logo,
+    hero,
 }
