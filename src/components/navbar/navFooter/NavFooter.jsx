@@ -283,7 +283,7 @@ const NavFooter = () => {
           <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>All Electronics</span></div>
         </div>
 
-        <div className="flex flex-col text-white gap-4  py-4">
+        <div className="flex flex-col text-white gap-4 py-4">
           <div className="cursor-pointer text-xl font-base px-6">Appliances</div>
           <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>Air Conditioners</span></div>
           <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>Refrigerators</span></div>
