@@ -10,20 +10,25 @@ const NavFooter = () => {
       // const [activeMenu2, setActiveMenu2] = useState("main2"); 
     const location=useLocation();
   return (
-    <section className=' w-full bg-gray-65 h-16 '>
+    <section className=' w-full bg-gray-700 h-16 '>
       <div className=' hidden md:flex flex-row items-center justify-between font-bold py-4 px-4 shadow-sm '>
          {/* only for "All" */}
-        <div className="flex items-center gap-1 cursor-pointer hover:text-blue-600">
-          <FiMenu size={18} />
-          <Link
-            to="/"
+          <Link  to="/"
             className={`transition ${
-              location.pathname === "/" ? "text-blue-600 font-semibold" : "text-gray-700"
+              location.pathname === "/" ? "text-blue-600 font-semibold" : "text-gray-200"
             }`}
           >
-            All
-          </Link>
+        <div className="flex items-center gap-1 cursor-pointer">
+          
+            {/* <div> */}
+               <FiMenu size={18} />
+            {/* </div> */}
+            {/* <div> */}
+              All
+            {/* </div>  */}
+        
         </div>
+          </Link>
         {navbarData
         .filter((item) => item.name !== "All") 
         .map((data,index)=>
@@ -32,7 +37,7 @@ const NavFooter = () => {
              key={index}
             to={data.path}
              className={`text-sm font-medium hover:text-blue-600 transition ${
-            location.pathname === data.path ? "text-blue-600 font-semibold" : "text-gray-700"
+            location.pathname === data.path ? "text-blue-600 font-semibold" : "text-gray-200"
           }`}
             >
             {data.name}
