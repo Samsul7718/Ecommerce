@@ -305,6 +305,28 @@ const NavFooter = () => {
                   <FiX />
                   </button>
                   )}
+
+
+                   {/* {activeMenu && (
+                    <button
+                      className="fixed top-4 right-40 text-orange-200 bg-black text-4xl border 
+                      hover:border-white hover:bg-yellow-400 z-[60]"
+                    onClick={() => setActiveMenu(false)}
+                  >
+                  <FiX />
+                  </button>
+                  )} */}
+
+
+                   {/* {menuOpen && (
+                    <button
+                      className="fixed top-4 right-40 text-orange-200 bg-black text-4xl border 
+                      hover:border-white hover:bg-yellow-400 z-[60]"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                  <FiX />
+                  </button>
+                  )} */}
     </section>
   )
 }
