@@ -1,18 +1,26 @@
 import React from 'react'
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { hero } from '../../assets';
+import { hero,hero1,hero2 } from '../../assets';
 
+const images=[hero,hero1,hero2]
 const Hero = () => {
+  const [currentIndex, setCurrentIndex] =useState(0);
+
+  const prevSlide=()=>{
+      setCurrentIndex((prevIndex)=>
+        prevIndex===0? images.length-1:prevIndex-1
+      );
+  }
+   const nextSlide=()=>{
+    setCurrentIndex((prevIndex)=>
+    currentIndex===images.length-1? 0:prevIndex+1);
+  }
   return (
    <section className='relative w-full h-screen overflow-hidden'>
        {/* background overlay */}
        <div className='absolute inset-0'>
         <div
           className="absolute inset-0 bg-cover bg-center"
-        //   style={{
-        //     backgroundImage:
-        //       "url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80')",
-        //   }}
         >
             <img src={hero} alt="" />
         </div>
@@ -28,12 +36,16 @@ const Hero = () => {
       </div>
 
         {/* Left Arrow */}
-      <button className="absolute left-4 top-1/2 -translate-y-25 bg-white/60 hover:bg-white p-3 rounded-full shadow-md z-0">
+      <button 
+      onClick={prevSlide}
+      className="absolute left-4 top-1/2 -translate-y-25 bg-white/60 hover:bg-white p-3 rounded-full shadow-md z-0">
         <ChevronLeft className="text-black" size={24} />
       </button>
 
       {/* Right Arrow */}
-      <button className="absolute right-4 top-1/2 -translate-y-25 bg-white/60 hover:bg-white p-3 rounded-full shadow-md z-0">
+      <button
+      onClick={nextSlide}
+      className="absolute right-4 top-1/2 -translate-y-25 bg-white/60 hover:bg-white p-3 rounded-full shadow-md z-0">
         <ChevronRight className="text-black" size={24} />
       </button>
    </section>

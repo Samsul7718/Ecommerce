@@ -44,7 +44,7 @@ const NavFooter = () => {
       </div>
              {/* Mobile Hamburger Icon (hidden on desktop) */}
                     <button
-                      className="md:hidden text-black-300  text-xl"
+                      className="md:hidden text-gray-200  text-xl"
                       onClick={() => setMenuOpen(true)}
                     >
                     <div className="flex items-center pt-5 px-2 cursor-pointer hover:text-blue-400">
