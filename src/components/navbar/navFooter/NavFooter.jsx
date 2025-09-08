@@ -68,6 +68,16 @@ const NavFooter = () => {
                        menuOpen ? "translate-x-0" : "-translate-x-full"
                      }`}
                    >
+
+                          {menuOpen && (
+                    <button
+                      className="fixed top-4 right-40 text-orange-200 bg-black text-4xl border 
+                      hover:border-white hover:bg-yellow-400 z-[60]"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                  <FiX />
+                  </button>
+                  )}
              
                      {/* Menu Items */}
                   
@@ -296,7 +306,7 @@ const NavFooter = () => {
     )}
 
 
-                   {menuOpen && (
+                   {/* {menuOpen && (
                     <button
                       className="fixed top-4 right-40 text-orange-200 bg-black text-4xl border 
                       hover:border-white hover:bg-yellow-400 z-[60]"
@@ -304,14 +314,14 @@ const NavFooter = () => {
                   >
                   <FiX />
                   </button>
-                  )}
+                  )} */}
 
-
-                   {/* {activeMenu && (
+{/* 
+                   {activeMenu && (
                     <button
                       className="fixed top-4 right-40 text-orange-200 bg-black text-4xl border 
                       hover:border-white hover:bg-yellow-400 z-[60]"
-                    onClick={() => setActiveMenu(false)}
+                    onClick={() => setActiveMenu(!main)}
                   >
                   <FiX />
                   </button>
