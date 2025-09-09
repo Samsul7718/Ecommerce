@@ -39,7 +39,7 @@ const Hero = () => {
       <button 
       onClick={prevSlide}
       className="absolute left-4 top-1/2 -translate-y-25 bg-white/60 hover:bg-white p-3 rounded-full shadow-md z-20">
-        <ChevronLeft className="text-black" size={24} />
+        <ChevronLeft className="text-black" size={26} />
       </button>
 
       {/* Right Arrow */}
