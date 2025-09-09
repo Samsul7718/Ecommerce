@@ -46,7 +46,7 @@ const Hero = () => {
       <button
       onClick={nextSlide}
       className="absolute right-4 top-1/2 -translate-y-25 bg-white/60 hover:bg-white p-3 rounded-full shadow-md z-20">
-        <ChevronRight className="text-black" size={24} />
+        <ChevronRight className="text-black" size={26} />
       </button>
    </section>
   )
