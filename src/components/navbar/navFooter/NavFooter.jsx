@@ -282,6 +282,13 @@ const NavFooter = () => {
     {activeMenu === "TV" && (
       <div className="fixed top-0 left-0 w-4/6 h-5/6 bg-black/90 z-50 overflow-y-auto transition-transform duration-300">
        
+              {/* Fixed Close Button */}
+    <button
+      className="fixed top-4 right-25 text-orange-200 bg-black text-3xl p-2 rounded-full hover:bg-gray-800"
+      onClick={() => setActiveMenu("main")} // or setActiveMenu(null)
+    >
+      <FiX />
+    </button>
            {/* Menu Items */}
                   
            <div className=" sticky top-0 left-0 w-full h-12 bg-bodyColor text-white flex items-center space-between
