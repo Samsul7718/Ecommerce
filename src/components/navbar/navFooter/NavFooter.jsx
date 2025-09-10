@@ -56,6 +56,7 @@ const NavFooter = () => {
                {/* Mobile Menu Overlay */}
                 <div className={`md:hidden fixed top-0 left-0 bottom-0 right-0 transition-opacity duration-300
                    ${ menuOpen ? "opacity-100 visible" : "opacity-0 invisible" }`} 
+                    style={{ zIndex: 40 }}
                    onClick={() => setMenuOpen(false)}> 
                    </div>
 
@@ -204,7 +205,7 @@ const NavFooter = () => {
                
                    </div>
 
-                {menuOpen && (
+                {activeMenu !="main" || menuOpen && (
                     <button
                       className="fixed top-4 right-35 text-orange-200 bg-black text-4xl border 
                       hover:border-white hover:bg-yellow-400 z-[60]"
@@ -214,10 +215,29 @@ const NavFooter = () => {
                   </button>
                   )}
 
+
+
+{(menuOpen && activeMenu) && (
+  <div
+    className="fixed inset-0 bg-black/50 z-40"
+    onClick={() => {
+      setMenuOpen(false);
+      setActiveMenu("main"); // close both menus
+    }}
+  ></div>
+)}
                  {/* SUB MENU: Mobiles */}
     {activeMenu === "mobiles" && (
       <div className="fixed top-0 left-0 w-4/6 h-5/6 bg-black/90 z-50 overflow-y-auto transition-transform duration-300">
        
+
+         {/* Fixed Close Button */}
+    <button
+      className="fixed top-4 right-25 text-orange-200 bg-black text-3xl p-2 rounded-full hover:bg-gray-800"
+      onClick={() => setActiveMenu("main")} // or setActiveMenu(null)
+    >
+      <FiX />
+    </button>
            {/* Menu Items */}
                   
            <div className=" sticky top-0 left-0 w-full h-12 bg-bodyColor text-white flex items-center space-between
