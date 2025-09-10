@@ -65,10 +65,8 @@ const NavFooter = () => {
                       overflow-x-hidden  border-r border-white/10  shadow-lg transition-transform duration-300 z-50 ${
                        menuOpen ? "translate-x-0" : "-translate-x-full"
                      }`}
-          
                    >
 
-               
                      {/* Menu Items */}
                   
                        <div className=" sticky top-0 left-0 w-full h-12 bg-bodyColor text-white flex items-center space-between
@@ -78,7 +76,6 @@ const NavFooter = () => {
                           </Link>
                          <span className='text-xl'>Hello, sign in</span>
 
-                 
                        </div>
                        
                      <div className=" h-96 mt-8 flex flex-col  text-gray-300 gap-6 ">
