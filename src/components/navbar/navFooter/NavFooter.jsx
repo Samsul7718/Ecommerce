@@ -52,14 +52,12 @@ const NavFooter = () => {
                       </div>
                     </button>
         
-                     {/* Mobile Menu Overlay */}
-                <div
-                className={`md:hidden fixed top-0 left-0 bottom-0 right-0 transition-opacity duration-300  ${
-                  menuOpen ? "opacity-100 visible" : "opacity-0 invisible"
-                }`}
-                onClick={() => setMenuOpen(false)}>
-        
-                </div>
+                    
+               {/* Mobile Menu Overlay */}
+                <div className={`md:hidden fixed top-0 left-0 bottom-0 right-0 transition-opacity duration-300
+                   ${ menuOpen ? "opacity-100 visible" : "opacity-0 invisible" }`} 
+                   onClick={() => setMenuOpen(false)}> 
+                   </div>
 
             {/* Mobile Slide-in Menu */}
                    <div
@@ -67,18 +65,10 @@ const NavFooter = () => {
                       overflow-x-hidden  border-r border-white/10  shadow-lg transition-transform duration-300 z-50 ${
                        menuOpen ? "translate-x-0" : "-translate-x-full"
                      }`}
+          
                    >
 
-                          {menuOpen && (
-                    <button
-                      className="fixed top-4 right-40 text-orange-200 bg-black text-4xl border 
-                      hover:border-white hover:bg-yellow-400 z-[60]"
-                    onClick={() => setMenuOpen(false)}
-                  >
-                  <FiX />
-                  </button>
-                  )}
-             
+               
                      {/* Menu Items */}
                   
                        <div className=" sticky top-0 left-0 w-full h-12 bg-bodyColor text-white flex items-center space-between
@@ -87,6 +77,8 @@ const NavFooter = () => {
                          <FiUser  className='text-3xl'/> 
                           </Link>
                          <span className='text-xl'>Hello, sign in</span>
+
+                 
                        </div>
                        
                      <div className=" h-96 mt-8 flex flex-col  text-gray-300 gap-6 ">
@@ -214,6 +206,16 @@ const NavFooter = () => {
                      </div>
                
                    </div>
+
+                {menuOpen && (
+                    <button
+                      className="fixed top-4 right-35 text-orange-200 bg-black text-4xl border 
+                      hover:border-white hover:bg-yellow-400 z-[60]"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                  <FiX />
+                  </button>
+                  )}
 
                  {/* SUB MENU: Mobiles */}
     {activeMenu === "mobiles" && (
