@@ -179,7 +179,6 @@ const NavHeader = () => {
                   className="absolute  text-orange-200 top-4 left-4 text-3xl border hover:border-white hover:bg-yellow-400 transition"
                   onClick={() => setMenuOpen(false)}
                 >
-                  {/* border hover:border-white transition */}
                   <FiX />
                 </button>
         
