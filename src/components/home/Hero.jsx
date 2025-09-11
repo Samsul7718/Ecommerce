@@ -25,7 +25,7 @@ const Hero = () => {
             <img src={images[currentIndex]} alt=""  className="w-full h-full object-cover" />
         </div>
           {/* Gradient fade (image -> skyblue) */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-sky-200"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-sky-100"></div>
        </div>
          {/* Content Center */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">

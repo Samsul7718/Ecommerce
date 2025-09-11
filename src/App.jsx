@@ -1,3 +1,4 @@
+import Client from "./components/client card/Client"
 import Hero from "./components/home/Hero"
 import Navbar from "./components/navbar/Navbar"
 import { BrowserRouter as Router,Routes,Route } from "react-router-dom"
@@ -27,6 +28,7 @@ function App() {
         <Route  path="/cart" element="" />
        </Routes>
        <Hero />
+       <Client/>
       </Router>   
      
     </div>
