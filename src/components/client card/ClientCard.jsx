@@ -19,7 +19,7 @@ const ClientCard = ({title,subTitle}) => {
             <img src={hero3} alt=""  className="w-full h-24 object-cover rounded-md"/>
         </div>
         <div className='p-4 text-center space-between flex gap-20 justify-center'>
-            <button className="bg-gray-200 text-black px-4 py-2 rounded hover:bg-gray-700 hover:text-white
+            <button className="bg-gray-200 text-black px-2 py-2 rounded hover:bg-gray-700 hover:text-white
              px-1 py-1">
                 See More...
             </button>
