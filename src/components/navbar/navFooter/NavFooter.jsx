@@ -62,7 +62,7 @@ const NavFooter = () => {
 
             {/* Mobile Slide-in Menu */}
                    <div
-                     className={` md:hidden fixed top-0 left-0 w-4/6 h-5/6 bg-black/65 backdrop-blur-sm 
+                     className={` md:hidden fixed top-0 left-0 w-86 h-5/6 bg-black/65 backdrop-blur-sm 
                       overflow-x-hidden  border-r border-white/10  shadow-lg transition-transform duration-300 z-50 ${
                        menuOpen ? "translate-x-0" : "-translate-x-full"
                      }`}
@@ -207,7 +207,7 @@ const NavFooter = () => {
 
                 {activeMenu !="main" || menuOpen && (
                     <button
-                      className="fixed top-4 right-35 text-orange-200 bg-black text-4xl border 
+                      className="fixed top-4 left-86 text-orange-200 bg-black text-4xl border 
                       hover:border-white hover:bg-yellow-400 z-[60]"
                     onClick={() => setMenuOpen(false)}
                   >
