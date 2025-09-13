@@ -1,6 +1,6 @@
 import React from 'react'
 import ClientCard from './ClientCard'
-import { hero3 } from '../../assets'
+import { hero3,hero2 } from '../../assets'
 
 const Client = () => {
   return (
@@ -8,6 +8,76 @@ const Client = () => {
       bg-sky-100'>
         
        <ClientCard
+       title={"Mens Fashion"}
+       subTitle={"Discover the latest trends in"}
+       items={[
+         {id:1, title:"Shirts", src: hero3},
+         {id:2, title:"Pants", src: hero3},
+         {id:3, title:"T-shirt", src: hero3},
+         {id:4, title:"Formals", src: hero3},
+       ]}
+       />
+        <ClientCard
+       title={"Womens Fashion"}
+       subTitle={"Discover the latest trends in"}
+       items={[
+         {id:1, title:"Shirts", src: hero3},
+         {id:2, title:"Pants", src: hero3},
+         {id:3, title:"T-shirt", src: hero3},
+         {id:4, title:"Formals", src: hero3},
+       ]}
+       />
+        <ClientCard
+       title={"Gym"}
+       subTitle={"Get into your fitness world"}
+       items={[
+         {id:1, title:"Shirts", src: hero3},
+         {id:2, title:"Pants", src: hero3},
+         {id:3, title:"T-shirt", src: hero3},
+         {id:4, title:"Formals", src: hero3},
+       ]}
+       />
+        <ClientCard
+       title={"Mens Fashion"}
+       subTitle={"Discover the latest trends in"}
+       items={[
+         {id:1, title:"Shirts", src: hero3},
+         {id:2, title:"Pants", src: hero3},
+         {id:3, title:"T-shirt", src: hero3},
+         {id:4, title:"Formals", src: hero3},
+       ]}
+       />
+        <ClientCard
+       title={"Mens Fashion"}
+       subTitle={"Discover the latest trends in"}
+       items={[
+         {id:1, title:"Shirts", src: hero3},
+         {id:2, title:"Pants", src: hero3},
+         {id:3, title:"T-shirt", src: hero3},
+         {id:4, title:"Formals", src: hero3},
+       ]}
+       />
+        <ClientCard
+       title={"Mens Fashion"}
+       subTitle={"Discover the latest trends in"}
+       items={[
+         {id:1, title:"Shirts", src: hero3},
+         {id:2, title:"Pants", src: hero3},
+         {id:3, title:"T-shirt", src: hero3},
+         {id:4, title:"Formals", src: hero3},
+       ]}
+       />
+        <ClientCard
+       title={"Mens Fashion"}
+       subTitle={"Discover the latest trends in"}
+       items={[
+         {id:1, title:"Shirts", src: hero3},
+         {id:2, title:"Pants", src: hero3},
+         {id:3, title:"T-shirt", src: hero3},
+         {id:4, title:"Formals", src: hero3},
+       ]}
+       />
+        <ClientCard
        title={"Mens Fashion"}
        subTitle={"Discover the latest trends in"}
        items={[
