@@ -207,7 +207,7 @@ const NavFooter = () => {
 
                 {activeMenu !="main" || menuOpen && (
                     <button
-                      className="fixed top-4 left-86 text-orange-200 bg-black text-4xl border 
+                      className="md:hidden fixed top-4 left-86 text-orange-200 bg-black text-4xl border 
                       hover:border-white hover:bg-yellow-400 z-[60]"
                     onClick={() => setMenuOpen(false)}
                   >
@@ -228,13 +228,13 @@ const NavFooter = () => {
 )}
                  {/* SUB MENU: Mobiles */}
     {activeMenu === "mobiles" && (
-      <div className="fixed top-0 left-0 w-4/6 h-5/6 bg-black/90 z-50 overflow-y-auto transition-transform duration-300 md:hidden">
+      <div className="fixed top-0 left-0 w-86 h-5/6 bg-black/90 z-50 overflow-y-auto transition-transform duration-300 md:hidden">
        
      <div className="relative w-full h-full md:hidden">
 
                  {/* Fixed Close Button */}
     <button
-      className="fixed top-4 right-28 text-orange-200 bg-black border-red-500 text-3xl p-2 rounded-full hover:bg-gray-800"
+      className="fixed top-4 left-86 text-orange-200 bg-black border-red-500 text-3xl p-2 rounded-full hover:bg-gray-800"
       onClick={() => setActiveMenu("main")} // or setActiveMenu(null)
     >
       <FiX />
@@ -283,11 +283,11 @@ const NavFooter = () => {
 
                   {/* SUB MENU: TV */}
     {activeMenu === "TV" && (
-      <div className="fixed top-0 left-0 w-4/6 h-5/6 bg-black/90 z-50 overflow-y-auto transition-transform duration-300">
-       
+      <div className="fixed top-0 left-0 w-86 h-5/6 bg-black/90 z-50 overflow-y-auto transition-transform duration-300 md:hidden">
+         <div className="relative w-full h-full md:hidden">
               {/* Fixed Close Button */}
     <button
-      className="fixed top-4 right-28 text-orange-200 bg-black text-3xl p-2 rounded-full hover:bg-gray-800"
+      className="fixed top-4 left-86 text-orange-200 bg-black text-3xl p-2 rounded-full hover:bg-gray-800"
       onClick={() => setActiveMenu("main")} // or setActiveMenu(null)
     >
       <FiX />
@@ -330,6 +330,7 @@ const NavFooter = () => {
           <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>Kitchen & Home Appliances</span></div>
           <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>Heating & Cooling Appliances</span></div>
           <div className="cursor-pointer  hover:text-black hover:bg-gray-100 px-2 py-2 text-md"> <span className='px-6'>All Appliances</span></div>
+        </div>
         </div>
       </div>
     )}
