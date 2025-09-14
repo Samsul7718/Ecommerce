@@ -11,6 +11,10 @@ import long from '../../src/assets/images/women-clth/long.webp'
 import kurti from '../../src/assets/images/women-clth/kurti.jpeg'
 import saree from '../../src/assets/images/women-clth/saree.webp'
 import burkha from '../../src/assets/images/women-clth/burkha.png'
+import cheast from "../../src/assets/images/gym/cheast.avif"
+import dumble from "../../src/assets/images/gym/dumble.jpg"
+import starx from "../../src/assets/images/gym/starx.webp"
+import trademill from "../../src/assets/images/gym/trademill.webp"
 
 
 
@@ -26,5 +30,9 @@ export{
     pant,
     T_shirt,
     formal,
+    long,
+    kurti,
+    saree,
+    burkha, 
 
 }
