@@ -7,6 +7,11 @@ import shirt from '../../src/assets/images/men-cloth/shirt-men.webp'
 import pant from '../../src/assets/images/men-cloth/pants.webp'
 import T_shirt from '../../src/assets/images/men-cloth/tshirt.jpeg'
 import formal from '../../src/assets/images/men-cloth/formal.jpg'
+import long from '../../src/assets/images/women-clth/long.webp'
+import kurti from '../../src/assets/images/women-clth/kurti.jpeg'
+import saree from '../../src/assets/images/women-clth/saree.webp'
+import burkha from '../../src/assets/images/women-clth/burkha.png'
+
 
 
 
