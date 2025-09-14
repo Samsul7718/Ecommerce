@@ -34,5 +34,9 @@ export{
     kurti,
     saree,
     burkha, 
+    cheast,
+    dumble,
+    starx,
+    trademill,
 
 }

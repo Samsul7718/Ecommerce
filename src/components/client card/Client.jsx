@@ -1,6 +1,7 @@
 import React from 'react'
 import ClientCard from './ClientCard'
-import { hero3,burkha, long,kurti,saree } from '../../assets'
+import { hero3,burkha, long,kurti,saree} from '../../assets'
+import {cheast,dumble,starx,trademill } from '../../assets'
 import { shirt,pant,T_shirt,formal } from '../../assets'
 
 const Client = () => {
@@ -32,10 +33,10 @@ const Client = () => {
        title={"Gym"}
        subTitle={"Get into your fitness world"}
        items={[
-         {id:1, title:"Shirts", src: hero3},
-         {id:2, title:"Pants", src: hero3},
-         {id:3, title:"T-shirt", src: hero3},
-         {id:4, title:"Formals", src: hero3},
+         {id:1, title:"Cheast", src: cheast},
+         {id:2, title:"Dumble", src: dumble},
+         {id:3, title:"Starx", src: starx},
+         {id:4, title:"Trademill", src: trademill},
        ]}
        />
         <ClientCard
