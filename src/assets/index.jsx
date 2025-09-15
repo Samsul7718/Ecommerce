@@ -19,6 +19,10 @@ import car from '../../src/assets/images/toy/car.webp'
 import bike from '../../src/assets/images/toy/bike.webp'
 import jcb from '../../src/assets/images/toy/jcb.webp'
 import train from '../../src/assets/images/toy/train.webp'
+import coffiee from '../../src/assets/images/kitchen/coffiee-maker.webp'
+import juicer from '../../src/assets/images/kitchen/juicer.webp'
+import coffiee from '../../src/assets/images/kitchen/coffiee-maker.webp'
+import coffiee from '../../src/assets/images/kitchen/coffiee-maker.webp'
 
 
 
