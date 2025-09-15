@@ -15,6 +15,10 @@ import cheast from "../../src/assets/images/gym/cheast.avif"
 import dumble from "../../src/assets/images/gym/dumble.jpg"
 import starx from "../../src/assets/images/gym/starx.webp"
 import trademill from "../../src/assets/images/gym/trademill.webp"
+import car from '../../src/assets/images/toy/car.webp'
+import bike from '../../src/assets/images/toy/bike.webp'
+import jcb from '../../src/assets/images/toy/jcb.webp'
+import train from '../../src/assets/images/toy/train.webp'
 
 
 
