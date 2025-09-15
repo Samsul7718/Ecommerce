@@ -3,6 +3,7 @@ import ClientCard from './ClientCard'
 import { hero3,burkha, long,kurti,saree} from '../../assets'
 import {cheast,dumble,starx,trademill } from '../../assets'
 import { shirt,pant,T_shirt,formal } from '../../assets'
+import { car,bike,jcb,train } from '../../assets'
 
 const Client = () => {
   return (
@@ -43,10 +44,10 @@ const Client = () => {
        title={"Toy's"}
        subTitle={"Get relaxed with toy's"}
        items={[
-         {id:1, title:"Shirts", src: hero3},
-         {id:2, title:"Pants", src: hero3},
-         {id:3, title:"T-shirt", src: hero3},
-         {id:4, title:"Formals", src: hero3},
+         {id:1, title:"Thar", src: car},
+         {id:2, title:"Bike", src: bike},
+         {id:3, title:"JCB", src: jcb},
+         {id:4, title:"Train", src: train},
        ]}
        />
         <ClientCard

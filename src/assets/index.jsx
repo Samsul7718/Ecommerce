@@ -42,5 +42,9 @@ export{
     dumble,
     starx,
     trademill,
+    car,
+    bike,
+    jcb,
+    train,   
 
 }
