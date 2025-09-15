@@ -4,6 +4,7 @@ import { hero3,burkha, long,kurti,saree} from '../../assets'
 import {cheast,dumble,starx,trademill } from '../../assets'
 import { shirt,pant,T_shirt,formal } from '../../assets'
 import { car,bike,jcb,train } from '../../assets'
+import { rice,juicer,toaster,coffiee } from '../../assets'
 
 const Client = () => {
   return (
@@ -54,10 +55,10 @@ const Client = () => {
        title={"Kitchen Appliances"}
        subTitle={"Introduce the best kitchen appliances"}
        items={[
-         {id:1, title:"Shirts", src: hero3},
-         {id:2, title:"Pants", src: hero3},
-         {id:3, title:"T-shirt", src: hero3},
-         {id:4, title:"Formals", src: hero3},
+         {id:1, title:"Coffiee Maker", src: coffiee},
+         {id:2, title:"Juicer Instant", src: juicer},
+         {id:3, title:"Toaster", src: toaster},
+         {id:4, title:"Rice Maker_45", src: rice},
        ]}
        />
         <ClientCard
