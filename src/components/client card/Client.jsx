@@ -5,10 +5,11 @@ import {cheast,dumble,starx,trademill } from '../../assets'
 import { shirt,pant,T_shirt,formal } from '../../assets'
 import { car,bike,jcb,train } from '../../assets'
 import { rice,juicer,toaster,coffiee } from '../../assets'
+import { nike,adidas,puma,reebok } from '../../assets'
 
 const Client = () => {
   return (
-    <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 pt-6 py-2
+    <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-6 py-4
       bg-sky-100'>
         
        <ClientCard
@@ -65,10 +66,10 @@ const Client = () => {
        title={"Shoes"}
        subTitle={"Step style with latest shoe collection"}
        items={[
-         {id:1, title:"Shirts", src: hero3},
-         {id:2, title:"Pants", src: hero3},
-         {id:3, title:"T-shirt", src: hero3},
-         {id:4, title:"Formals", src: hero3},
+         {id:1, title:"Nike shoes ", src: nike},
+         {id:2, title:"Adidas dream", src: adidas},
+         {id:3, title:"Reebok walk", src: reebok},
+         {id:4, title:"Puma hunter", src: puma},
        ]}
        />
         <ClientCard

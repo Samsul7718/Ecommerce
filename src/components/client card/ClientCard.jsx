@@ -8,7 +8,7 @@ const ClientCard = ({title,subTitle,items}) => {
             <h2 className="text-xl md:text-2xl font-semibold text-gray-800">{title}</h2>
             <p className="text-gray-600 mt-2 md:text-lg">{subTitle}</p>
         </div>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-3">
             {items.map((item)=>(
             <div key={item.id} className="p-2 rounded hover:shadow-md transition">
                 <img src={item.src} alt={item.title}  className="w-full h-24 object-cover rounded-md aspect-[4/3]" />

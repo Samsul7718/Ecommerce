@@ -23,6 +23,14 @@ import coffiee from '../../src/assets/images/kitchen/coffiee1.jpeg'
 import juicer from '../../src/assets/images/kitchen/juicer.webp'
 import toaster from '../../src/assets/images/kitchen/toaster.webp'
 import rice from '../../src/assets/images/kitchen/rice-maker.webp'
+import nike from '../../src/assets/images/shoe/n1.jpeg'
+import adidas from '../../src/assets/images/shoe/adi1.jpeg'
+import puma from '../../src/assets/images/shoe/pma1.jpeg'
+import reebok from '../../src/assets/images/shoe/reb1.jpeg'
+import lapi from '../../src/assets/images/electronics/lapi.jpg'
+import speaker from '../../src/assets/images/electronics/speaker.jpeg'
+import watch from '../../src/assets/images/electronics/watch1.jpg'
+import pend from '../../src/assets/images/electronics/pend.jpg'
 
 
 
@@ -54,5 +62,9 @@ export{
     juicer,
     toaster,
     rice,    
+    nike,
+    adidas,
+    puma,
+    reebok,lapi,speaker,watch,pend,
 
 }
