@@ -6,6 +6,7 @@ import { shirt,pant,T_shirt,formal } from '../../assets'
 import { car,bike,jcb,train } from '../../assets'
 import { rice,juicer,toaster,coffiee } from '../../assets'
 import { nike,adidas,puma,reebok } from '../../assets'
+import { lapi,speaker,watch,pend } from '../../assets'
 
 const Client = () => {
   return (
@@ -76,10 +77,10 @@ const Client = () => {
        title={"Best of Electronics"}
        subTitle={"Explore top-rated electronics"}
        items={[
-         {id:1, title:"Shirts", src: hero3},
-         {id:2, title:"Pants", src: hero3},
-         {id:3, title:"T-shirt", src: hero3},
-         {id:4, title:"Formals", src: hero3},
+         {id:1, title:"Laptop", src: lapi},
+         {id:2, title:"Speaker", src: speaker},
+         {id:3, title:"Watch", src: watch},
+         {id:4, title:"2.0 pendrive", src: pend},
        ]}
        />
         <ClientCard

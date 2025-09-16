@@ -31,6 +31,10 @@ import lapi from '../../src/assets/images/electronics/lapi.jpg'
 import speaker from '../../src/assets/images/electronics/speaker.jpeg'
 import watch from '../../src/assets/images/electronics/watch1.jpg'
 import pend from '../../src/assets/images/electronics/pend.jpg'
+import facepwd from '../../src/assets/images/beauty/facepwd.webp'
+import day_creme from '../../src/assets/images/beauty/day_creme.webp'
+import lipstick from '../../src/assets/images/beauty/lipstick.webp'
+import facewash from '../../src/assets/images/beauty/facewash.webp'
 
 
 
@@ -65,6 +69,6 @@ export{
     nike,
     adidas,
     puma,
-    reebok,
+    reebok,lapi,speaker,watch,pend,
 
 }
