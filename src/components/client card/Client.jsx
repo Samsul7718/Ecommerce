@@ -7,7 +7,7 @@ import { car,bike,jcb,train } from '../../assets'
 import { rice,juicer,toaster,coffiee } from '../../assets'
 import { nike,adidas,puma,reebok } from '../../assets'
 import { lapi,speaker,watch,pend } from '../../assets'
-
+import { facepwd,day_creme,lipstick,facewash } from '../../assets'
 const Client = () => {
   return (
     <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-6 py-4
@@ -87,10 +87,10 @@ const Client = () => {
        title={"Best seller in Beauty"}
        subTitle={"Discover the latest trends in"}
        items={[
-         {id:1, title:"Shirts", src: hero3},
-         {id:2, title:"Pants", src: hero3},
-         {id:3, title:"T-shirt", src: hero3},
-         {id:4, title:"Formals", src: hero3},
+         {id:1, title:"Face powder", src: facepwd},
+         {id:2, title:"Lakmi day creme", src: day_creme},
+         {id:3, title:"Lipstick", src: lipstick},
+         {id:4, title:"Face wash", src: facewash},
        ]}
        />
        {/* <ClientCard/>

@@ -69,6 +69,6 @@ export{
     nike,
     adidas,
     puma,
-    reebok,lapi,speaker,watch,pend,
+    reebok,lapi,speaker,watch,pend,facepwd,day_creme,lipstick,facewash,
 
 }
