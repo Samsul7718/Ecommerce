@@ -16,7 +16,7 @@ const Hero = () => {
     currentIndex===images.length-1? 0:prevIndex+1);
   }
   return (
-   <section className='relative w-full h-screen overflow-hidden'>
+   <section id='101' className='relative w-full h-screen overflow-hidden'>
        {/* background overlay */}
        <div className='absolute inset-0'>
         <div

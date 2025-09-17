@@ -1,3 +1,4 @@
+import Deals1 from "./components/best deals/Deals1"
 import Client from "./components/client card/Client"
 import Hero from "./components/home/Hero"
 import Navbar from "./components/navbar/Navbar"
@@ -29,6 +30,7 @@ function App() {
        </Routes>
        <Hero />
        <Client/>
+       <Deals1/>
       </Router>   
      
     </div>
