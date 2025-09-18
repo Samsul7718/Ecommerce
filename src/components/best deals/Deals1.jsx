@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 // import Deals_Card from './Deals_Card'
-import { shirt,pant,T_shirt,formal } from '../../assets'
+import { shirt,pant,T_shirt,formal} from '../../assets'
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const images=[shirt,pant,T_shirt,formal]
@@ -18,18 +18,19 @@ const Deals1 = () => {
       );
   }
   return (
-    <section id ='102' className='relative flex flex-col w-full my-16 px-4 bg-sky-100'>
-        <div className='absolute inset-0'>
-      <div className="p-4 text-center">
+    <section id ='102' className='relative w-full my-16 px-4 bg-sky-100'>
+       
+       <div className="p-4 text-center">
             <h2 className="text-xl md:text-2xl font-semibold text-gray-800">best deal for the week</h2>
             <p className="text-gray-600 mt-2 md:text-lg">choice is yours</p>
         </div>
+         {/* <div className='absolute inset-0'> */}
         <div
           className="absolute inset-0 bg-cover bg-center"
         >
             <img src={images[currentIndex]} alt=""  className="w-full h-full object-cover" />
         </div>
-       </div>
+       {/* </div> */}
 
           {/* Left Arrow */}
       <button 
