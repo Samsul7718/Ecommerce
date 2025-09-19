@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 // import Deals_Card from './Deals_Card'
 import { shirt,pant,T_shirt,formal} from '../../assets'
 import { burkha,saree,kurti,long,cheast} from '../../assets'
@@ -11,21 +11,14 @@ const Deals1 = () => {
 
   const scrollLeft=()=>{
     if(containerRef.current){
-      containerRef.current.scrollBy({
-        left:-200,
-        behavior:'smooth'
-      });
+      const imgWidth = containerRef.current.firstChild.offsetWidth + 16; // width + gap
+      containerRef.current.scrollBy({ left: -imgWidth, behavior: "smooth" });
     }
-      // setCurrentIndex((prevIndex)=>
-      //   prevIndex===0? images.length-1:prevIndex-1
-      // );
   }
    const scrollRight=()=>{
     if(containerRef.current){
-      containerRef.current.scrollBy({
-        left:200,
-        behavior:'smooth'
-      });
+     const imgWidth = containerRef.current.firstChild.offsetWidth + 16;
+      containerRef.current.scrollBy({ left: imgWidth, behavior: "smooth" });
     }
   }
   return (
@@ -36,7 +29,11 @@ const Deals1 = () => {
             <p className="text-gray-600 mt-2 md:text-lg">choice is yours</p>
         </div>
 
-         <div className="flex gap-4 overflow-x-auto scrollbar-hide p-4">
+         <div 
+          ref={containerRef}
+          className="flex gap-4 overflow-x-hidden scroll-smooth p-4"
+          style={{ scrollSnapType: "x mandatory" }}
+         >
     {images.map((img, index) => (
       <div
         key={index}
@@ -60,14 +57,14 @@ const Deals1 = () => {
 
           {/* Left Arrow */}
       <button 
-      onClick={prevSlide}
+      onClick={scrollLeft}
       className="absolute left-4 top-1/2 -translate-y-2 bg-white/60 hover:bg-white p-3 rounded-full shadow-md z-20">
         <ChevronLeft className="text-black" size={26} />
       </button>
 
       {/* Right Arrow */}
       <button
-      onClick={nextSlide}
+      onClick={scrollRight}
       className="absolute right-4 top-1/2 -translate-y-2 bg-white/60 hover:bg-white p-3 rounded-full shadow-md z-20">
         <ChevronRight className="text-black" size={26} />
       </button>
