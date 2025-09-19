@@ -6,17 +6,27 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const images=[shirt,pant,T_shirt,formal,burkha,saree,kurti,long,cheast]
 const Deals1 = () => {
+  const containerRef = useRef(null);
   const [currentIndex, setCurrentIndex] =useState(0);
 
-  const prevSlide=()=>{
-      setCurrentIndex((prevIndex)=>
-        prevIndex===0? images.length-1:prevIndex-1
-      );
+  const scrollLeft=()=>{
+    if(containerRef.current){
+      containerRef.current.scrollBy({
+        left:-200,
+        behavior:'smooth'
+      });
+    }
+      // setCurrentIndex((prevIndex)=>
+      //   prevIndex===0? images.length-1:prevIndex-1
+      // );
   }
-   const nextSlide=()=>{
-      setCurrentIndex((prevIndex)=>
-        currentIndex=== images.length-1? 0:prevIndex+1
-      );
+   const scrollRight=()=>{
+    if(containerRef.current){
+      containerRef.current.scrollBy({
+        left:200,
+        behavior:'smooth'
+      });
+    }
   }
   return (
     <section id ='102' className='relative w-full px-4 bg-sky-100'>
