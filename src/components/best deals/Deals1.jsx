@@ -27,7 +27,7 @@ const Deals1 = () => {
         </div>
 
          <div className="flex gap-4 overflow-x-auto scrollbar-hide p-4">
-    {images[currentIndex].map((img, index) => (
+    {images.map((img, index) => (
       <div
         key={index}
         className="min-w-[200px] flex-shrink-0 rounded-lg overflow-hidden shadow-md"
