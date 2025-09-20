@@ -58,14 +58,14 @@ const Deals1 = () => {
           {/* Left Arrow */}
       <button 
       onClick={scrollLeft}
-      className="absolute left-4 top-1/2 -translate-y-2 bg-white/60 hover:bg-white p-3 rounded-full shadow-md z-20">
+      className="absolute left-4 top-3/5 -translate-y-2 bg-white/60 hover:bg-white p-3 rounded-full shadow-md z-20">
         <ChevronLeft className="text-black" size={24} />
       </button>
 
       {/* Right Arrow */}
       <button
       onClick={scrollRight}
-      className="absolute right-4 top-1/2 -translate-y-2 bg-white/60 hover:bg-white p-3 rounded-full shadow-md z-20">
+      className="absolute right-4 top-3/5 -translate-y-2 bg-white/60 hover:bg-white p-3 rounded-full shadow-md z-20">
         <ChevronRight className="text-black" size={24} />
       </button>
 
