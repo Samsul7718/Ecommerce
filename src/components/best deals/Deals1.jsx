@@ -24,7 +24,7 @@ const Deals1 = () => {
   return (
     <section id ='102' className='relative w-full px-4 bg-sky-100'>
        
-       <div className=" relative p-4 text-center">
+       <div className=" relative p-4 text-start">
             <h2 className="text-xl md:text-2xl font-semibold text-gray-800">best deal for the week</h2>
             <p className="text-gray-600 mt-2 md:text-lg">choice is yours</p>
         </div>
