@@ -1,10 +1,10 @@
 import React, { useRef, useState } from 'react'
 // import Deals_Card from './Deals_Card'
-import { shirt,pant,T_shirt,formal} from '../../assets'
+import { shirt,pant,T_shirt,formal, dumble, starx} from '../../assets'
 import { burkha,saree,kurti,long,cheast} from '../../assets'
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-const images=[shirt,pant,T_shirt,formal,burkha,saree,kurti,long,cheast]
+const images=[shirt,pant,T_shirt,formal,burkha,saree,kurti,long,cheast,dumble,starx]
 const Deals1 = () => {
   const containerRef = useRef(null);
   const [currentIndex, setCurrentIndex] =useState(0);
