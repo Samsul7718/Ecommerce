@@ -26,7 +26,7 @@ const Deals1 = () => {
        
        <div className=" relative p-4 text-start">
             <h2 className="text-xl md:text-2xl font-semibold text-gray-800">best deal for the week</h2>
-            <p className="text-gray-600 mt-2 md:text-lg">choice is yours</p>
+            <p className="text-gray-600 mt-2 md:text-lg">choice is yours come fast</p>
         </div>
 
          <div 
