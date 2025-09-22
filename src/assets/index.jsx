@@ -35,7 +35,22 @@ import facepwd from '../../src/assets/images/beauty/facepwd.webp'
 import day_creme from '../../src/assets/images/beauty/day_creme.webp'
 import lipstick from '../../src/assets/images/beauty/lipstick.webp'
 import facewash from '../../src/assets/images/beauty/facewash.webp'
-
+import ac_container from '../../src/assets/images/ac_container.jpg'
+import bowl from '../../src/assets/images/bowl.jpg'
+import chaicup from '../../src/assets/images/chaicup.jpg'
+import chopping_knife from '../../src/assets/images/chopping_knife.jpg'
+import ciger from '../../src/assets/images/ciger.jpg'
+import coco_chopper from '../../src/assets/images/coco_chopper.jpg'
+import container from '../../src/assets/images/container.jpg'
+import dalpress from '../../src/assets/images/dalpress.jpg'
+import glass from '../../src/assets/images/glass.jpg'
+import ice_maker from '../../src/assets/images/ice_maker.jpg'
+import karai from '../../src/assets/images/karai.jpg'
+import kutni from '../../src/assets/images/kutni.jpg'
+import rotibelun from '../../src/assets/images/rotibelun.jpg'
+import spray from '../../src/assets/images/spray.jpg'
+import thali from '../../src/assets/images/thali.jpg'
+import toast_turn from '../../src/assets/images/toast_turn.jpg'
 
 
 
@@ -69,6 +84,7 @@ export{
     nike,
     adidas,
     puma,
-    reebok,lapi,speaker,watch,pend,facepwd,day_creme,lipstick,facewash,
+    reebok,lapi,speaker,watch,pend,facepwd,day_creme,lipstick,facewash,ac_container,bowl,chaicup,chopping_knife,ciger,coco_chopper,
+    container,dalpress,glass,ice_maker,karai,kutni,rotibelun,spray,thali,toast_turn
 
 }
