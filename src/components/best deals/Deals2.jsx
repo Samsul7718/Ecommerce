@@ -7,6 +7,9 @@ const Deals2 = () => {
             <h2 className="text-xl md:text-2xl font-semibold text-gray-800">Great Deal | Get upto 45% off on essential kitchen</h2>
             {/* <p className="text-gray-600 mt-2 md:text-lg">choice is yours come fast</p> */}
         </div>
+        <div>
+            
+        </div>
     </section>
   )
 }

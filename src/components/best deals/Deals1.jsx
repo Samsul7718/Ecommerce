@@ -7,7 +7,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 const images=[shirt,pant,T_shirt,formal,burkha,saree,kurti,long,cheast,dumble,starx]
 const Deals1 = () => {
   const containerRef = useRef(null);
-  const [currentIndex, setCurrentIndex] =useState(0);
+  // const [currentIndex, setCurrentIndex] =useState(0);
 
   const scrollLeft=()=>{
     if(containerRef.current){
@@ -25,8 +25,8 @@ const Deals1 = () => {
     <section id ='102' className='relative w-full px-4 bg-sky-100'>
        
        <div className=" relative p-4 text-start">
-            <h2 className="text-xl md:text-2xl font-semibold text-gray-800">best deal for the week</h2>
-            <p className="text-gray-600 mt-2 md:text-lg">choice is yours come fast</p>
+            <h2 className="text-xl md:text-2xl font-semibold text-gray-800">Best deal for this week | Up to 35% off on Women fashion</h2>
+            {/* <p className="text-gray-600 mt-2 md:text-lg">choice is yours come fast</p> */}
         </div>
 
          <div 
