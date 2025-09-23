@@ -1,13 +1,26 @@
 import React, {useRef } from 'react'
-// import Deals_Card from './Deals_Card'
-import { shirt,pant,T_shirt,formal, dumble, starx} from '../../assets'
-import { burkha,saree,kurti,long,cheast} from '../../assets'
+import { useNavigate } from 'react-router-dom';
+import {images}from '../best deals/Deals1_Img'
+// import { shirt,pant,T_shirt,formal, dumble, starx} from '../../assets'
+// import { burkha,saree,kurti,long,cheast} from '../../assets'
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-const images=[shirt,pant,T_shirt,formal,burkha,saree,kurti,long,cheast,dumble,starx]
+// const images=[
+//   {src:shirt,link:"/fashion"},
+//   {src:pant,link:"/fashion"},
+//   {src:T_shirt,link:"/fashion"},
+//   {src:formal,link:"/fashion"},
+//   {src:burkha,link:"/fashion"},
+//   {src:saree,link:"/fashion"},
+//   {src:kurti,link:"/fashion"},
+//   {src:long,link:"/fashion"},
+//   {src:cheast,link:"/fitness"},
+//   {src:dumble,link:"/fitness"},
+//   {src:starx,link:"/fitness"},
+// ]
 const Deals1 = () => {
   const containerRef = useRef(null);
-  
+  const navigate=useNavigate();
 
   const scrollLeft=()=>{
     if(containerRef.current){
@@ -37,11 +50,12 @@ const Deals1 = () => {
     {images.map((img, index) => (
       <div
         key={index}
+        onClick={()=>navigate(img.link)}
         className="min-w-[200px] flex-shrink-0 rounded-lg overflow-hidden shadow-md"
       >
         <img
-          src={img}
-          alt=""
+          src={img.src}
+          alt="fashionImg loading..."
           className="w-full h-40 object-cover"
         />
       </div>

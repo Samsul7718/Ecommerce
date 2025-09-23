@@ -1,13 +1,12 @@
 import React, { useRef } from 'react'
-import { ac_container,bowl,chaicup,ciger,coco_chopper,container,dalpress,glass,ice_maker,
-  karai,kutni,rotibelun,spray,thali,toast_turn
- } from '../../assets'
+import { useNavigate } from 'react-router-dom'
+import { images } from '../best deals/Deals2_Img'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
- const images=[ac_container,bowl,chaicup,ciger,coco_chopper,container,dalpress,glass,ice_maker,
-  karai,kutni,rotibelun,spray,thali,toast_turn]
+ 
 const Deals2 = () => {
   const containerRef = useRef(null);
+  const navigate=useNavigate();
 
   const scrollLeft=()=>{
     if(containerRef.current){
@@ -28,7 +27,7 @@ const Deals2 = () => {
         </div>
         <div 
         ref={containerRef}
-        className='flex gap-4 overflow-x-auto scroll-smooth p-4'
+        className='flex gap-4 overflow-x-hidden scroll-smooth p-4'
         style={{scrollSnapAlign:"start"}}
         >
           {images.map((img,index)=>(
@@ -36,8 +35,9 @@ const Deals2 = () => {
             className='min-w-[200px] shrink-0 rounded-lg overflow-hidden shadow-md'
             >
              <img
-             src={img}
-             alt="kitchenimg"
+             src={img.src}
+             onClick={()=>navigate(img.link)}
+             alt="kitchenImg loading..."
              className='w-full h-40 object-cover'
              />
             </div>
