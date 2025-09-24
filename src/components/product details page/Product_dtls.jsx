@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { formal,pant,shirt,T_shirt,long } from "../../assets";
+import { formal,pant,shirt,T_shirt} from "../../assets";
 
-const images = [formal,pant,shirt,T_shirt,long];
+const images = [formal,pant,shirt,T_shirt];
 
 const Product_dtls = () => {
   const [quantity, setQuantity] = useState(1);
@@ -21,17 +21,17 @@ const Product_dtls = () => {
           className="rounded-2xl shadow-lg object-cover w-full h-120 max-w-md"
         />
         </div>
-        <div className="flex gap-2 mt-2 overflow-x-hidden">
+        <div className="flex gap-1 m-3 overflow-x-hidden">
           {images.map((img,index)=>(
              <div key={index}
-            className={`min-w-[80px] shrink-0 p-2 overflow-hidden shadow-md 
+            className={`min-w-[70px] shrink-0 p-1 m-2 cursor-pointer rounded-md shadow-md 
               ${selectedImg===img ? 'ring-2 ring-sky-500':'border-transparent'}`}
             onClick={()=>setSelectedImg(img)}
             >
               <img 
               src={img} 
               alt="" 
-              className="w-full h-20 object-cover rounded-md"
+              className="w-full h-20 object-cover"
               />
             </div>
           ))}
