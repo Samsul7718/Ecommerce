@@ -21,17 +21,17 @@ const Product_dtls = () => {
           className="rounded-2xl shadow-lg object-cover w-full h-120 max-w-md"
         />
         </div>
-        <div className="flex gap-2 mt-4 overflow-x-hidden">
+        <div className="flex gap-2 mt-2 overflow-x-hidden">
           {images.map((img,index)=>(
              <div key={index}
-            className={`min-w-[80px] shrink-0 rounded-lg overflow-hidden shadow-md 
-              ${selectedImg===img ? 'border-sky-500':'border-tranparent'}`}
+            className={`min-w-[80px] shrink-0 p-2 overflow-hidden shadow-md 
+              ${selectedImg===img ? 'ring-2 ring-sky-500':'border-transparent'}`}
             onClick={()=>setSelectedImg(img)}
             >
               <img 
               src={img} 
               alt="" 
-              className="w-full h-20 object-cover"
+              className="w-full h-20 object-cover rounded-md"
               />
             </div>
           ))}
