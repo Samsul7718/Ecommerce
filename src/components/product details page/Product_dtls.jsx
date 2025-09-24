@@ -1,14 +1,22 @@
 import React, { useState } from "react";
 import { formal,pant,shirt,T_shirt} from "../../assets";
+import { Link } from "react-router-dom";
 
 const images = [formal,pant,shirt,T_shirt];
+
+
+const colors = ["red", "blue", "green", "yellow", "black"];
 
 const Product_dtls = () => {
   const [quantity, setQuantity] = useState(1);
   const [selectedImg, setSelectedImg] = useState(formal);
+  const [selectedColor, setSelectedColor] = useState("red"); 
+
+  const basePrice = 79.99;
 
   const handleIncrease = () => setQuantity(quantity + 1);
   const handleDecrease = () => setQuantity(quantity > 1 ? quantity - 1 : 1);
+  const totalPrice=(basePrice * quantity).toFixed(2)
 
   return (
     <section className="max-w-6xl mx-auto p-6 grid md:grid-cols-2 gap-8">
@@ -19,6 +27,7 @@ const Product_dtls = () => {
           src={selectedImg}
           alt="Product"
           className="rounded-2xl shadow-lg object-cover w-full h-120 max-w-md"
+          style={{ backgroundColor: selectedColor }}
         />
         </div>
         <div className="flex gap-1 m-3 overflow-x-hidden">
@@ -26,6 +35,7 @@ const Product_dtls = () => {
              <div key={index}
             className={`min-w-[70px] shrink-0 p-1 m-2 cursor-pointer rounded-md shadow-md 
               ${selectedImg===img ? 'ring-2 ring-sky-500':'border-transparent'}`}
+              // style={{ backgroundColor: color }}
             onClick={()=>setSelectedImg(img)}
             >
               <img 
@@ -42,13 +52,31 @@ const Product_dtls = () => {
 
       {/* Right: Product Info */}
       <div className="flex flex-col justify-center space-y-6">
-        <h1 className="text-3xl font-bold text-gray-800">Stylish Sneakers</h1>
+        <h1 className="text-3xl font-bold text-gray-800">Stylish Dress</h1>
         <p className="text-gray-600 leading-relaxed">
-          These sneakers are designed for comfort and style. Perfect for casual wear or sports activities. Made with breathable fabric and durable sole.
+          These formals are designed for comfort and style. Perfect for office wear or party activities. Made with pure cotton and soft light weight.
         </p>
+        {/* color */}
+         <div>
+        <h3 className="font-medium text-gray-700 mb-2">Color:</h3>
+        <div className="flex gap-3">
+          {colors.map((color) => (
+            <button
+              key={color}
+              onClick={() => setSelectedColor(color)}
+              className={`w-6 h-6 rounded-full border-2 ${
+                selectedColor === color
+                  ? "border-sky-500 scale-110"
+                  : "border-gray-300"
+              }`}
+              style={{ backgroundColor: color }}
+            />
+          ))}
+        </div>
+      </div>
 
         {/* Price */}
-        <div className="text-2xl font-semibold text-sky-600">$79.99</div>
+        <div className="text-2xl font-semibold text-sky-600">${totalPrice}</div>
 
         {/* Quantity selector */}
         <div className="flex items-center space-x-4">
@@ -69,9 +97,11 @@ const Product_dtls = () => {
 
         {/* Buttons */}
         <div className="flex space-x-4">
+          <Link to="/cart">
           <button className="px-6 py-3 bg-sky-600 text-white rounded-xl shadow hover:bg-sky-700">
             Add to Cart
           </button>
+          </Link>
           <button className="px-6 py-3 border border-sky-600 text-sky-600 rounded-xl hover:bg-sky-50">
             Buy Now
           </button>
