@@ -1,16 +1,20 @@
 import React, { useState } from "react";
-import { formal,pant,shirt,T_shirt} from "../../assets";
+// import { formal,pant,shirt,T_shirt} from "../../assets";
 import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { products } from "../../products/fashion/Product";
 
-const images = [formal,pant,shirt,T_shirt];
 
+// const images = [formal,pant,shirt,T_shirt];
+// const colors = ["red", "blue", "green", "yellow", "black"];
 
-const colors = ["red", "blue", "green", "yellow", "black"];
-
-const Product_dtls = () => {
+const Product_dtls = ({items}) => {
+  const { id } = useParams();
+   const product = products.find((item) => item.id === id);
   const [quantity, setQuantity] = useState(1);
-  const [selectedImg, setSelectedImg] = useState(formal);
+  const [selectedImg, setSelectedImg] = useState(product.images[0]);
   const [selectedColor, setSelectedColor] = useState("red"); 
+  
 
   const basePrice = 79.99;
 
@@ -31,7 +35,7 @@ const Product_dtls = () => {
         />
         </div>
         <div className="flex gap-1 m-3 overflow-x-hidden">
-          {images.map((img,index)=>(
+          {product.images.map((img,index)=>(
              <div key={index}
             className={`min-w-[70px] shrink-0 p-1 m-2 cursor-pointer rounded-md shadow-md 
               ${selectedImg===img ? 'ring-2 ring-sky-500':'border-transparent'}`}
@@ -60,7 +64,7 @@ const Product_dtls = () => {
          <div>
         <h3 className="font-medium text-gray-700 mb-2">Color:</h3>
         <div className="flex gap-3">
-          {colors.map((color) => (
+          {product.colors.map((color) => (
             <button
               key={color}
               onClick={() => setSelectedColor(color)}

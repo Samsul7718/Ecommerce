@@ -17,80 +17,80 @@ const Client = () => {
        title={"Mens Fashion"}
        subTitle={"Discover the latest trends in"}
        items={[
-         {id:1, title:"Shirts", src: shirt},
-         {id:2, title:"Pants", src: pant},
-         {id:3, title:"T-shirt", src: T_shirt},
-         {id:4, title:"Formals", src: formal},
+         {id:1, title:"Shirts", src: shirt, price:39.99},
+         {id:2, title:"Pants", src: pant, price:49.99},
+         {id:3, title:"T-shirt", src: T_shirt, price:19.99},
+         {id:4, title:"Formals", src: formal, price:89.99},
        ]}
        />
         <ClientCard
        title={"Womens Fashion"}
        subTitle={"Discover the latest trends in"}
        items={[
-         {id:1, title:"Long", src: long},
-         {id:2, title:"Kurti", src: kurti},
-         {id:3, title:"Saree", src: saree},
-         {id:4, title:"Burkha", src: burkha},
+         {id:5, title:"Long", src: long},
+         {id:6, title:"Kurti", src: kurti},
+         {id:7, title:"Saree", src: saree},
+         {id:8, title:"Burkha", src: burkha},
        ]}
        />
         <ClientCard
        title={"Gym"}
        subTitle={"Get into your fitness world"}
        items={[
-         {id:1, title:"Cheast", src: cheast},
-         {id:2, title:"Dumble", src: dumble},
-         {id:3, title:"Starx", src: starx},
-         {id:4, title:"Trademill", src: trademill},
+         {id:9, title:"Cheast", src: cheast},
+         {id:10, title:"Dumble", src: dumble},
+         {id:11, title:"Starx", src: starx},
+         {id:12, title:"Trademill", src: trademill},
        ]}
        />
         <ClientCard
        title={"Toy's"}
        subTitle={"Get relaxed with toy's"}
        items={[
-         {id:1, title:"Thar", src: car},
-         {id:2, title:"Bike", src: bike},
-         {id:3, title:"JCB", src: jcb},
-         {id:4, title:"Train", src: train},
+         {id:13, title:"Thar", src: car},
+         {id:14, title:"Bike", src: bike},
+         {id:15, title:"JCB", src: jcb},
+         {id:16, title:"Train", src: train},
        ]}
        />
         <ClientCard
        title={"Kitchen Appliances"}
        subTitle={"Introduce the best kitchen appliances"}
        items={[
-         {id:1, title:"Coffiee Maker", src: coffiee},
-         {id:2, title:"Juicer Instant", src: juicer},
-         {id:3, title:"Toaster", src: toaster},
-         {id:4, title:"Rice Maker_45", src: rice},
+         {id:17, title:"Coffiee Maker", src: coffiee},
+         {id:18, title:"Juicer Instant", src: juicer},
+         {id:19, title:"Toaster", src: toaster},
+         {id:20, title:"Rice Maker_45", src: rice},
        ]}
        />
         <ClientCard
        title={"Shoes"}
        subTitle={"Step style with latest shoe collection"}
        items={[
-         {id:1, title:"Nike shoes ", src: nike},
-         {id:2, title:"Adidas dream", src: adidas},
-         {id:3, title:"Reebok walk", src: reebok},
-         {id:4, title:"Puma hunter", src: puma},
+         {id:21, title:"Nike shoes ", src: nike},
+         {id:22, title:"Adidas dream", src: adidas},
+         {id:23, title:"Reebok walk", src: reebok},
+         {id:24, title:"Puma hunter", src: puma},
        ]}
        />
         <ClientCard
        title={"Best of Electronics"}
        subTitle={"Explore top-rated electronics"}
        items={[
-         {id:1, title:"Laptop", src: lapi},
-         {id:2, title:"Speaker", src: speaker},
-         {id:3, title:"Watch", src: watch},
-         {id:4, title:"2.0 pendrive", src: pend},
+         {id:25, title:"Laptop", src: lapi},
+         {id:26, title:"Speaker", src: speaker},
+         {id:27, title:"Watch", src: watch},
+         {id:28, title:"2.0 pendrive", src: pend},
        ]}
        />
         <ClientCard
        title={"Best seller in Beauty"}
        subTitle={"Discover the latest trends in"}
        items={[
-         {id:1, title:"Face powder", src: facepwd},
-         {id:2, title:"Lakmi day creme", src: day_creme},
-         {id:3, title:"Lipstick", src: lipstick},
-         {id:4, title:"Face wash", src: facewash},
+         {id:29, title:"Face powder", src: facepwd},
+         {id:30, title:"Lakmi day creme", src: day_creme},
+         {id:31, title:"Lipstick", src: lipstick},
+         {id:32, title:"Face wash", src: facewash},
        ]}
        />
        {/* <ClientCard/>

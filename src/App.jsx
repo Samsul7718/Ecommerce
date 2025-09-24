@@ -30,12 +30,12 @@ function App() {
         <Route  path="/login" element="" />
         <Route  path="/returnorder" element="" />
         <Route  path="/cart" element="" />
+        <Route  path="/item/:id" element={<Product_dtls/>} />
        </Routes>
        <Hero />
        <Client/>
        <Deals1/>
        <Deals2/>
-       <Product_dtls/>
       </Router>   
      
     </div>

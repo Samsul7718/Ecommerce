@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 // import { hero3 } from '../../assets'
 
 const ClientCard = ({title,subTitle,items}) => {
@@ -10,11 +11,16 @@ const ClientCard = ({title,subTitle,items}) => {
         </div>
         <div className="grid grid-cols-2 gap-3 p-4">
             {items.map((item)=>(
-            <div key={item.id} className="p-2 rounded hover:shadow-md transition">
+                <Link
+                key={item.id}
+                to={`/item/${item.id}`}
+                className="text-decoration-none"
+                >
+            <div className="p-2 rounded hover:shadow-md transition">
                 <img src={item.src} alt={item.title}  className="w-full h-24 object-cover rounded-md aspect-[4/3]" />
                   <p className="text-gray-600 mt-2 md:text-xs mx-8">{item.title}</p>
             </div>
-        
+             </Link>
             ))}
         </div>
         <div className='p-4 text-center space-between flex gap-20 justify-center'>
