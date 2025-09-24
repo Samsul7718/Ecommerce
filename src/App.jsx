@@ -4,6 +4,8 @@ import Client from "./components/client card/Client"
 import Hero from "./components/home/Hero"
 import Navbar from "./components/navbar/Navbar"
 import { BrowserRouter as Router,Routes,Route } from "react-router-dom"
+// import ProductDetails from "./components/product details page/Product_dtls"
+import Product_dtls from "./components/product details page/Product_dtls"
 
 
 function App() {
@@ -33,6 +35,7 @@ function App() {
        <Client/>
        <Deals1/>
        <Deals2/>
+       <Product_dtls/>
       </Router>   
      
     </div>
