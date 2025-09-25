@@ -1,7 +1,7 @@
 import React from 'react'
 import ClientCard from './ClientCard'
 import { products } from '../../products/fashion/Product'
-import { hero3,burkha, long,kurti,saree} from '../../assets'
+import { burkha,long,kurti,saree} from '../../assets'
 import {cheast,dumble,starx,trademill } from '../../assets'
 // import { shirt,pant,T_shirt,formal } from '../../assets'
 import { car,bike,jcb,train } from '../../assets'
@@ -17,9 +17,8 @@ const Client = () => {
        <ClientCard
        title={"Mens Fashion"}
        subTitle={"Discover the latest trends in"}
-       items=
-     {products}
-       
+       items={products}
+      
        />
         <ClientCard
        title={"Womens Fashion"}

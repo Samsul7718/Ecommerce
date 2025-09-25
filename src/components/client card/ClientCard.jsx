@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+// import { products } from '../../products/fashion/Product'
 // import { hero3 } from '../../assets'
 
 const ClientCard = ({title,subTitle,items}) => {
@@ -13,11 +14,16 @@ const ClientCard = ({title,subTitle,items}) => {
             {items.map((product)=>(
                 <Link
                 key={product.id}
-                to={`/product/${product.id}`}
+                to={`/item/${product.id}`}
                 className="text-decoration-none"
                 >
+                   {/* {console.log(product.images[1])} */}
+                    
             <div className="p-2 rounded hover:shadow-md transition">
-                <img src={product.images[0]} alt={product.title}  className="w-full h-24 object-cover rounded-md aspect-[4/3]" />
+                
+                <img 
+                src={product.images?.[0] || "loading..."} 
+                alt={product.name}  className="w-full h-24 object-cover rounded-md aspect-[4/3]" />
                   <p className="text-gray-600 mt-2 md:text-xs mx-8">{product.name}</p>
             </div>
              </Link>
