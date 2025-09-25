@@ -2,14 +2,12 @@ import React from 'react'
 import ClientCard from './ClientCard'
 import { MenProducts } from '../../products/men fashion/MenFashion'
 import { GirlProducts } from '../../products/women fashion/WomenFashion'
-// import { burkha,long,kurti,saree} from '../../assets'
-import {cheast,dumble,starx,trademill } from '../../assets'
-// import { shirt,pant,T_shirt,formal } from '../../assets'
 import { car,bike,jcb,train } from '../../assets'
 import { rice,juicer,toaster,coffiee } from '../../assets'
 import { nike,adidas,puma,reebok } from '../../assets'
 import { lapi,speaker,watch,pend } from '../../assets'
 import { facepwd,day_creme,lipstick,facewash } from '../../assets'
+import { GymProducts } from '../../products/gym/Gym'
 const Client = () => {
   return (
     <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-6 p-4
@@ -29,12 +27,7 @@ const Client = () => {
         <ClientCard
        title={"Gym"}
        subTitle={"Get into your fitness world"}
-       items={[
-         {id:9, title:"Cheast", src: cheast},
-         {id:10, title:"Dumble", src: dumble},
-         {id:11, title:"Starx", src: starx},
-         {id:12, title:"Trademill", src: trademill},
-       ]}
+       items={GymProducts}
        />
         <ClientCard
        title={"Toy's"}

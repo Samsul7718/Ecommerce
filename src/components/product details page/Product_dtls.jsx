@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { MenProducts } from "../../products/men fashion/MenFashion";
 import { GirlProducts } from "../../products/women fashion/WomenFashion";
+import { GymProducts } from "../../products/gym/Gym";
 
-const products = [...MenProducts, ...GirlProducts];
+const products = [...MenProducts, ...GirlProducts, ...GymProducts];
 
 const Product_dtls = () => {
   const { id } = useParams();
@@ -14,7 +15,7 @@ const Product_dtls = () => {
   const [selectedColor, setSelectedColor] = useState("red"); 
   
 
-  const basePrice = {...product}.price;
+  const basePrice = product.price;
 
   const handleIncrease = () => setQuantity(quantity + 1);
   const handleDecrease = () => setQuantity(quantity > 1 ? quantity - 1 : 1);
