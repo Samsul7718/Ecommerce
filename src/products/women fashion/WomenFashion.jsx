@@ -10,6 +10,7 @@ const GirlProducts = [
     description: "These long dress specially designed for function and style...",
     images: [long,kurti,saree,burkha],
     colors: ["black","red", "blue"],
+    size: ["S", "M", "L", "XL"],
   },
   {
     id: "102",
@@ -18,6 +19,7 @@ const GirlProducts = [
     description: "Soft cotton kurti for daily wear...",
     images: [kurti,saree,burkha,long],
     colors: ["red", "green"],
+    size: ["S", "M", "L", "XL"],
   },
    {
     id: "103",
@@ -26,6 +28,7 @@ const GirlProducts = [
     description: "Long traditional saree for daily wear...",
     images: [saree,burkha,long,kurti],
     colors: ["black", "green"],
+    size: ["S", "M", "L", "XL"],
   },
    {
     id: "104",
@@ -34,6 +37,7 @@ const GirlProducts = [
     description: "Elegant burkha for special occasions...",
     images: [burkha,long,kurti,saree],
     colors: ["black","blue", "green"],
+    size: ["S", "M", "L", "XL"],
   },
 ];
 export {GirlProducts};

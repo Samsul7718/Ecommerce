@@ -13,6 +13,7 @@ const Product_dtls = () => {
   const [quantity, setQuantity] = useState(1);
   const [selectedImg, setSelectedImg] = useState(product.images[0]);
   const [selectedColor, setSelectedColor] = useState("red"); 
+  const [selectedSize, setSelectedSize] = useState("s");
   
 
   const basePrice = product.price;
@@ -59,7 +60,28 @@ const Product_dtls = () => {
         <p className="text-gray-600 leading-relaxed">
         {product.description}
         </p>
-        {/* color */}
+          {/* size */}
+          <div>
+        <h3 className="font-medium text-gray-700 mb-2">Size:</h3>
+        <div className="flex gap-3">
+          {product.size.map((s) => (
+            <button
+              key={s}
+              onClick={() => setSelectedSize(s)}
+              className={`px-3 py-1 border rounded-lg ${
+                selectedSize === s
+                  ? "border-sky-500 scale-110"
+                  : "border-gray-300"
+              }`}
+            >
+              {s}
+            </button>
+          ))}
+        </div>
+       
+          </div>
+         
+      {/*  color */}
          <div>
         <h3 className="font-medium text-gray-700 mb-2">Color:</h3>
         <div className="flex gap-3">
