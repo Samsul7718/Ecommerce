@@ -10,15 +10,15 @@ const ClientCard = ({title,subTitle,items}) => {
             <p className="text-gray-600 mt-2 md:text-lg">{subTitle}</p>
         </div>
         <div className="grid grid-cols-2 gap-3 p-4">
-            {items.map((item)=>(
+            {items.map((product)=>(
                 <Link
-                key={item.id}
-                to={`/item/${item.id}`}
+                key={product.id}
+                to={`/product/${product.id}`}
                 className="text-decoration-none"
                 >
             <div className="p-2 rounded hover:shadow-md transition">
-                <img src={item.src} alt={item.title}  className="w-full h-24 object-cover rounded-md aspect-[4/3]" />
-                  <p className="text-gray-600 mt-2 md:text-xs mx-8">{item.title}</p>
+                <img src={product.images[0]} alt={product.title}  className="w-full h-24 object-cover rounded-md aspect-[4/3]" />
+                  <p className="text-gray-600 mt-2 md:text-xs mx-8">{product.name}</p>
             </div>
              </Link>
             ))}

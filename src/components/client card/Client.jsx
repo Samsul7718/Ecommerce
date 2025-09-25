@@ -1,8 +1,9 @@
 import React from 'react'
 import ClientCard from './ClientCard'
+import { products } from '../../products/fashion/Product'
 import { hero3,burkha, long,kurti,saree} from '../../assets'
 import {cheast,dumble,starx,trademill } from '../../assets'
-import { shirt,pant,T_shirt,formal } from '../../assets'
+// import { shirt,pant,T_shirt,formal } from '../../assets'
 import { car,bike,jcb,train } from '../../assets'
 import { rice,juicer,toaster,coffiee } from '../../assets'
 import { nike,adidas,puma,reebok } from '../../assets'
@@ -16,12 +17,9 @@ const Client = () => {
        <ClientCard
        title={"Mens Fashion"}
        subTitle={"Discover the latest trends in"}
-       items={[
-         {id:1, title:"Shirts", src: shirt, price:39.99},
-         {id:2, title:"Pants", src: pant, price:49.99},
-         {id:3, title:"T-shirt", src: T_shirt, price:19.99},
-         {id:4, title:"Formals", src: formal, price:89.99},
-       ]}
+       items=
+     {products}
+       
        />
         <ClientCard
        title={"Womens Fashion"}

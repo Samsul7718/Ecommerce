@@ -16,7 +16,16 @@ function App() {
     <Router>
        <Navbar />
        <Routes>
-        <Route  path="/" element="" />
+        <Route  
+        path="/" 
+        element={
+          <>
+        <Hero />
+       <Client/>
+       <Deals1/>
+       <Deals2/>
+       </>
+        } />
         <Route  path="/sell" element="" />
         <Route  path="/fresh" element="" />
         <Route  path="/bestsellers" element="" />
@@ -32,10 +41,8 @@ function App() {
         <Route  path="/cart" element="" />
         <Route  path="/item/:id" element={<Product_dtls/>} />
        </Routes>
-       <Hero />
-       <Client/>
-       <Deals1/>
-       <Deals2/>
+      
+       {/* <Product_dtls/> */}
       </Router>   
      
     </div>

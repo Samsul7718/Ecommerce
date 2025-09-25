@@ -8,7 +8,7 @@ import { products } from "../../products/fashion/Product";
 // const images = [formal,pant,shirt,T_shirt];
 // const colors = ["red", "blue", "green", "yellow", "black"];
 
-const Product_dtls = ({items}) => {
+const Product_dtls = () => {
   const { id } = useParams();
    const product = products.find((item) => item.id === id);
   const [quantity, setQuantity] = useState(1);
@@ -16,7 +16,7 @@ const Product_dtls = ({items}) => {
   const [selectedColor, setSelectedColor] = useState("red"); 
   
 
-  const basePrice = 79.99;
+  const basePrice = {...product}.price;
 
   const handleIncrease = () => setQuantity(quantity + 1);
   const handleDecrease = () => setQuantity(quantity > 1 ? quantity - 1 : 1);
@@ -56,9 +56,9 @@ const Product_dtls = ({items}) => {
 
       {/* Right: Product Info */}
       <div className="flex flex-col justify-center space-y-6">
-        <h1 className="text-3xl font-bold text-gray-800">Stylish Dress</h1>
+        <h1 className="text-3xl font-bold text-gray-800">{product.name}</h1>
         <p className="text-gray-600 leading-relaxed">
-          These formals are designed for comfort and style. Perfect for office wear or party activities. Made with pure cotton and soft light weight.
+        {product.description}
         </p>
         {/* color */}
          <div>
