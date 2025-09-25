@@ -1,7 +1,8 @@
 import React from 'react'
 import ClientCard from './ClientCard'
-import { products } from '../../products/fashion/Product'
-import { burkha,long,kurti,saree} from '../../assets'
+import { MenProducts } from '../../products/men fashion/MenFashion'
+import { GirlProducts } from '../../products/women fashion/WomenFashion'
+// import { burkha,long,kurti,saree} from '../../assets'
 import {cheast,dumble,starx,trademill } from '../../assets'
 // import { shirt,pant,T_shirt,formal } from '../../assets'
 import { car,bike,jcb,train } from '../../assets'
@@ -17,18 +18,13 @@ const Client = () => {
        <ClientCard
        title={"Mens Fashion"}
        subTitle={"Discover the latest trends in"}
-       items={products}
+       items={MenProducts}
       
        />
         <ClientCard
        title={"Womens Fashion"}
        subTitle={"Discover the latest trends in"}
-       items={[
-         {id:5, title:"Long", src: long},
-         {id:6, title:"Kurti", src: kurti},
-         {id:7, title:"Saree", src: saree},
-         {id:8, title:"Burkha", src: burkha},
-       ]}
+       items={GirlProducts}
        />
         <ClientCard
        title={"Gym"}

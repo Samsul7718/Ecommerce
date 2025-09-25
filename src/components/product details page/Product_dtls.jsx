@@ -1,12 +1,10 @@
 import React, { useState } from "react";
-// import { formal,pant,shirt,T_shirt} from "../../assets";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import { products } from "../../products/fashion/Product";
+import { MenProducts } from "../../products/men fashion/MenFashion";
+import { GirlProducts } from "../../products/women fashion/WomenFashion";
 
-
-// const images = [formal,pant,shirt,T_shirt];
-// const colors = ["red", "blue", "green", "yellow", "black"];
+const products = [...MenProducts, ...GirlProducts];
 
 const Product_dtls = () => {
   const { id } = useParams();

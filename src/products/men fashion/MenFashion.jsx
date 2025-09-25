@@ -1,5 +1,5 @@
 import { shirt, pant,T_shirt,formal} from "../../assets";
-const products = [
+const MenProducts = [
   // console.log(shirt, pant,T_shirt,formal,long,kurti ,saree,burkha),
   
   {
@@ -7,7 +7,7 @@ const products = [
     name: "Formal Dress",
     price: 79.99,
     description: "These formals are designed for comfort and style...",
-    images: [formal,shirt,pant,T_shirt], // multiple images per product
+    images: [formal,shirt,pant,T_shirt], 
     colors: ["black", "blue"],
   },
   {
@@ -35,4 +35,4 @@ const products = [
     colors: ["blue", "green"],
   },
 ];
-export {products};
+export {MenProducts};
