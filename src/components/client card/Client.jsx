@@ -3,11 +3,11 @@ import ClientCard from './ClientCard'
 import { MenProducts } from '../../products/men fashion/MenFashion'
 import { GirlProducts } from '../../products/women fashion/WomenFashion'
 import { KitchProducts } from '../../products/kitchen/Kitchen'
-import { car,bike,jcb,train } from '../../assets'
 import { nike,adidas,puma,reebok } from '../../assets'
 import { lapi,speaker,watch,pend } from '../../assets'
 import { facepwd,day_creme,lipstick,facewash } from '../../assets'
 import { GymProducts } from '../../products/gym/Gym'
+import { Toys } from '../../products/toy/Toy'
 const Client = () => {
   return (
     <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-6 p-4
@@ -35,12 +35,8 @@ const Client = () => {
         <ClientCard
        title={"Toy's"}
        subTitle={"Get relaxed with toy's"}
-       items={[
-         {id:13, title:"Thar", src: car},
-         {id:14, title:"Bike", src: bike},
-         {id:15, title:"JCB", src: jcb},
-         {id:16, title:"Train", src: train},
-       ]}
+       items={Toys}
+       seeMorePage={"/womenfashion"}
        />
         <ClientCard
        title={"Kitchen Appliances"}
