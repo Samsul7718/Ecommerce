@@ -17,17 +17,20 @@ const Client = () => {
        title={"Mens Fashion"}
        subTitle={"Discover the latest trends in"}
        items={MenProducts}
+       seeMorePage={"/menfashion"}
       
        />
         <ClientCard
        title={"Womens Fashion"}
        subTitle={"Discover the latest trends in"}
        items={GirlProducts}
+        seeMorePage={"/womenfashion"}
        />
         <ClientCard
        title={"Gym"}
        subTitle={"Get into your fitness world"}
        items={GymProducts}
+        seeMorePage={"/gymfashion"}
        />
         <ClientCard
        title={"Toy's"}
@@ -79,13 +82,6 @@ const Client = () => {
          {id:32, title:"Face wash", src: facewash},
        ]}
        />
-       {/* <ClientCard/>
-       <ClientCard/>
-       <ClientCard/>
-       <ClientCard/>
-       <ClientCard/>
-       <ClientCard/>
-       <ClientCard/> */}
 
     </section>
   )

@@ -7,6 +7,9 @@ import { BrowserRouter as Router,Routes,Route } from "react-router-dom"
 // import ProductDetails from "./components/product details page/Product_dtls"
 import Product_dtls from "./components/product details page/Product_dtls"
 import MenFashion from "./components/page/MenFashion"
+import WomenFashion from "./components/page/WomenFashion"
+import GymFashion from "./components/page/GymFashion"
+
 
 
 function App() {
@@ -42,6 +45,8 @@ function App() {
         <Route  path="/cart" element="" />
         <Route  path="/item/:id" element={<Product_dtls/>} />
         <Route  path="/menfashion" element={<MenFashion/>} />
+        <Route  path="/Womenfashion" element={<WomenFashion/>} />
+        <Route  path="/gymfashion" element={<GymFashion/>} />
        </Routes>
       
        {/* <Product_dtls/> */}

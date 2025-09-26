@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 // import { products } from '../../products/fashion/Product'
 // import { hero3 } from '../../assets'
 
-const ClientCard = ({title,subTitle,items}) => {
+const ClientCard = ({title,subTitle,items,seeMorePage}) => {
   return (
     <section className="max-w-sm mx-auto bg-white rounded-lg shadow-md overflow-hidden">
         <div className="p-4 text-center">
@@ -31,8 +31,7 @@ const ClientCard = ({title,subTitle,items}) => {
         </div>
         <div className='p-4 text-center space-between flex gap-20 justify-center'>
             <Link
-            key={product.id}
-            to={"/menfashion"}
+            to={seeMorePage}
             >
              <button className="bg-gray-200 text-black px-2 py-2 rounded hover:bg-gray-700 hover:text-white
              px-1 py-1">
