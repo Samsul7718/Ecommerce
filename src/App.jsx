@@ -6,6 +6,7 @@ import Navbar from "./components/navbar/Navbar"
 import { BrowserRouter as Router,Routes,Route } from "react-router-dom"
 // import ProductDetails from "./components/product details page/Product_dtls"
 import Product_dtls from "./components/product details page/Product_dtls"
+import MenFashion from "./components/page/MenFashion"
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
         <Route  path="/returnorder" element="" />
         <Route  path="/cart" element="" />
         <Route  path="/item/:id" element={<Product_dtls/>} />
+        <Route  path="/menfashion" element={<MenFashion/>} />
        </Routes>
       
        {/* <Product_dtls/> */}

@@ -30,10 +30,16 @@ const ClientCard = ({title,subTitle,items}) => {
             ))}
         </div>
         <div className='p-4 text-center space-between flex gap-20 justify-center'>
-            <button className="bg-gray-200 text-black px-2 py-2 rounded hover:bg-gray-700 hover:text-white
+            <Link
+            key={product.id}
+            to={"/menfashion"}
+            >
+             <button className="bg-gray-200 text-black px-2 py-2 rounded hover:bg-gray-700 hover:text-white
              px-1 py-1">
                 See More...
             </button>
+            </Link>
+           
             {/* <button className="bg-green-500 text-black px-2 py-2 rounded hover:bg-green-700 hover:text-white
              px-1 py-1">
                 Add to Cart
