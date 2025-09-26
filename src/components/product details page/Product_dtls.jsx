@@ -4,8 +4,9 @@ import { useParams } from "react-router-dom";
 import { MenProducts } from "../../products/men fashion/MenFashion";
 import { GirlProducts } from "../../products/women fashion/WomenFashion";
 import { GymProducts } from "../../products/gym/Gym";
+import { KitchProducts } from "../../products/kitchen/Kitchen";
 
-const products = [...MenProducts, ...GirlProducts, ...GymProducts];
+const products = [...MenProducts, ...GirlProducts, ...GymProducts, ...KitchProducts];
 
 const Product_dtls = () => {
   const { id } = useParams();
@@ -60,7 +61,9 @@ const Product_dtls = () => {
         <p className="text-gray-600 leading-relaxed">
         {product.description}
         </p>
+        
           {/* size */}
+          {product.size && product.size.length>0 && (
           <div>
         <h3 className="font-medium text-gray-700 mb-2">Size:</h3>
         <div className="flex gap-3">
@@ -80,8 +83,10 @@ const Product_dtls = () => {
         </div>
        
           </div>
+          )}
          
-      {/*  color */}
+         {/* Colors */}
+      {product.colors && product.colors.length>0 &&(
          <div>
         <h3 className="font-medium text-gray-700 mb-2">Color:</h3>
         <div className="flex gap-3">
@@ -99,6 +104,7 @@ const Product_dtls = () => {
           ))}
         </div>
       </div>
+      )}
 
         {/* Price */}
         <div className="text-2xl font-semibold text-sky-600">${totalPrice}</div>

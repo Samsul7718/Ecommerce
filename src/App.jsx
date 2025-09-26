@@ -9,6 +9,7 @@ import Product_dtls from "./components/product details page/Product_dtls"
 import MenFashion from "./components/page/MenFashion"
 import WomenFashion from "./components/page/WomenFashion"
 import GymFashion from "./components/page/GymFashion"
+import KitchenTool from "./components/page/KitchenTool"
 
 
 
@@ -47,6 +48,7 @@ function App() {
         <Route  path="/menfashion" element={<MenFashion/>} />
         <Route  path="/Womenfashion" element={<WomenFashion/>} />
         <Route  path="/gymfashion" element={<GymFashion/>} />
+        <Route  path="/kittools" element={<KitchenTool/>} />
        </Routes>
       
        {/* <Product_dtls/> */}

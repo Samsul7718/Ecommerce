@@ -2,8 +2,8 @@ import React from 'react'
 import ClientCard from './ClientCard'
 import { MenProducts } from '../../products/men fashion/MenFashion'
 import { GirlProducts } from '../../products/women fashion/WomenFashion'
+import { KitchProducts } from '../../products/kitchen/Kitchen'
 import { car,bike,jcb,train } from '../../assets'
-import { rice,juicer,toaster,coffiee } from '../../assets'
 import { nike,adidas,puma,reebok } from '../../assets'
 import { lapi,speaker,watch,pend } from '../../assets'
 import { facepwd,day_creme,lipstick,facewash } from '../../assets'
@@ -45,12 +45,8 @@ const Client = () => {
         <ClientCard
        title={"Kitchen Appliances"}
        subTitle={"Introduce the best kitchen appliances"}
-       items={[
-         {id:17, title:"Coffiee Maker", src: coffiee},
-         {id:18, title:"Juicer Instant", src: juicer},
-         {id:19, title:"Toaster", src: toaster},
-         {id:20, title:"Rice Maker_45", src: rice},
-       ]}
+       items={KitchProducts}
+       seeMorePage={"/kittools"}
        />
         <ClientCard
        title={"Shoes"}

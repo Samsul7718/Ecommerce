@@ -10,7 +10,7 @@ const GymProducts = [
     description: "These product build your body and chest...",
     images: [cheast,dumble,starx,trademill],
     colors: ["black","red", "blue"],
-    size: ["S", "M", "L", "XL"],
+   
   },
   {
     id: "202",
@@ -19,7 +19,7 @@ const GymProducts = [
     description: "Very effective for body building...",
     images: [dumble,starx,trademill,cheast],
     colors: ["red","black", "green"],
-    size: ["S", "M", "L", "XL"],
+    
   },
    {
     id: "203",
@@ -28,7 +28,7 @@ const GymProducts = [
     description: "Perfect for your daily exercise...",
     images: [starx,trademill,cheast,dumble],
     colors: ["black", "green"],
-    size: ["S", "M", "L", "XL"],
+   
   },
    {
     id: "204",
@@ -37,7 +37,7 @@ const GymProducts = [
     description: "Best running machine for your daily exercise...",
     images: [trademill,cheast,dumble,starx],
     colors: ["black","blue", "red"],
-    size: ["S", "M", "L", "XL"],
+   
   },
 ];
 export {GymProducts};
