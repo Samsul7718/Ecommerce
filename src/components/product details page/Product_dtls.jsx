@@ -5,8 +5,9 @@ import { MenProducts } from "../../products/men fashion/MenFashion";
 import { GirlProducts } from "../../products/women fashion/WomenFashion";
 import { GymProducts } from "../../products/gym/Gym";
 import { KitchProducts } from "../../products/kitchen/Kitchen";
+import { Toys } from "../../products/toy/Toy";
 
-const products = [...MenProducts, ...GirlProducts, ...GymProducts, ...KitchProducts];
+const products = [...MenProducts, ...GirlProducts, ...GymProducts, ...KitchProducts, ...Toys];
 
 const Product_dtls = () => {
   const { id } = useParams();
@@ -61,7 +62,7 @@ const Product_dtls = () => {
         <p className="text-gray-600 leading-relaxed">
         {product.description}
         </p>
-        
+
           {/* size */}
           {product.size && product.size.length>0 && (
           <div>

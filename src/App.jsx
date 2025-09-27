@@ -11,6 +11,7 @@ import WomenFashion from "./components/page/WomenFashion"
 import GymFashion from "./components/page/GymFashion"
 import KitchenTool from "./components/page/KitchenTool"
 import KidsToy from "./components/page/KidsToy"
+import CartPage from "./components/page/CartPage"
 
 
 
@@ -44,7 +45,7 @@ function App() {
         <Route  path="/book" element="" />
         <Route  path="/login" element="" />
         <Route  path="/returnorder" element="" />
-        <Route  path="/cart" element="" />
+        <Route  path="/cart" element={<CartPage/>} />
         <Route  path="/item/:id" element={<Product_dtls/>} />
         <Route  path="/menfashion" element={<MenFashion/>} />
         <Route  path="/Womenfashion" element={<WomenFashion/>} />

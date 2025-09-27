@@ -36,7 +36,7 @@ const Client = () => {
        title={"Toy's"}
        subTitle={"Get relaxed with toy's"}
        items={Toys}
-       seeMorePage={"/womenfashion"}
+       seeMorePage={"/KidsToy"}
        />
         <ClientCard
        title={"Kitchen Appliances"}
