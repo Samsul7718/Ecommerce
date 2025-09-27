@@ -22,10 +22,16 @@ const CartPage = () => {
                 </div>
                 <div>
                     <button>-</button>
+                    <span>qty</span>
                     <button>+</button>
                     <button>remove</button>
                 </div>
             </div>
+        </div>
+        {/* Total price */}
+        <div>
+            <h2>total</h2>
+            <button>Proceed to Checkout</button>
         </div>
     </div>
   )
