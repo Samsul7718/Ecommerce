@@ -20,6 +20,11 @@ const CartPage = () => {
                         <p className=''>price</p>
                     </div>
                 </div>
+                <div>
+                    <button>-</button>
+                    <button>+</button>
+                    <button>remove</button>
+                </div>
             </div>
         </div>
     </div>
