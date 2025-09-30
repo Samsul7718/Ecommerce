@@ -2,7 +2,7 @@ import React from 'react'
 
 const CartPage = () => {
   return (
-    <div className='max-w-5xl mx-auto p-5'>
+    <div className='max-w-4xl mx-auto p-5'>
         <h1 className='text-2xl font-bold mb-5'>Your Shopping Cart</h1>
         <div className='space-y-5'>
             <div
@@ -15,7 +15,6 @@ const CartPage = () => {
                         className='w-20 h-20 object-cover rounded-lg'
                         />
                     <div>
-                      
                         <h1 className='font semi-bold'>name</h1>
                         <p className='text-gray-500'>price</p>
                     </div>
@@ -29,9 +28,9 @@ const CartPage = () => {
             </div>
         </div>
         {/* Total price */}
-        <div>
-            <h2>total</h2>
-            <button>Proceed to Checkout</button>
+        <div className='mt-8 p-5 shadow rounded-lg shadow-sm'>
+            <h2 className='text-xl font-bold'>total</h2>
+            <button className='bg-blue-600 text-white px-6 py-2 rounded-lg mt-4'>Proceed to Checkout</button>
         </div>
     </div>
   )
