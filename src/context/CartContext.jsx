@@ -7,6 +7,14 @@ export const CartProvider=({children})=>{
     const [cartItems,setCartItems]=useState([]);
 
     const addToCart=(product)=>{
+        const existing=cartItems.find((p)=>p.id===product.id);
+        if(existing){
+            setCartItems(prev=>
+                prev.map(p=>p.id===product.id? {...p,qty:p.qty+1}:p)
+            );
+        }else{
+          setCartItems(prev=>[...prev,{...product,qty:1}])
+        }
 
     }
     const incQty=(id)=>{

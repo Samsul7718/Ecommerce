@@ -1,16 +1,19 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { MenProducts } from "../../products/men fashion/MenFashion";
 import { GirlProducts } from "../../products/women fashion/WomenFashion";
 import { GymProducts } from "../../products/gym/Gym";
 import { KitchProducts } from "../../products/kitchen/Kitchen";
 import { Toys } from "../../products/toy/Toy";
+import { useCart } from "../../context/CartContext";
 
 const products = [...MenProducts, ...GirlProducts, ...GymProducts, ...KitchProducts, ...Toys];
 
 const Product_dtls = () => {
   const { id } = useParams();
+  const {addToCart}=useCart()
+  const navigate=useNavigate();
    const product = products.find((item) => item.id === id);
   const [quantity, setQuantity] = useState(1);
   const [selectedImg, setSelectedImg] = useState(product.images[0]);
@@ -23,6 +26,11 @@ const Product_dtls = () => {
   const handleIncrease = () => setQuantity(quantity + 1);
   const handleDecrease = () => setQuantity(quantity > 1 ? quantity - 1 : 1);
   const totalPrice=(basePrice * quantity).toFixed(2)
+
+  const handleCartProduct=(product)=>{
+      addToCart(product);
+      navigate("/cart");
+  }
 
   return (
     <section className="max-w-6xl mx-auto p-6 grid md:grid-cols-2 gap-8">
@@ -129,11 +137,13 @@ const Product_dtls = () => {
 
         {/* Buttons */}
         <div className="flex space-x-4">
-          <Link to="/cart">
-          <button className="px-6 py-3 bg-sky-600 text-white rounded-xl shadow hover:bg-sky-700">
+          {/* <Link to="/cart"> */}
+          <button
+          onClick={()=>handleCartProduct(product)}
+          className="px-6 py-3 bg-sky-600 text-white rounded-xl shadow hover:bg-sky-700">
             Add to Cart
           </button>
-          </Link>
+          {/* </Link> */}
           <button className="px-6 py-3 border border-sky-600 text-sky-600 rounded-xl hover:bg-sky-50">
             Buy Now
           </button>
