@@ -13,10 +13,13 @@ export const CartProvider=({children})=>{
         setCartItems((prev)=>prev.map(item=>item.id===id?{...item,qty:item.qty+1}:item))
     }
     const decQty=(id)=>{
-
+       setCartItems((prev)=>prev.map(item=>item.id===id?{...item,qty:item.qty>1?item.qty-1:1}:item))
+    }
+    const remove=(id)=>{
+       setCartItems((prev)=>prev.filter(item=>item.id !=id))
     }
     return (
-    <CartContext.Provider value={{cartItems,setCartItems,addToCart,incQty,decQty}}>
+    <CartContext.Provider value={{cartItems,addToCart,incQty,decQty,remove}}>
         {children}
     </CartContext.Provider>
     )

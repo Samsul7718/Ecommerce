@@ -1,6 +1,8 @@
 import React from 'react'
+import { useCart } from '../../context/CartContext'
 
 const CartPage = () => {
+    const {addToCart}=useCart()
   return (
     <div className='max-w-4xl mx-auto p-5'>
         <h1 className='text-2xl font-bold mb-5'>Your Shopping Cart</h1>
