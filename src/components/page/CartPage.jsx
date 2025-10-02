@@ -4,8 +4,8 @@ import { useCart } from '../../context/CartContext'
 const CartPage = () => {
     const {cartItems,incQty,decQty,remove}=useCart()
    
-     const total=cartItems.reduce((sum,item)=>sum + item.price * (item.qty || 1),0);
-      {console.log("cart-product",cartItems)}
+     const total=cartItems.reduce((sum,item)=>sum + item.price * (item.quantity || 1),0);
+      {console.log("cart-product",cartItems,total)}
   return (
     <div className='max-w-4xl mx-auto p-5'>
         <h1 className='text-2xl font-bold mb-5'>Your Shopping Cart</h1>
@@ -28,7 +28,7 @@ const CartPage = () => {
                 </div>
                 <div className='flex items-center gap-3'>
                     <button onClick={()=>decQty(item.id)}>-</button>
-                    <span>{item.qty}</span>
+                    <span>{item.quantity}</span>
                     <button onClick={()=>incQty(item.id)}>+</button>
                     <button onClick={()=>remove(item.id)}>remove</button>
                 </div>
