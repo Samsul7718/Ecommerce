@@ -5,7 +5,7 @@ const CartPage = () => {
     const {cartItems,incQty,decQty,remove}=useCart()
    
      const total=cartItems.reduce((sum,item)=>sum + item.price * (item.quantity || 1),0);
-      {console.log("cart-product",cartItems,total)}
+      {console.log("cart-product",cartItems)}
   return (
     <div className='max-w-4xl mx-auto p-5'>
         <h1 className='text-2xl font-bold mb-5'>Your Shopping Cart</h1>

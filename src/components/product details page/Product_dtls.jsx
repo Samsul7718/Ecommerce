@@ -12,24 +12,25 @@ const products = [...MenProducts, ...GirlProducts, ...GymProducts, ...KitchProdu
 
 const Product_dtls = () => {
   const { id } = useParams();
-  const {addToCart,cartItems,incQty,decQty}=useCart()
+  const {addToCart}=useCart()
   const navigate=useNavigate();
    const product = products.find((item) => item.id === id);
-  // const [quantity, setQuantity] = useState(1);
+  const [quantity, setQuantity] = useState(1);
   const [selectedImg, setSelectedImg] = useState(product.images[0]);
   const [selectedColor, setSelectedColor] = useState("red"); 
-  const [selectedSize, setSelectedSize] = useState("s");
+  const [selectedSize, setSelectedSize] = useState(product.size[0]);
   
 
-     const total=cartItems.reduce((sum,item)=>sum + product.price * (item.quantity || 1),0);
-  // const basePrice = product.price;
+    //  const total=cartItems.reduce((sum,item)=>sum + product.price * (product.quantity || 1),0);
+  const basePrice = product.price;
 
-  // const handleIncrease = () => setQuantity(quantity + 1);
-  // const handleDecrease = () => setQuantity(quantity > 1 ? quantity - 1 : 1);
-  // const totalPrice=(basePrice * quantity).toFixed(2)
+  const handleIncrease = () => setQuantity(quantity + 1);
+  const handleDecrease = () => setQuantity(quantity > 1 ? quantity - 1 : 1);
+  const totalPrice=(basePrice * quantity).toFixed(2)
 
   const handleCartProduct=(product)=>{
       addToCart(product,quantity,selectedColor,selectedSize);
+      setQuantity(1);
       navigate("/cart");
   }
 
@@ -117,7 +118,7 @@ const Product_dtls = () => {
       )}
 
         {/* Price */}
-        <div className="text-2xl font-semibold text-sky-600">${total}</div>
+        <div className="text-2xl font-semibold text-sky-600">${totalPrice}</div>
 
         {/* Quantity selector */}
         <div className="flex items-center space-x-4">
@@ -140,7 +141,7 @@ const Product_dtls = () => {
         <div className="flex space-x-4">
           {/* <Link to="/cart"> */}
           <button
-          onClick={()=>handleCartProduct(product,quantity,selectedColor,selectedSize)}
+          onClick={()=>handleCartProduct(product)}
           className="px-6 py-3 bg-sky-600 text-white rounded-xl shadow hover:bg-sky-700">
             Add to Cart
           </button>
