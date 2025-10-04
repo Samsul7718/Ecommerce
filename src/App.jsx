@@ -12,6 +12,7 @@ import GymFashion from "./components/page/GymFashion"
 import KitchenTool from "./components/page/KitchenTool"
 import KidsToy from "./components/page/KidsToy"
 import CartPage from "./components/page/CartPage"
+import Shoes from "./components/page/Shoes"
 
 
 
@@ -52,6 +53,7 @@ function App() {
         <Route  path="/gymfashion" element={<GymFashion/>} />
         <Route  path="/kidstoy" element={<KidsToy/>} />
         <Route  path="/kittools" element={<KitchenTool/>} />
+        <Route  path="/shoes" element={<Shoes/>} />
        </Routes>
       
        {/* <Product_dtls/> */}

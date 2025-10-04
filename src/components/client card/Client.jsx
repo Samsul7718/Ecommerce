@@ -8,6 +8,8 @@ import { lapi,speaker,watch,pend } from '../../assets'
 import { facepwd,day_creme,lipstick,facewash } from '../../assets'
 import { GymProducts } from '../../products/gym/Gym'
 import { Toys } from '../../products/toy/Toy'
+import { Shoes } from '../../products/shoe/Shoe'
+import { Electronic } from '../../products/electronics/Electronic'
 const Client = () => {
   return (
     <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-6 p-4
@@ -47,22 +49,14 @@ const Client = () => {
         <ClientCard
        title={"Shoes"}
        subTitle={"Step style with latest shoe collection"}
-       items={[
-         {id:21, title:"Nike shoes ", src: nike},
-         {id:22, title:"Adidas dream", src: adidas},
-         {id:23, title:"Reebok walk", src: reebok},
-         {id:24, title:"Puma hunter", src: puma},
-       ]}
+       items={Shoes}
+       seeMorePage={"/Shoes"}
        />
         <ClientCard
        title={"Best of Electronics"}
        subTitle={"Explore top-rated electronics"}
-       items={[
-         {id:25, title:"Laptop", src: lapi},
-         {id:26, title:"Speaker", src: speaker},
-         {id:27, title:"Watch", src: watch},
-         {id:28, title:"2.0 pendrive", src: pend},
-       ]}
+       items={Electronic}
+       seeMorePage={"/Electronic"}
        />
         <ClientCard
        title={"Best seller in Beauty"}

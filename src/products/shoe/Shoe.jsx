@@ -1,4 +1,4 @@
-import {car,bike,jcb,train} from "../../assets";
+import {nike,adidas,puma,reebok} from "../../assets";
 
 
 const  Shoes = [
@@ -6,37 +6,37 @@ const  Shoes = [
   
   {
     id: "501",
-    name: "Car Toy",
-    price: 13.99,
-    description: "These car toy specially designed for kids...",
-    images: [car,bike,jcb,train],
+    name: "Nike Shoe",
+    price: 53.99,
+    description: "Worlds number one nike sports shoe",
+    images: [nike,adidas,puma,reebok],
     colors: ["black","red", "blue"],
     size: ["S", "M", "L", "XL"],
   },
   {
     id: "502",
-    name: "Bike Toy",
-    price: 29.99,
-    description: "Amazing bike toy for kids...",
-    images: [bike,jcb,train,car],
+    name: "Adidas Shoe",
+    price: 49.99,
+    description: "Best product ever in this seoson",
+    images: [adidas,puma,reebok,nike],
     colors: ["red", "green"],
     size: ["S", "M", "L", "XL"],
   },
    {
     id: "503",
-    name: "JCB Toy",
-    price: 15.99,
-    description: "Original looking JCB toy for kids...",
-    images: [jcb,train,car,bike],
+    name: "Puma Shoe",
+    price: 45.99,
+    description: "Best running shoes for all.",
+    images: [puma,reebok,nike,adidas],
     colors: ["black", "green"],
     size: ["S", "M", "L", "XL"],
   },
    {
     id: "504",
-    name: "Train Toy",
-    price: 12.99,
-    description: "Amazing train toy for kids...",
-    images: [train,car,bike,jcb],
+    name: "Reebok Shoe",
+    price: 32.99,
+    description: "Amazing sports shoe for everyone",
+    images: [reebok,nike,adidas,puma],
     colors: ["black","blue", "green"],
     size: ["S", "M", "L", "XL"],
   },
