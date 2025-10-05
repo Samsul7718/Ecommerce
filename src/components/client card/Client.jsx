@@ -3,13 +3,11 @@ import ClientCard from './ClientCard'
 import { MenProducts } from '../../products/men fashion/MenFashion'
 import { GirlProducts } from '../../products/women fashion/WomenFashion'
 import { KitchProducts } from '../../products/kitchen/Kitchen'
-import { nike,adidas,puma,reebok } from '../../assets'
-import { lapi,speaker,watch,pend } from '../../assets'
-import { facepwd,day_creme,lipstick,facewash } from '../../assets'
 import { GymProducts } from '../../products/gym/Gym'
 import { Toys } from '../../products/toy/Toy'
 import { Shoes } from '../../products/shoe/Shoe'
 import { Electronic } from '../../products/electronics/Electronic'
+import { Beauty } from '../../products/beauty/Beauty'
 const Client = () => {
   return (
     <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-6 p-4
@@ -61,12 +59,8 @@ const Client = () => {
         <ClientCard
        title={"Best seller in Beauty"}
        subTitle={"Discover the latest trends in"}
-       items={[
-         {id:29, title:"Face powder", src: facepwd},
-         {id:30, title:"Lakmi day creme", src: day_creme},
-         {id:31, title:"Lipstick", src: lipstick},
-         {id:32, title:"Face wash", src: facewash},
-       ]}
+       items={Beauty}
+       seeMorePage={"/Beauty"}
        />
 
     </section>

@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-// import { products } from '../../products/fashion/Product'
-// import { hero3 } from '../../assets'
+
 
 const ClientCard = ({title,subTitle,items,seeMorePage}) => {
   return (

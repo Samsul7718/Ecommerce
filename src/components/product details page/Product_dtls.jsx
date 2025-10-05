@@ -8,9 +8,11 @@ import { KitchProducts } from "../../products/kitchen/Kitchen";
 import { Toys } from "../../products/toy/Toy";
 import { Shoes } from "../../products/shoe/Shoe";
 import { Electronic } from "../../products/electronics/Electronic";
+import { Beauty } from "../../products/beauty/Beauty";
 import { useCart } from "../../context/CartContext";
 
-const products = [...MenProducts, ...GirlProducts, ...GymProducts, ...KitchProducts, ...Toys,...Shoes,...Electronic];
+const products = [...MenProducts, ...GirlProducts, ...GymProducts, ...KitchProducts, ...Toys,
+  ...Shoes,...Electronic,...Beauty];
 
 const Product_dtls = () => {
   const { id } = useParams();
