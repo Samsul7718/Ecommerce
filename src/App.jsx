@@ -13,6 +13,7 @@ import KitchenTool from "./components/page/KitchenTool"
 import KidsToy from "./components/page/KidsToy"
 import CartPage from "./components/page/CartPage"
 import Shoes from "./components/page/Shoes"
+import Beauty from "./components/page/Beauty"
 
 
 
@@ -54,6 +55,7 @@ function App() {
         <Route  path="/kidstoy" element={<KidsToy/>} />
         <Route  path="/kittools" element={<KitchenTool/>} />
         <Route  path="/shoes" element={<Shoes/>} />
+        <Route  path="/beauty" element={<Beauty/>} />
        </Routes>
       
        {/* <Product_dtls/> */}
