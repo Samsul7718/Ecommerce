@@ -55,6 +55,10 @@ import mac4 from '../../src/assets/images/laptop/mac4.jpg'
 import macpro from '../../src/assets/images/laptop/macpro.jpg'
 import asus from '../../src/assets/images/laptop/asuslap.jpg'
 import lenovo from '../../src/assets/images/laptop/lenovo.jpg'
+import iphone17 from '../../src/assets/images/mobile/iphone17.webp'
+import Oneplus from '../../src/assets/images/mobile/oneplus.webp'
+import samg from '../../src/assets/images/mobile/samg.jpg'
+import oppo from '../../src/assets/images/mobile/oppo.webp'
 
 
 
@@ -64,6 +68,7 @@ export{
     hero,hero1,hero2,hero3,shirt,pant,T_shirt,formal,
     long,kurti,saree,burkha, cheast,dumble,starx,trademill,car,bike,jcb,train,coffiee,juicer,toaster,rice,nike,adidas,puma,
     reebok,lapi,speaker,watch,pend,facepwd,day_creme,lipstick,facewash,ac_container,bowl,chaicup,chopping_knife,ciger,coco_chopper,
-    container,dalpress,glass,ice_maker,karai,kutni,rotibelun,spray,thali,toast_turn,mac4,macpro,asus,lenovo
+    container,dalpress,glass,ice_maker,karai,kutni,rotibelun,spray,thali,toast_turn,mac4,macpro,asus,lenovo,iphone17,Oneplus,samg,
+    oppo,
 
 }
