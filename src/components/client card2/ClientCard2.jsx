@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 
-const ClientCard2 = ({title,subTitle,items,seeMorePage}) => {
+const ClientCard2 = ({title,subTitle,items,viewPage}) => {
   return (
     <section className="max-w-sm mx-auto bg-white rounded-lg shadow-md overflow-hidden">
         <div className="p-4 text-center">
@@ -30,14 +30,13 @@ const ClientCard2 = ({title,subTitle,items,seeMorePage}) => {
         </div>
         <div className='p-4 text-center space-between flex gap-20 justify-center'>
             <Link
-            to={seeMorePage}
+            to={viewPage}
             >
              <button className="bg-gray-200 text-black px-2 py-2 rounded hover:bg-gray-700 hover:text-white
              px-1 py-1">
-                See More...
+                View Page..
             </button>
             </Link>
-           
         </div>
         
    </section>

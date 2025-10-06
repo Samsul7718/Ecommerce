@@ -14,6 +14,7 @@ import KidsToy from "./components/page/KidsToy"
 import CartPage from "./components/page/CartPage"
 import Shoes from "./components/page/Shoes"
 import Beauty from "./components/page/Beauty"
+import Client2 from "./components/client card2/Client2"
 
 
 
@@ -33,7 +34,7 @@ function App() {
        <Client/>
        <Deals1/>
        <Deals2/>
-        <Client/>
+        <Client2/>
          <Deals1/>
          <Deals1/>
        </>
