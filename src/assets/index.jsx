@@ -51,40 +51,19 @@ import rotibelun from '../../src/assets/images/kitchen/rotibelun.jpg'
 import spray from '../../src/assets/images/kitchen/spray.jpg'
 import thali from '../../src/assets/images/kitchen/thali.jpg'
 import toast_turn from '../../src/assets/images/kitchen/toast_turn.jpg'
+import mac4 from '../../src/assets/images/laptop/mac4.jpg'
+import macpro from '../../src/assets/images/laptop/macpro.jpg'
+import asus from '../../src/assets/images/laptop/asuslap.jpg'
+import lenovo from '../../src/assets/images/laptop/lenovo.jpg'
 
 
 
 
 export{
     logo,
-    hero,
-    hero1,
-    hero2,
-    hero3,
-    shirt,
-    pant,
-    T_shirt,
-    formal,
-    long,
-    kurti,
-    saree,
-    burkha, 
-    cheast,
-    dumble,
-    starx,
-    trademill,
-    car,
-    bike,
-    jcb,
-    train,   
-    coffiee,
-    juicer,
-    toaster,
-    rice,    
-    nike,
-    adidas,
-    puma,
+    hero,hero1,hero2,hero3,shirt,pant,T_shirt,formal,
+    long,kurti,saree,burkha, cheast,dumble,starx,trademill,car,bike,jcb,train,coffiee,juicer,toaster,rice,nike,adidas,puma,
     reebok,lapi,speaker,watch,pend,facepwd,day_creme,lipstick,facewash,ac_container,bowl,chaicup,chopping_knife,ciger,coco_chopper,
-    container,dalpress,glass,ice_maker,karai,kutni,rotibelun,spray,thali,toast_turn
+    container,dalpress,glass,ice_maker,karai,kutni,rotibelun,spray,thali,toast_turn,mac4,macpro,asus,lenovo
 
 }

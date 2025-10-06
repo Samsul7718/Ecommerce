@@ -33,6 +33,9 @@ function App() {
        <Client/>
        <Deals1/>
        <Deals2/>
+        <Client/>
+         <Deals1/>
+         <Deals1/>
        </>
         } />
         <Route  path="/sell" element="" />
