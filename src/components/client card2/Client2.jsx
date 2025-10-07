@@ -1,6 +1,7 @@
 import React from 'react'
 import ClientCard2 from './ClientCard2'
 import { Laptop } from '../../products/laptop/Laptop'
+import { Mobile } from '../../products/mobile/Mobile'
 
 const Client2 = () => {
   return (
@@ -9,13 +10,13 @@ const Client2 = () => {
          title={"Laptop"}
          subTitle={"Introducing new arrival series"}
          items={Laptop}
-         viewPage={'/Laptop'}
+         viewPage={'/laptop'}
          />
          <ClientCard2
-         title={"Laptop"}
+         title={"Mobile"}
          subTitle={"Introducing new arrival series"}
-         items={Laptop}
-         viewPage={'/Laptop'}
+         items={Mobile}
+         viewPage={'/mobile'}
          />
          <ClientCard2
          title={"Laptop"}

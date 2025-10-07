@@ -15,6 +15,8 @@ import CartPage from "./components/page/CartPage"
 import Shoes from "./components/page/Shoes"
 import Beauty from "./components/page/Beauty"
 import Client2 from "./components/client card2/Client2"
+import Mobile from "./components/page/Mobile"
+import Laptop from "./components/page/Laptop"
 
 
 
@@ -43,7 +45,7 @@ function App() {
         <Route  path="/fresh" element="" />
         <Route  path="/bestsellers" element="" />
         <Route  path="/todaysdeal" element="" />
-        <Route  path="/mobile" element="" />
+        <Route  path="/mobile" element={<Mobile/>}/>
         <Route  path="/customer" element="" />
         <Route  path="/fashion" element="" />
         <Route  path="/electric" element="" />
@@ -60,6 +62,8 @@ function App() {
         <Route  path="/kittools" element={<KitchenTool/>} />
         <Route  path="/shoes" element={<Shoes/>} />
         <Route  path="/beauty" element={<Beauty/>} />
+        <Route  path="/laptop" element={<Laptop/>} />
+       
        </Routes>
       
        {/* <Product_dtls/> */}
