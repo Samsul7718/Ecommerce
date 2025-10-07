@@ -2,12 +2,13 @@ import React, { useState } from 'react'
 import {Link,useLocation} from 'react-router-dom'
 import { navbarData } from '../../../data/navbarData'
 import { FiArrowLeft, FiChevronDown, FiChevronUp, FiMenu,FiShoppingCart,FiUser,FiX } from 'react-icons/fi';
+import { useCart } from '../../../context/CartContext';
 
 const NavFooter = () => {
    const [menuOpen, setMenuOpen] = useState(false);
      const [showMore, setShowMore] = useState(false);
       const [activeMenu, setActiveMenu] = useState("main"); 
-      // const [activeMenu2, setActiveMenu2] = useState("main2"); 
+      const {totalQuantity}=useCart();
     const location=useLocation();
   return (
     <section className=' w-full bg-gray-700 h-16 '>
@@ -196,7 +197,7 @@ const NavFooter = () => {
                         
                        <div className="flex items-center hover:text-black hover:bg-gray-100 gap-2 px-6 py-2">
                           <Link to="/cart" className="flex items-center gap-2">
-                         <FiShoppingCart /><span>Cart (0)</span>
+                         <FiShoppingCart /><span>Cart {totalQuantity}</span>
                            </Link>
                        </div>
                       
@@ -334,39 +335,6 @@ const NavFooter = () => {
         </div>
       </div>
     )}
-
-
-                   {/* {menuOpen && (
-                    <button
-                      className="fixed top-4 right-40 text-orange-200 bg-black text-4xl border 
-                      hover:border-white hover:bg-yellow-400 z-[60]"
-                    onClick={() => setMenuOpen(false)}
-                  >
-                  <FiX />
-                  </button>
-                  )} */}
-
-{/* 
-                   {activeMenu && (
-                    <button
-                      className="fixed top-4 right-40 text-orange-200 bg-black text-4xl border 
-                      hover:border-white hover:bg-yellow-400 z-[60]"
-                    onClick={() => setActiveMenu(!main)}
-                  >
-                  <FiX />
-                  </button>
-                  )} */}
-
-
-                   {/* {menuOpen && (
-                    <button
-                      className="fixed top-4 right-40 text-orange-200 bg-black text-4xl border 
-                      hover:border-white hover:bg-yellow-400 z-[60]"
-                    onClick={() => setMenuOpen(false)}
-                  >
-                  <FiX />
-                  </button>
-                  )} */}
     </section>
   )
 }

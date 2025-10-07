@@ -5,6 +5,7 @@ const CartPage = () => {
     const {cartItems,incQty,decQty,remove}=useCart()
    
      const total=cartItems.reduce((sum,item)=>sum + item.price * (item.quantity || 1),0);
+     const totalPayment=total.toFixed(2);
       {console.log("cart-product",cartItems)}
   return (
     <div className='max-w-4xl mx-auto p-5'>
@@ -36,8 +37,8 @@ const CartPage = () => {
             ))}
         </div>
         {/* Total price */}
-        <div className='mt-8 p-5 shadow rounded-lg shadow-sm'>
-            <h2 className='text-xl font-bold'>Total:$ {total}</h2>
+        <div className='flex flex-col items-center mt-8 p-5 shadow rounded-lg shadow-sm'>
+            <h2 className='text-xl font-bold'>Total:$ {totalPayment}</h2>
             <button className='bg-blue-600 text-white px-6 py-2 rounded-lg mt-4'>Proceed to Checkout</button>
         </div>
     </div>

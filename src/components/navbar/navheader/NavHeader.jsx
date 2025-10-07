@@ -3,9 +3,11 @@ import { logo } from '../../../assets'
 // import { IoClose, IoSearchOutline } from "react-icons/io5";
 import { FiMenu, FiSearch, FiShoppingCart, FiUser, FiX } from "react-icons/fi";
 import { Link } from 'react-router-dom';
+import { useCart } from '../../../context/CartContext';
 
 
 const NavHeader = () => {
+  const {totalQuantity}=useCart();
     const [menuOpen, setMenuOpen] = useState(false);
     const cities = ["Kolkata","Hyderabad","Pune","vizaj","Amedabad","Kashmir", "Mumbai", "Delhi", "Chennai", "Bangalore"];
     const languages = ["English","Hindi","Spanish","French","German","Chinese","Japanese"];
@@ -135,16 +137,17 @@ const NavHeader = () => {
             </div>
          
           <div className="relative block">
+        
             <Link to="/cart">
              <FiShoppingCart className=" w-7 h-7 text-gray-300 hover:text-blue-600 duration-200 cursor-pointer" />
             <span
               className="inline-flex items-center justify-center bg-red-500 text-white absolute 
             -top-1 -right-2 text-[10px] rounded-full w-5 h-5"
             >
-              0
+              {totalQuantity}
             </span>
             </Link>
-           
+               
           </div>
         </div>
 
@@ -193,7 +196,7 @@ const NavHeader = () => {
                   <div className='cursor-pointer'><Link to="/returnorder">Return & Order</Link></div>
                     <Link to="/cart">
                   <div className="flex items-center gap-2">
-                    <FiShoppingCart /> <span>Cart (0)</span>
+                    <FiShoppingCart /> <span>Cart {totalQuantity}</span>
                   </div>
                    </Link>
                 </div>
