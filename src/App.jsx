@@ -17,6 +17,7 @@ import Beauty from "./components/page/Beauty"
 import Client2 from "./components/client card2/Client2"
 import Mobile from "./components/page/Mobile"
 import Laptop from "./components/page/Laptop"
+import Login from "./components/page/Login"
 
 
 
@@ -51,7 +52,7 @@ function App() {
         <Route  path="/electric" element="" />
         <Route  path="/releases" element="" />
         <Route  path="/book" element="" />
-        <Route  path="/login" element="" />
+        <Route  path="/login" element={<Login/>} />
         <Route  path="/returnorder" element="" />
         <Route  path="/cart" element={<CartPage/>} />
         <Route  path="/item/:id" element={<Product_dtls/>} />
