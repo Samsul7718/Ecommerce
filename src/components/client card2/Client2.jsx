@@ -2,6 +2,7 @@ import React from 'react'
 import ClientCard2 from './ClientCard2'
 import { Laptop } from '../../products/laptop/Laptop'
 import { Mobile } from '../../products/mobile/Mobile'
+import { Vanity } from '../../products/vanity/Vanity'
 
 const Client2 = () => {
   return (
@@ -19,10 +20,10 @@ const Client2 = () => {
          viewPage={'/mobile'}
          />
          <ClientCard2
-         title={"Laptop"}
-         subTitle={"Introducing new arrival series"}
-         items={Laptop}
-         viewPage={'/Laptop'}
+         title={"Vanity"}
+         subTitle={"Best collection for your all festivals"}
+         items={Vanity}
+         viewPage={'/vanity'}
          />
          <ClientCard2
          title={"Laptop"}

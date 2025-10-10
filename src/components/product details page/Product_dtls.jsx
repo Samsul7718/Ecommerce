@@ -11,10 +11,11 @@ import { Electronic } from "../../products/electronics/Electronic";
 import { Beauty } from "../../products/beauty/Beauty";
 import { Laptop } from "../../products/laptop/Laptop";
 import { Mobile } from "../../products/mobile/Mobile";
+import { Vanity } from "../../products/vanity/Vanity";
 import { useCart } from "../../context/CartContext";
 
 const products = [...MenProducts, ...GirlProducts, ...GymProducts, ...KitchProducts, ...Toys,
-  ...Shoes,...Electronic,...Beauty,...Laptop,...Mobile];
+  ...Shoes,...Electronic,...Beauty,...Laptop,...Mobile,...Vanity];
 
 const Product_dtls = () => {
   const { id } = useParams();

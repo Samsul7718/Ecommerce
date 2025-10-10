@@ -59,6 +59,19 @@ import iphone17 from '../../src/assets/images/mobile/iphone17.webp'
 import Oneplus from '../../src/assets/images/mobile/oneplus.webp'
 import samg from '../../src/assets/images/mobile/samg.jpg'
 import oppo from '../../src/assets/images/mobile/oppo.webp'
+import vanity1 from '../../src/assets/images/vanity/vanity1.jpeg'
+import vanity1_0 from '../../src/assets/images/vanity/vanity1.0.jpeg'
+import vanity1_1 from '../../src/assets/images/vanity/vanity1.1.jpeg'
+import vanity1_2 from '../../src/assets/images/vanity/vanity1.2.jpeg'
+import vanity2 from '../../src/assets/images/vanity/vanity2.jpg'
+import vanity2_0 from '../../src/assets/images/vanity/vanity2.0.jpg'
+import vanity2_1 from '../../src/assets/images/vanity/vanity2.1.jpg'
+import vanity2_2 from '../../src/assets/images/vanity/vanity2.2.jpg'
+import vanity3 from '../../src/assets/images/vanity/vanity3.jpg'
+import vanity3_0 from '../../src/assets/images/vanity/vanity3.0.jpg'
+import vanity3_1 from '../../src/assets/images/vanity/vanity3.1.jpg'
+import vanity3_2 from '../../src/assets/images/vanity/vanity3.2.jpg'
+import solidWood from '../../src/assets/images/vanity/solid wooden.jpg'
 
 
 
@@ -69,6 +82,7 @@ export{
     long,kurti,saree,burkha, cheast,dumble,starx,trademill,car,bike,jcb,train,coffiee,juicer,toaster,rice,nike,adidas,puma,
     reebok,lapi,speaker,watch,pend,facepwd,day_creme,lipstick,facewash,ac_container,bowl,chaicup,chopping_knife,ciger,coco_chopper,
     container,dalpress,glass,ice_maker,karai,kutni,rotibelun,spray,thali,toast_turn,mac4,macpro,asus,lenovo,iphone17,Oneplus,samg,
-    oppo,
+    oppo,vanity1,vanity1_0,vanity1_2,vanity1_1,vanity2,vanity2_0,vanity2_1,vanity2_2,vanity3,vanity3_0,vanity3_1,vanity3_2,
+    solidWood,
 
 }
