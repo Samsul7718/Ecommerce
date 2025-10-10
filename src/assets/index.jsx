@@ -72,6 +72,10 @@ import vanity3_0 from '../../src/assets/images/vanity/vanity3.0.jpg'
 import vanity3_1 from '../../src/assets/images/vanity/vanity3.1.jpg'
 import vanity3_2 from '../../src/assets/images/vanity/vanity3.2.jpg'
 import solidWood from '../../src/assets/images/vanity/solid wooden.jpg'
+import ipad from '../../src/assets/images/electronics/ipad.webp'
+import headphone from '../../src/assets/images/electronics/headphone.webp'
+import watch_T from '../../src/assets/images/electronics/watch.webp'
+import eyeglass from '../../src/assets/images/electronics/eyeglass.webp'
 
 
 
@@ -83,6 +87,6 @@ export{
     reebok,lapi,speaker,watch,pend,facepwd,day_creme,lipstick,facewash,ac_container,bowl,chaicup,chopping_knife,ciger,coco_chopper,
     container,dalpress,glass,ice_maker,karai,kutni,rotibelun,spray,thali,toast_turn,mac4,macpro,asus,lenovo,iphone17,Oneplus,samg,
     oppo,vanity1,vanity1_0,vanity1_2,vanity1_1,vanity2,vanity2_0,vanity2_1,vanity2_2,vanity3,vanity3_0,vanity3_1,vanity3_2,
-    solidWood,
+    solidWood,ipad,headphone,watch_T,eyeglass,
 
 }

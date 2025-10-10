@@ -3,6 +3,7 @@ import ClientCard2 from './ClientCard2'
 import { Laptop } from '../../products/laptop/Laptop'
 import { Mobile } from '../../products/mobile/Mobile'
 import { Vanity } from '../../products/vanity/Vanity'
+import { Electronic1 } from '../../products/electronic1/Electronic1'
 
 const Client2 = () => {
   return (
@@ -26,10 +27,10 @@ const Client2 = () => {
          viewPage={'/vanity'}
          />
          <ClientCard2
-         title={"Laptop"}
+         title={"Electronic_daily"}
          subTitle={"Introducing new arrival series"}
-         items={Laptop}
-         viewPage={'/Laptop'}
+         items={Electronic1}
+         viewPage={'/electronic'}
          />
     </section>
   )

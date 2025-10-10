@@ -20,6 +20,7 @@ import Laptop from "./components/page/Laptop"
 import Login from "./components/page/Login"
 import SignUp from "./components/page/SignUp"
 import Vanity from "./components/page/Vanity"
+import Electronic from './components/page/Electronic'
 
 
 
@@ -52,7 +53,7 @@ function App() {
         <Route  path="/vanity" element={<Vanity/>}/>
         <Route  path="/customer" element="" />
         <Route  path="/fashion" element="" />
-        <Route  path="/electric" element="" />
+        <Route  path="/electronic" element={<Electronic/>} />
         <Route  path="/releases" element="" />
         <Route  path="/book" element="" />
         <Route  path="/login" element={<Login/>} />
