@@ -21,6 +21,7 @@ import Login from "./components/page/Login"
 import SignUp from "./components/page/SignUp"
 import Vanity from "./components/page/Vanity"
 import Electronic from './components/page/Electronic'
+import Deals3 from "./components/best deals/Deals3"
 
 
 
@@ -41,7 +42,7 @@ function App() {
        <Deals1/>
        <Deals2/>
         <Client2/>
-         <Deals1/>
+         <Deals3/>
          <Deals1/>
        </>
         } />

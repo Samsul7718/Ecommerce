@@ -76,6 +76,18 @@ import ipad from '../../src/assets/images/electronics/ipad.webp'
 import headphone from '../../src/assets/images/electronics/headphone.webp'
 import watch_T from '../../src/assets/images/electronics/watch.webp'
 import eyeglass from '../../src/assets/images/electronics/eyeglass.webp'
+import bag1 from '../../src/assets/images/vanity/bag1.jpg'
+import bag2 from '../../src/assets/images/vanity/bag2.jpg'
+import bag3 from '../../src/assets/images/vanity/bag3.jpg'
+import bag4 from '../../src/assets/images/vanity/bag4.jpg'
+import bag5 from '../../src/assets/images/vanity/bag5.jpg'
+import bag6 from '../../src/assets/images/vanity/bag6.jpg'
+import bag7 from '../../src/assets/images/vanity/bag7.jpg'
+import bag8 from '../../src/assets/images/vanity/bag8.jpg'
+import bag9 from '../../src/assets/images/vanity/bag9.jpg'
+import bag14 from '../../src/assets/images/vanity/bag14.jpg'
+import bag15 from '../../src/assets/images/vanity/bag15.jpg'
+
 
 
 
@@ -87,6 +99,6 @@ export{
     reebok,lapi,speaker,watch,pend,facepwd,day_creme,lipstick,facewash,ac_container,bowl,chaicup,chopping_knife,ciger,coco_chopper,
     container,dalpress,glass,ice_maker,karai,kutni,rotibelun,spray,thali,toast_turn,mac4,macpro,asus,lenovo,iphone17,Oneplus,samg,
     oppo,vanity1,vanity1_0,vanity1_2,vanity1_1,vanity2,vanity2_0,vanity2_1,vanity2_2,vanity3,vanity3_0,vanity3_1,vanity3_2,
-    solidWood,ipad,headphone,watch_T,eyeglass,
+    solidWood,ipad,headphone,watch_T,eyeglass,bag1,bag2,bag3,bag4,bag5,bag6,bag7,bag8,bag9,bag14,bag15,
 
 }

@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import { logo } from '../../../assets'
 // import { IoClose, IoSearchOutline } from "react-icons/io5";
 import { FiMenu, FiSearch, FiShoppingCart, FiUser, FiX } from "react-icons/fi";
@@ -7,17 +8,19 @@ import { useCart } from '../../../context/CartContext';
 
 
 const NavHeader = () => {
+  const navigate=useNavigate();
   const {totalQuantity}=useCart();
     const [menuOpen, setMenuOpen] = useState(false);
     const cities = ["Kolkata","Hyderabad","Pune","vizaj","Amedabad","Kashmir", "Mumbai", "Delhi", "Chennai", "Bangalore"];
     const languages = ["English","Hindi","Spanish","French","German","Chinese","Japanese"];
-    const allItems = ["Baby","Beauty","Electronics","Fashion","Home & Furniture","Grocery","Books & More"];
+    const allItems = ["Baby","Beauty","Electronics","Fashion","Home & Furniture","Grocery","Shoes","GymFashion","Books & More"];
     
     const [selectedCity,setSelectedCity]=useState("")
     const [selectedLanguage,setSelectedLanguage]=useState("")
     const [selectedItem,setSelectedItem]=useState("")
     const [leftPadding, setLeftPadding] = useState(50); // default padding
-     const leftBlockRef = useRef(null);
+    const leftBlockRef = useRef(null);
+    const [searchTerm, setSearchTerm] = useState("");
 
        // Measure width of "All + dropdown" and set padding in searching bar
     useEffect(() => {
@@ -27,6 +30,18 @@ const NavHeader = () => {
     setLeftPadding(textWidth + 40); 
   }
   }, [selectedItem]);
+
+  const handleSearch=(e)=>{
+       e.preventDefault();
+      if(selectedItem){
+      const path="/"+selectedItem.toLowerCase().replace(/[\s&]/g, "");
+        navigate(path)
+
+      } else if(searchTerm.trim()){
+        navigate(`/search?query=${encodeURIComponent(searchTerm.trim())}`);
+        // navigate(`/search?query=$={encodeURIComponent(searchTerm.trim())}`)
+      }
+  }
   return (
     <>
      <section className='w-full h-16 gap-8 bg-bodyColor flex items-center justify-between shadow-md fixed 
@@ -59,6 +74,8 @@ const NavHeader = () => {
             </div>
            
             {/* search bar */}
+            <form onSubmit={handleSearch}> 
+
             <div className='relative w-full max-w-md mx-auto flex items-center '>
                {/* all item menu */}
              <div
@@ -86,19 +103,24 @@ const NavHeader = () => {
                 <input 
                 type="text"
                 placeholder='Search for products'
-             
+                value={searchTerm}
+                onChange={(e)=>setSearchTerm(e.target.value)}
                 className='w-full pl-20 pr-10 py-2 rounded-xl bg-gray-100 text-gray-700 
                    focus:outline-none focus:ring-1 focus:ring-blue-500 transition'
                      style={{ paddingLeft: `${leftPadding}px` }}
                 />
                 {/* Search Icon */}
-                <div className='absolute right-2 top-1/2 -translate-y-1/2 bg-yellow-400 border 
-                border-gray-300 rounded p-1 flex items-center justify-center'>
+                <button
+                 type="submit"
+                // onChange={(e)=>setSearchTerm(e.target.value)}
+                className='absolute right-2 top-1/2 -translate-y-1/2 bg-yellow-400 border 
+                border-gray-300 rounded p-1 flex items-center justify-center hover:bg-cyan-200'>
                   <FiSearch className='text-gray-500'
                 size={20}/>
-                </div>
+                </button>
                 
             </div>
+               </form>
             {/* language */}
                <div className='hidden text-sm text-gray-300 font-base md:flex items-center gap-1'>
                 <div>language</div>

@@ -78,20 +78,6 @@ const Login = () => {
              />
               {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
           </div>
-            <div className='mb-2'>
-            <label className='text-gray-700 font-medium mb-1'>
-                Mobile :
-            </label>
-             <input 
-             type="number" 
-             name="mobile" 
-             onChange={handleChange}
-             value={values.mobile}
-             className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-1 focus:ring-blue-500 capitalize" 
-             placeholder='Enter your name'
-             required
-             />
-          </div>
           
            {/* Submit Button */}
           <div className="flex items-center justify-center gap-4 py-5">
