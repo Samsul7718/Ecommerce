@@ -1,11 +1,17 @@
-import React from 'react'
+import React,{useRef} from 'react'
+import { useNavigate } from 'react-router-dom'
 import {images} from '../best deals/Deals3_Img'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 const Deals3 = () => {
+  const containerRef=useRef(null);
+  const navigate=useNavigate();
     const scrollLeft=()=>{
-
+      if(containerRef.current){
+        const containerWidth=containerRef.current.offsetWidth;
+        containerRef.current.scrollBy({left:-containerWidth,behavior:"smooth"})
     }
+  }
 
     const scrollRight=()=>{
         
@@ -15,7 +21,11 @@ const Deals3 = () => {
         <div className='relative p-4 text-start'>
             <h2 className='text-xl md:text-2xl font-semibold text-gray-800'>Amazing offer on vanity | Get upto 45% off on various vanity</h2>
         </div>
-        <div className='flex overflow-x-hidden scroll-smooth p-4'>
+        <div 
+        ref={containerRef}
+        className='flex overflow-x-hidden scroll-smooth p-4'
+         style={{scrollSnapAlign:"start"}}
+        >
           {images.map((img,index)=>(
             <div
             key={index}
