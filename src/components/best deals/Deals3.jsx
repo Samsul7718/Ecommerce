@@ -30,13 +30,13 @@ const Deals3 = () => {
         </div>
         <button
         onClick={scrollLeft}
-        className=''
+        className='absolute left-4 top-4/7 -translate-y-2'
         >
              <ChevronLeft className="text-black" size={24} />
         </button>
         <button
          onClick={scrollRight}
-         className=''
+         className='absolute right-4 top-4/7 -translate-y-2'
         >
              <ChevronRight className="text-black" size={24} />
         </button>
