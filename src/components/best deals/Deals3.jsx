@@ -6,6 +6,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react'
 const Deals3 = () => {
   const containerRef=useRef(null);
   const navigate=useNavigate();
+
     const scrollLeft=()=>{
       if(containerRef.current){
         const containerWidth=containerRef.current.offsetWidth;
@@ -14,8 +15,12 @@ const Deals3 = () => {
   }
 
     const scrollRight=()=>{
+      if(containerRef.current){
+        const containerWidth=containerRef.current.offsetWidth;
+        containerRef.current.scrollBy({left:containerWidth,behavior:"smooth"})
         
     }
+  }
   return (
     <section className='relative w-full px-4 bg-sky-100'>
         <div className='relative p-4 text-start'>
@@ -31,7 +36,10 @@ const Deals3 = () => {
             key={index}
             className='min-w-[200px] shrink-0  overflow-hidden shadow-md'
             >
-                <img src={img.src} alt="vanity loading..." 
+                <img 
+                src={img.src} 
+                onClick={()=>navigate(img.link)}
+                alt="vanity loading..." 
                 className='w-full h-42 object-cover'
                 /> 
             </div>
