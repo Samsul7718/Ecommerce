@@ -87,6 +87,21 @@ import bag8 from '../../src/assets/images/vanity/bag8.jpg'
 import bag9 from '../../src/assets/images/vanity/bag9.jpg'
 import bag14 from '../../src/assets/images/vanity/bag14.jpg'
 import bag15 from '../../src/assets/images/vanity/bag15.jpg'
+import chair1 from '../../src/assets/images/chair/chair1.jpg'
+import chair2 from '../../src/assets/images/chair/chair2.jpg'
+import chair3 from '../../src/assets/images/chair/chair3.jpg'
+import chair4 from '../../src/assets/images/chair/chair4.jpg'
+import chair5 from '../../src/assets/images/chair/chair5.jpg'
+import chair6 from '../../src/assets/images/chair/chair6.jpg'
+import chair7 from '../../src/assets/images/chair/chair7.jpg'
+import chair8 from '../../src/assets/images/chair/chair8.jpg'
+import chair9 from '../../src/assets/images/chair/chair9.jpg'
+import chair10 from '../../src/assets/images/chair/chair10.jpg'
+import chair11 from '../../src/assets/images/chair/chair11.jpg'
+import chair12 from '../../src/assets/images/chair/chair12.jpg'
+import chair13 from '../../src/assets/images/chair/chair13.jpg'
+import chair14 from '../../src/assets/images/chair/chair14.jpg'
+import chair15 from '../../src/assets/images/chair/chair15.jpg'
 
 
 
@@ -99,6 +114,7 @@ export{
     reebok,lapi,speaker,watch,pend,facepwd,day_creme,lipstick,facewash,ac_container,bowl,chaicup,chopping_knife,ciger,coco_chopper,
     container,dalpress,glass,ice_maker,karai,kutni,rotibelun,spray,thali,toast_turn,mac4,macpro,asus,lenovo,iphone17,Oneplus,samg,
     oppo,vanity1,vanity1_0,vanity1_2,vanity1_1,vanity2,vanity2_0,vanity2_1,vanity2_2,vanity3,vanity3_0,vanity3_1,vanity3_2,
-    solidWood,ipad,headphone,watch_T,eyeglass,bag1,bag2,bag3,bag4,bag5,bag6,bag7,bag8,bag9,bag14,bag15,
+    solidWood,ipad,headphone,watch_T,eyeglass,bag1,bag2,bag3,bag4,bag5,bag6,bag7,bag8,bag9,bag14,bag15,chair1,chair2,chair3,
+    chair4,chair5,chair6,chair7,chair8,chair9,chair10,chair11,chair12,chair13,chair14,chair15,
 
 }
