@@ -1,19 +1,21 @@
 import React,{useRef} from 'react'
+import { useNavigate } from 'react-router-dom'
 import {images} from '../best deals/Deals4_Img'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 const Deals4 = () => {
   const containerRef=useRef(null);
+  const navigate=useNavigate();
   const scrollLeft=()=>{
       if(containerRef.current){
-        const containerWidth=containerRef.current.ofsetWidth;
+        const containerWidth=containerRef.current.offsetWidth;
        containerRef.current.scrollBy({left:-containerWidth,behavior:"smooth"})
       }
   }
   const scrollRight=()=>{
     if(containerRef.current){
-      const containerWidth=containerRef.current.ofsetWidth;
-      containerRef.current.scrollBy({right:containerWidth,behavior:"smooth"})
+      const containerWidth=containerRef.current.offsetWidth;
+      containerRef.current.scrollBy({left:containerWidth,behavior:"smooth"})
     }
   }
   return (
@@ -23,12 +25,15 @@ const Deals4 = () => {
       </div>
       <div
       ref={containerRef}
-      className='flex overflow-x-hidden scroll-smooth p-4'>
+      className='flex overflow-x-hidden scroll-smooth p-4'
+      style={{scrollSnapAlign:"start"}}
+      >
         {images.map((img,index)=>(
           <div
           key={index}
           className='min-w-[200px] shrink-0 object-cover shadow-md'>
           <img
+          onClick={()=>navigate(img.link)}
           className='w-full h-42 object-cover'
           src={img.src}
           alt="chair loading... " 

@@ -23,6 +23,7 @@ import Vanity from "./components/page/Vanity"
 import Electronic from './components/page/Electronic'
 import Deals3 from "./components/best deals/Deals3"
 import Deals4 from "./components/best deals/Deals4"
+import Chair from "./components/page/Chair"
 
 
 
@@ -71,6 +72,7 @@ function App() {
         <Route  path="/shoes" element={<Shoes/>} />
         <Route  path="/beauty" element={<Beauty/>} />
         <Route  path="/laptop" element={<Laptop/>} />
+        <Route  path="/chair" element={<Chair/>} />
        
        </Routes>
       
