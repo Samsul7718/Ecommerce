@@ -22,6 +22,7 @@ import SignUp from "./components/page/SignUp"
 import Vanity from "./components/page/Vanity"
 import Electronic from './components/page/Electronic'
 import Deals3 from "./components/best deals/Deals3"
+import Deals4 from "./components/best deals/Deals4"
 
 
 
@@ -43,7 +44,7 @@ function App() {
        <Deals2/>
         <Client2/>
          <Deals3/>
-         <Deals1/>
+         <Deals4/>
        </>
         } />
         <Route  path="/sell" element="" />
