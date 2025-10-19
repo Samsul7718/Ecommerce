@@ -7,15 +7,15 @@ const Deals4 = () => {
       <div>
         <h2 className='font-semibold text-xl md:text-2xl text-gray-800'>Great deals on sesons Festivals | Get upto 55% off on office chair</h2>
       </div>
-      <div>
+      <div className='flex overflow-x-hidden scroll-smooth p-4'>
         {images.map((img,index)=>(
           <div
           key={index}
-          className=''>
+          className='min-w-[200px] shrink-0 object-cover shadow-md'>
           <img
-          className=''
+          className='w-full h-42 object-cover'
           src={img.src}
-          alt="" 
+          alt="chair loading... " 
           />
         </div>
         ))}
