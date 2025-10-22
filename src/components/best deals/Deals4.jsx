@@ -21,7 +21,7 @@ const Deals4 = () => {
   return (
     <section className='relative w-full px-4 bg-sky-100'>
       <div>
-        <h2 className='font-semibold text-xl md:text-2xl text-gray-800'>Great deals on sesons Festivals | Get upto 55% off on office chair</h2>
+        <h2 className='font-semibold text-xl md:text-2xl text-gray-800 p-4'>Great deals on sesons Festivals | Get upto 55% off on office chair</h2>
       </div>
       <div
       ref={containerRef}
