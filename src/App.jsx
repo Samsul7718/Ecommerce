@@ -24,6 +24,7 @@ import Electronic from './components/page/Electronic'
 import Deals3 from "./components/best deals/Deals3"
 import Deals4 from "./components/best deals/Deals4"
 import Chair from "./components/page/Chair"
+import Footer from "./components/footer/Footer"
 
 
 
@@ -46,6 +47,7 @@ function App() {
         <Client2/>
          <Deals3/>
          <Deals4/>
+         <Footer/>
        </>
         } />
         <Route  path="/sell" element="" />
