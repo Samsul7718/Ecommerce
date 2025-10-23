@@ -1,10 +1,17 @@
-import { useContext,createContext,useState} from "react";
+import { useContext,createContext,useState, useEffect} from "react";
 
 const CartContext=createContext(null);
 
 
 export const CartProvider=({children})=>{
-    const [cartItems,setCartItems]=useState([]);
+    const [cartItems,setCartItems]=useState(()=>{
+      const storedCart=localStorage.getItem('cartItems');
+      return storedCart ? JSON.parse(storedCart) : [];
+    });
+
+    useEffect(()=>{
+      localStorage.setItem('cartItems',JSON.stringify(cartItems));
+    },[cartItems])
 
    const totalQuantity=cartItems.reduce((sum,item)=>sum+item.quantity,0);
 
