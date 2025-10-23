@@ -6,14 +6,13 @@ const Footer = () => {
    <footer className="w-full bg-gray-800 text-gray-300 py-6 px-8 text-sm">
   <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
     
-    {/* Company Info */}
-    {/* flex flex-cols items-center justify-between gap-4 */}
+    {/* Basic Info */}
     <div className=''>
         <div className='w-15 h-15 cursor-pointer bg-white rounded-full mb-4'>
             <img className="w-15 h-15 rounded-full" src={logo} alt="Logo" />
          </div>
       <p className="text-gray-400">Your shopmate shop for all essentials.</p>
-      <p className="mt-3 text-gray-500">© {new Date().getFullYear()} </p>
+      <p className="mt-3 text-gray-500">© {new Date().getFullYear()} ShopMate</p>
     </div>
 
     {/* Quick Links */}
