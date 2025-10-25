@@ -26,14 +26,14 @@ const Footer = () => {
     </div> 
 
     {/* Policies */}
-    {/* <div>
+    <div> 
       <h3 className="text-white font-semibold mb-2">Legal</h3>
-      <ul className="space-y-1">
-        <li><a href="/privacy" className="hover:text-white">Privacy Policy</a></li>
-        <li><a href="/terms" className="hover:text-white">Terms & Conditions</a></li>
-        <li><a href="/refund" className="hover:text-white">Refund Policy</a></li>
-      </ul>
-    </div> */}
+      {/* <ul className="space-y-1"> */}
+        {/* <li><a href="/privacy" className="hover:text-white">Privacy Policy</a></li> */}
+        {/* <li><a href="/terms" className="hover:text-white">Terms & Conditions</a></li> */}
+        {/* <li><a href="/refund" className="hover:text-white">Refund Policy</a></li> */}
+      {/* </ul> */}
+    </div> 
   </div>
 </footer>
 
