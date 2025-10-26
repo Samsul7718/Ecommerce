@@ -8,6 +8,7 @@ const Beauty = () => {
         <p className="text-gray-700">
           Discover our range of beauty products designed to enhance your natural glow. From skincare essentials to makeup must-haves, we have everything you need to look and feel your best.
         </p>
+        <button className='bg-green-500 p-4 rounded-lg shadow-md'>add to cart</button>
       </div>
     </section>
   )
