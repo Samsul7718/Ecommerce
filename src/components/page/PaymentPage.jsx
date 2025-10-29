@@ -41,7 +41,7 @@ const PaymentPage = () => {
         <Link to="/">
         <button className='bg-yellow-400  p-3 rounded-lg shadow-md'>Shop More</button>
         </Link>
-        <Link to="/">
+        <Link to="/order">
         <button className='bg-green-500 p-3 rounded-lg shadow-md'>pay INR {total}</button>
         </Link>
         
