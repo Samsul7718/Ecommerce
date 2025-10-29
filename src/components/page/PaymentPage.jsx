@@ -8,6 +8,9 @@ const PaymentPage = () => {
 
     const total=cartItems.reduce((acc,item)=>acc+item.price *(item.quantity || 1),0);
     // const totalPayment=total.toFixed(2);
+      const handlePayment=()=>{
+    alert(`Payment of $${total} done using ${paymentMethod}`);
+   }
 
   return (
     <div className='flex flex-col items-center gap-6 mt-10'>
@@ -42,7 +45,9 @@ const PaymentPage = () => {
         <button className='bg-yellow-400  p-3 rounded-lg shadow-md'>Shop More</button>
         </Link>
         <Link to="/order">
-        <button className='bg-green-500 p-3 rounded-lg shadow-md'>pay INR {total}</button>
+        <button
+        onClick={handlePayment}
+        className='bg-green-500 p-3 rounded-lg shadow-md'>pay INR {total}</button>
         </Link>
         
       </div>
