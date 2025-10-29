@@ -25,6 +25,7 @@ import Deals3 from "./components/best deals/Deals3"
 import Deals4 from "./components/best deals/Deals4"
 import Chair from "./components/page/Chair"
 import Footer from "./components/footer/Footer"
+import PaymentPage from "./components/page/PaymentPage"
 
 
 
@@ -75,6 +76,7 @@ function App() {
         <Route  path="/beauty" element={<Beauty/>} />
         <Route  path="/laptop" element={<Laptop/>} />
         <Route  path="/chair" element={<Chair/>} />
+        <Route  path="/payment" element={<PaymentPage/>} />
        
        </Routes>
       
