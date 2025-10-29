@@ -39,7 +39,7 @@ const CartPage = () => {
         </div>
         {/* Total price */}
         <div className='flex flex-col items-center mt-8 p-5 shadow rounded-lg shadow-sm'>
-            <h2 className='text-xl font-bold'>Total:$ {totalPayment}</h2>
+            <h2 className='text-xl font-bold'>Total:INR {totalPayment}</h2>
 
             <Link to="/payment">
             <button className='bg-blue-600 text-white px-6 py-2 rounded-lg mt-4'>Proceed to Checkout</button>
