@@ -24,13 +24,13 @@ const Product_dtls = () => {
   const navigate=useNavigate();
    const product = products.find((item) => item.id === id);
   const [quantity, setQuantity] = useState(1);
-  const [selectedImg, setSelectedImg] = useState(product.images[0]);
+  const [selectedImg, setSelectedImg] = useState(product?.images?.[0] || '');
   const [selectedColor, setSelectedColor] = useState("red"); 
-  const [selectedSize, setSelectedSize] = useState(product.size[0]);
+  const [selectedSize, setSelectedSize] = useState(product?.size?.[0] || '');
   
 
     //  const total=cartItems.reduce((sum,item)=>sum + product.price * (product.quantity || 1),0);
-  const basePrice = product.price;
+  const basePrice = product?.price;
 
   const handleIncrease = () => setQuantity(quantity + 1);
   const handleDecrease = () => setQuantity(quantity > 1 ? quantity - 1 : 1);
@@ -55,7 +55,7 @@ const Product_dtls = () => {
         />
         </div>
         <div className="flex gap-1 m-3 overflow-x-hidden">
-          {product.images.map((img,index)=>(
+          {product?.images?.map((img,index)=>(
              <div key={index}
             className={`min-w-[70px] shrink-0 p-1 m-2 cursor-pointer rounded-md shadow-md 
               ${selectedImg===img ? 'ring-2 ring-sky-500':'border-transparent'}`}
@@ -76,17 +76,17 @@ const Product_dtls = () => {
 
       {/* Right: Product Info */}
       <div className="flex flex-col justify-center space-y-6">
-        <h1 className="text-3xl font-bold text-gray-800">{product.name}</h1>
+        <h1 className="text-3xl font-bold text-gray-800">{product?.name}</h1>
         <p className="text-gray-600 leading-relaxed">
-        {product.description}
+        {product?.description}
         </p>
 
           {/* size */}
-          {product.size && product.size.length>0 && (
+          {product?.size && product?.size.length>0 && (
           <div>
         <h3 className="font-medium text-gray-700 mb-2">Size:</h3>
         <div className="flex gap-3">
-          {product.size.map((s) => (
+          {product?.size.map((s) => (
             <button
               key={s}
               onClick={() => setSelectedSize(s)}
@@ -105,11 +105,11 @@ const Product_dtls = () => {
           )}
          
          {/* Colors */}
-      {product.colors && product.colors.length>0 &&(
+      {product?.colors && product?.colors.length>0 &&(
          <div>
         <h3 className="font-medium text-gray-700 mb-2">Color:</h3>
         <div className="flex gap-3">
-          {product.colors.map((color) => (
+          {product?.colors.map((color) => (
             <button
               key={color}
               onClick={() => setSelectedColor(color)}

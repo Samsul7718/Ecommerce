@@ -1,6 +1,9 @@
 import React, {useRef } from 'react'
-import { useNavigate } from 'react-router-dom';
-import {images}from '../best deals/Deals1_Img'
+import { Link, useNavigate } from 'react-router-dom';
+// import {MenProducts} from '../../products/men fashion/MenFashion'
+import { fson } from './Deals1_Img';
+
+// import {images}from '../best deals/Deals1_Img'
 // import { shirt,pant,T_shirt,formal, dumble, starx} from '../../assets'
 // import { burkha,saree,kurti,long,cheast} from '../../assets'
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -21,6 +24,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 const Deals1 = () => {
   const containerRef = useRef(null);
   const navigate=useNavigate();
+    // const product = products.find((item) => item.id === id);
 
   const scrollLeft=()=>{
     if(containerRef.current){
@@ -42,23 +46,29 @@ const Deals1 = () => {
     
         </div>
 
+
          <div 
           ref={containerRef}
           className="flex gap-4 overflow-x-hidden scroll-smooth p-4"
           style={{ scrollSnapAlign: "start" }}
-         >
-    {images.map((img, index) => (
+          >
+    {fson?.map((product, index) => (
+           <Link
+           key={index}
+           to={`item/${product.id}`}
+           >
       <div
         key={index}
-        onClick={()=>navigate(img.link)}
+        onClick={()=>navigate()}
         className="min-w-[200px] flex-shrink-0 rounded-lg overflow-hidden shadow-md"
       >
         <img
-          src={img.src}
+          src={product?.images?.[0] || "loading..."}
           alt="fashionImg loading..."
           className="w-full h-40 object-cover"
         />
       </div>
+     </Link>
     ))}
   </div>
      
