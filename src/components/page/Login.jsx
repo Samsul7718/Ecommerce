@@ -4,7 +4,6 @@ import { Link,useNavigate } from 'react-router-dom'
 
 const Login = () => {
   const [values,setValues]=useState({
-    name:"",
     email:"",
     mobile:"",
     
@@ -47,20 +46,7 @@ const Login = () => {
           Login
         </h2>
         <form onSubmit={handleSubmit}>
-          <div className='mb-2'>
-            <label className='text-gray-700 font-medium mb-1'>
-                Name :
-            </label>
-             <input 
-             type="text" 
-             name="name" 
-             onChange={handleChange}
-             value={values.name}
-             className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-1 focus:ring-blue-500 capitalize" 
-             placeholder='Enter your name'
-             required
-             />
-          </div>
+        
             <div className='mb-2'>
             <label className='text-gray-700 font-medium mb-1'>
                 Email :
@@ -77,6 +63,20 @@ const Login = () => {
              required
              />
               {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
+          </div>
+            <div className='mb-2'>
+            <label className='text-gray-700 font-medium mb-1'>
+                Mobile :
+            </label>
+             <input 
+             type="number" 
+             name="mobile" 
+             onChange={handleChange}
+             value={values.mobile}
+             className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-1 focus:ring-blue-500 capitalize" 
+             placeholder='Enter your mobile number'
+             required
+             />
           </div>
           
            {/* Submit Button */}
