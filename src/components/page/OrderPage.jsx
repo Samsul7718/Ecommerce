@@ -13,7 +13,7 @@ const OrderPage = () => {
                     </button>
             </div>
             <div>
-              <p>visite again our shopping app</p>
+              <p className='text-bold '>visite again our shopping app</p>
             </div>
         </div>
     </div>
