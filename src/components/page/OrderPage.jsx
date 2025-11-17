@@ -12,6 +12,9 @@ const OrderPage = () => {
                         Order Sucessful!
                     </button>
             </div>
+            <div>
+              <p>visite again our shopping app</p>
+            </div>
         </div>
     </div>
   )
