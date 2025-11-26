@@ -1,7 +1,7 @@
 import React, {useRef } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 // import {MenProducts} from '../../products/men fashion/MenFashion'
-import { fson } from './Deals1_Img';
+// import { fson } from './Deals1_Img';
 
 // import {images}from '../best deals/Deals1_Img'
 // import { shirt,pant,T_shirt,formal, dumble, starx} from '../../assets'

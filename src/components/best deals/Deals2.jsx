@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { images } from '../best deals/Deals2_Img'
+// import { images } from '../best deals/Deals2_Img'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
  
