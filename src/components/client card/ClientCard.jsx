@@ -10,9 +10,9 @@ const ClientCard = ({title,subTitle,items,seeMorePage}) => {
             <p className="text-gray-600 mt-2 md:text-lg">{subTitle}</p>
         </div>
         <div className="grid grid-cols-2 gap-3 p-4">
-            {items.map((product)=>(
+            {items.map((product,id)=>(
                 <Link
-                key={product.id}
+                key={id}
                 to={`/item/${product.id}`}
                 className="text-decoration-none"
                 >
