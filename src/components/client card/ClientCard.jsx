@@ -10,23 +10,28 @@ const ClientCard = ({title,subTitle,items,seeMorePage}) => {
             <p className="text-gray-600 mt-2 md:text-lg">{subTitle}</p>
         </div>
         <div className="grid grid-cols-2 gap-3 p-4">
-            {items.map((product,id)=>(
+            {items.map((product)=>(
+               
+
                 <Link
-                key={id}
+                key={product.id}
                 to={`/item/${product.id}`}
                 className="text-decoration-none"
                 >
                    {/* {console.log(product.images[1])} */}
                     
             <div className="p-2 rounded hover:shadow-md transition">
-                
+
                 <img 
-                src={product.images?.[0] || "loading..."} 
+                src={product.images[0]} 
                 alt={product.name}  className="w-full h-24 object-cover rounded-md aspect-[4/3]" />
-                  <p className="text-gray-600 mt-2 md:text-xs mx-8">{product.name}</p>
-            </div>
+               <p className="text-gray-600 mt-2 md:text-xs mx-8">{product.name}</p>
+              
+             </div>
+            {console.log(product.images)}
              </Link>
             ))}
+        
         </div>
         <div className='p-4 text-center space-between flex gap-20 justify-center'>
             <Link
