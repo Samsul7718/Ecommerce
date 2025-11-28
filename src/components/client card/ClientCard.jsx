@@ -1,9 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { resolveSrc } from '../../config/api'
 
 
 const ClientCard = ({title,subTitle,items,seeMorePage}) => {
-  return (
+    // const resolveSrc = (img) => {
+    //     if (!img) return '';
+    //     if (img.startsWith('http') || img.startsWith('https')) return img;
+    //     if (img.startsWith('/')) return `http://localhost:3000${img}`;
+    //     return img;
+    // }
+    return (
     <section className="max-w-sm mx-auto bg-white rounded-lg shadow-md overflow-hidden">
         <div className="p-4 text-center">
             <h2 className="text-xl md:text-2xl font-semibold text-gray-800">{title}</h2>
@@ -22,13 +29,13 @@ const ClientCard = ({title,subTitle,items,seeMorePage}) => {
                     
             <div className="p-2 rounded hover:shadow-md transition">
 
-                <img 
-                src={product.images[0]} 
-                alt={product.name}  className="w-full h-24 object-cover rounded-md aspect-[4/3]" />
+                     <img 
+                     src={resolveSrc(product.images[0])} 
+                     alt={product.name}  className="w-full h-24 object-cover rounded-md aspect-[4/3]" />
                <p className="text-gray-600 mt-2 md:text-xs mx-8">{product.name}</p>
               
              </div>
-            {console.log(product.images)}
+            
              </Link>
             ))}
         
