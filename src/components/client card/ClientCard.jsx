@@ -4,12 +4,7 @@ import { resolveSrc } from '../../config/api'
 
 
 const ClientCard = ({title,subTitle,items,seeMorePage}) => {
-    // const resolveSrc = (img) => {
-    //     if (!img) return '';
-    //     if (img.startsWith('http') || img.startsWith('https')) return img;
-    //     if (img.startsWith('/')) return `http://localhost:3000${img}`;
-    //     return img;
-    // }
+ 
     return (
     <section className="max-w-sm mx-auto bg-white rounded-lg shadow-md overflow-hidden">
         <div className="p-4 text-center">
