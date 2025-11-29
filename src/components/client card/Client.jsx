@@ -27,52 +27,52 @@ const Client = () => {
        <ClientCard
        title={"Mens Fashion"}
        subTitle={"Discover the latest trends in"}
-       items={products}
+       items={products.filter(p => Number(p.id) >= 1 && Number(p.id) <= 50)}
        seeMorePage={"/menfashion"}
       
        />
         <ClientCard
        title={"Womens Fashion"}
        subTitle={"Discover the latest trends in"}
-       items={products}
+        items={products.filter(p => Number(p.id) >= 51 && Number(p.id) <= 100)}
         seeMorePage={"/womenfashion"}
        />
-        <ClientCard
+        {/* <ClientCard
        title={"Gym"}
        subTitle={"Get into your fitness world"}
        items={products}
         seeMorePage={"/gymfashion"}
-       />
-        <ClientCard
+       /> */}
+        {/* <ClientCard
        title={"Toy's"}
        subTitle={"Get relaxed with toy's"}
        items={products}
        seeMorePage={"/KidsToy"}
-       />
-        <ClientCard
+       /> */}
+        {/* <ClientCard
        title={"Kitchen Appliances"}
        subTitle={"Introduce the best kitchen appliances"}
        items={products}
        seeMorePage={"/kittools"}
-       />
-        <ClientCard
+       /> */}
+        {/* <ClientCard
        title={"Shoes"}
        subTitle={"Step style with latest shoe collection"}
        items={products}
        seeMorePage={"/Shoes"}
-       />
-        <ClientCard
+       /> */}
+        {/* <ClientCard
        title={"Best of Electronics"}
        subTitle={"Explore top-rated electronics"}
        items={products}
        seeMorePage={"/electronic"}
-       />
-        <ClientCard
+       /> */}
+        {/* <ClientCard
        title={"Best seller in Beauty"}
        subTitle={"Discover the latest trends in"}
        items={products}
        seeMorePage={"/Beauty"}
-       />
+       /> */}
 
     </section>
   )
