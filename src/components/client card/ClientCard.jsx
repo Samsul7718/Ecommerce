@@ -6,7 +6,7 @@ import { resolveSrc } from '../../config/api'
 const ClientCard = ({title,subTitle,items,seeMorePage}) => {
  
     return (
-    <section className="max-w-sm mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+    <section className="max-w-sm mx-auto bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full">
         <div className="p-4 text-center">
             <h2 className="text-xl md:text-2xl font-semibold text-gray-800">{title}</h2>
             <p className="text-gray-600 mt-2 md:text-lg">{subTitle}</p>
@@ -35,7 +35,7 @@ const ClientCard = ({title,subTitle,items,seeMorePage}) => {
             ))}
         
         </div>
-        <div className='p-4 text-center space-between flex gap-20 justify-center'>
+        <div className='p-4 text-center mt-auto flex gap-20 justify-center'>
             <Link
             to={seeMorePage}
             >
