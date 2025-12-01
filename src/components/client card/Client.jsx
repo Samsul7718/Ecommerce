@@ -49,12 +49,12 @@ const Client = () => {
        items={products.filter(p=>Number(p.id)>=151 && Number(p.id)<=200)}
        seeMorePage={"/KidsToy"}
        />
-        {/* <ClientCard
+        <ClientCard
        title={"Kitchen Appliances"}
        subTitle={"Introduce the best kitchen appliances"}
-       items={products}
+       items={products.filter(p=>Number(p.id)>=201 && Number(p.id)<=250)}
        seeMorePage={"/kittools"}
-       /> */}
+       />
         {/* <ClientCard
        title={"Shoes"}
        subTitle={"Step style with latest shoe collection"}
