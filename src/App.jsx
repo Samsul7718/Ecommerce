@@ -5,7 +5,7 @@ import Hero from "./components/home/Hero"
 import Navbar from "./components/navbar/Navbar"
 import { BrowserRouter as Router,Routes,Route } from "react-router-dom"
 // import ProductDetails from "./components/product details page/Product_dtls"
-// import Product_dtls from "./components/product details page/Product_dtls"
+import Product_dtls from "./components/product details page/Product_dtls"
 import MenFashion from "./components/page/MenFashion"
 import WomenFashion from "./components/page/WomenFashion"
 import GymFashion from "./components/page/GymFashion"
@@ -67,7 +67,7 @@ function App() {
         <Route  path="/signup" element={<SignUp/>} />
         <Route  path="/returnorder" element="" />
         <Route  path="/cart" element={<CartPage/>} />
-        {/* <Route  path="/item/:id" element={<Product_dtls/>} /> */}
+        <Route  path="/item/:id" element={<Product_dtls/>} />
         <Route  path="/menfashion" element={<MenFashion/>} />
         <Route  path="/Womenfashion" element={<WomenFashion/>} />
         <Route  path="/gymfashion" element={<GymFashion/>} />

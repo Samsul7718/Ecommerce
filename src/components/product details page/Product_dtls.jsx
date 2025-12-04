@@ -1,6 +1,6 @@
-// import React, { useState } from "react";
+import React, { useState } from "react";
 // import { Link, useNavigate } from "react-router-dom";
-// import { useParams } from "react-router-dom";
+import {useLocation, useParams } from "react-router-dom";
 // import { MenProducts } from "../../products/men fashion/MenFashion";
 // import { GirlProducts } from "../../products/women fashion/WomenFashion";
 // import { GymProducts } from "../../products/gym/Gym";
@@ -18,11 +18,16 @@
 // const products = [...MenProducts, ...GirlProducts, ...GymProducts, ...KitchProducts, ...Toys,
 //   ...Shoes,...Electronic,...Beauty,...Laptop,...Mobile,...Vanity,...Electronic1];
 
-// const Product_dtls = () => {
-//   const { id } = useParams();
+const Product_dtls = () => {
+    // console.log("hello product");
+    
+  const { id } = useParams();
+const { state } = useLocation();
+const { products } = state || { products: [] };
+console.log("products in dtls page:", products);
 //   const {addToCart}=useCart()
 //   const navigate=useNavigate();
-//    const product = products.find((item) => item.id === id);
+   const product = product.find((item) => item.id === id);
 //   const [quantity, setQuantity] = useState(1);
 //   const [selectedImg, setSelectedImg] = useState(product?.images?.[0] || '');
 //   const [selectedColor, setSelectedColor] = useState("red"); 
@@ -43,7 +48,7 @@
 //   }
 
 //   return (
-//     <section className="max-w-6xl mx-auto p-6 grid md:grid-cols-2 gap-8">
+    // <section className="max-w-6xl mx-auto p-6 grid md:grid-cols-2 gap-8">
 //       {/* Left: Product Image */}
 //       <div className="flex flex-col justify-center">
 //         <div>
@@ -168,6 +173,6 @@
 //       </div>
 //     </section>
 //   );
-// };
+};
 
-// export default Product_dtls;
+export default Product_dtls;
