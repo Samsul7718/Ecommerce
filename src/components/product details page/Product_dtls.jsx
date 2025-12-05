@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 // import { Link, useNavigate } from "react-router-dom";
 // import {useLocation, useParams } from "react-router-dom";
 import { useProduct } from "../../context/ProductContext";
@@ -21,7 +21,7 @@ console.log("products in dtls page:", products);
 //   const navigate=useNavigate();
   //  const product = productContext.find((item) => item.id === id);
 //   const [quantity, setQuantity] = useState(1);
-  // const [selectedImg, setSelectedImg] = useState(products?.images?.[0] || '');
+  const [selectedImg, setSelectedImg] = useState(resolveSrc(products?.images?.[0] || ""));
   // const [selectedColor, setSelectedColor] = useState("red"); 
   // const [selectedSize, setSelectedSize] = useState(product?.size?.[0] || '');
   
@@ -40,30 +40,36 @@ console.log("products in dtls page:", products);
 //   }
   if (!products) return <h2>Product not found{products.name}</h2>;
 
+  // useEffect(()=>{
+  //   if(products?.images?.length>0){
+  //     setSelectedImg(resolveSrc(products.images[0]))
+  //   }
+  // },[products])
+
 
   return (
     <section className="max-w-6xl mx-auto p-6 grid md:grid-cols-2 gap-8">
        {/* Left: Product Image */}
       <div className="flex flex-col justify-center">
-       {/* {console.log("products in dtls page from return :", products)} */}
+       {console.log("products in dtls page from return :", products)}
         <div>
               <img
           src={selectedImg}
-          alt="Product"
+          alt="products"
           className="rounded-2xl shadow-lg object-cover w-full h-120 max-w-md"
-          style={{ backgroundColor: selectedColor }}
+          // style={{ backgroundColor: selectedColor }}
         />
           </div>
           <div className="flex gap-1 m-3 overflow-x-hidden">
            {products?.images?.map((img,index)=>(
               <div key={index}
              className={`min-w-[70px] shrink-0 p-1 m-2 cursor-pointer rounded-md shadow-md 
-               ${selectedImg===img ? 'ring-2 ring-sky-500':'border-transparent'}`}
+               ${selectedImg===resolveSrc(img) ? 'ring-2 ring-sky-500':'border-transparent'}`}
               // style={{ backgroundColor: color }}
-             onClick={()=>setSelectedImg(img)}
+             onClick={()=>setSelectedImg(resolveSrc(img))}
              >
                 <img 
-               src={img} 
+               src={resolveSrc(img)} 
                alt="" 
                className="w-full h-20 object-cover"
                />
@@ -89,12 +95,12 @@ console.log("products in dtls page:", products);
             {products?.size.map((s) => (
              <button
                key={s}
-                onClick={() => setSelectedSize(s)}
-                className={`px-3 py-1 border rounded-lg ${
-                 selectedSize === s
-                   ? "border-sky-500 scale-110"
-                   : "border-gray-300"
-               }`}
+                // onClick={() => setSelectedSize(s)}
+              //   className={`px-3 py-1 border rounded-lg ${
+              //    selectedSize === s
+              //      ? "border-sky-500 scale-110"
+              //      : "border-gray-300"
+              //  }`}
              >
                 {s}
               </button>
@@ -112,13 +118,13 @@ console.log("products in dtls page:", products);
            {products?.colors.map((color) => (
              <button
                key={color}
-               onClick={() => setSelectedColor(color)}
-               className={`w-6 h-6 rounded-full border-2 ${
-                 selectedColor === color
-                   ? "border-sky-500 scale-110"
-                   : "border-gray-300"
-              }`}
-              style={{ backgroundColor: color }}
+              //  onClick={() => setSelectedColor(color)}
+              //  className={`w-6 h-6 rounded-full border-2 ${
+              //    selectedColor === color
+              //      ? "border-sky-500 scale-110"
+              //      : "border-gray-300"
+              // }`}
+              // style={{ backgroundColor: color }}
             />
           ))}
         </div>
@@ -131,14 +137,14 @@ console.log("products in dtls page:", products);
           {/* Quantity selector */}
         <div className="flex items-center space-x-4">
            <button
-             onClick={handleDecrease}
+            //  onClick={handleDecrease}
             className="px-3 py-1 border rounded-lg hover:bg-gray-100"
            >
             -
            </button>
-           <span className="text-lg">{quantity}</span>
+           {/* <span className="text-lg">{quantity}</span> */}
            <button
-            onClick={handleIncrease}
+            // onClick={handleIncrease}
             className="px-3 py-1 border rounded-lg hover:bg-gray-100"
           >
             +
@@ -149,7 +155,7 @@ console.log("products in dtls page:", products);
         <div className="flex space-x-4">
             {/* <Link to="/cart"> */}
            <button
-          onClick={()=>handleCartProduct(product)}
+          // onClick={()=>handleCartProduct(product)}
           className="px-6 py-3 bg-sky-600 text-white rounded-xl shadow hover:bg-sky-700">
             Add to Cart
           </button> 
