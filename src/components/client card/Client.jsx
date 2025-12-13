@@ -14,7 +14,7 @@ const Client = () => {
   const [products,setProducts]=useState([]);
 
   useEffect(()=>{
-    fetch(`${import.meta.env.VITE_API_URL}/api/products`)
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/api/products`)
     .then(res=>res.json())
     .then(data=>setProducts(data))
     .catch(err=>console.log(err));
