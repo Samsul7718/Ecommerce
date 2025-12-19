@@ -112,11 +112,11 @@ console.log("products in dtls page:", product);
            )} 
          
           {/* Colors */}
-        {products?.colors && products?.colors.length>0 &&(
+        {product?.colors && product?.colors.length>0 &&(
           <div>
          <h3 className="font-medium text-gray-700 mb-2">Color:</h3>
          <div className="flex gap-3">
-           {products?.colors.map((color) => (
+           {product?.colors.map((color) => (
              <button
                key={color}
               //  onClick={() => setSelectedColor(color)}
