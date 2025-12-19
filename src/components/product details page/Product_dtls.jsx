@@ -62,7 +62,7 @@ console.log("products in dtls page:", product);
         />
           </div>
           <div className="flex gap-1 m-3 overflow-x-hidden">
-           {products?.images?.map((img,index)=>(
+           {product?.images?.map((img,index)=>(
               <div key={index}
              className={`min-w-[70px] shrink-0 p-1 m-2 cursor-pointer rounded-md shadow-md 
                ${selectedImg===resolveSrc(img) ? 'ring-2 ring-sky-500':'border-transparent'}`}
