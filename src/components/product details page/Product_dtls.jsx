@@ -10,19 +10,19 @@ import { useCart } from "../../context/CartContext";
 //   ...Shoes,...Electronic,...Beauty,...Laptop,...Mobile,...Vanity,...Electronic1];
 
 const Product_dtls = () => {
-  const { selectedProduct:products } = useProduct();
+  const { selectedProduct:product } = useProduct();
     // console.log("hello product");
     
   // const { id } = useParams();
 // const { state } = useLocation();
 // const { products } = state || { products: [] };
-console.log("products in dtls page:", products);
+console.log("products in dtls page:", product);
 //  const productContext = selectedProduct;
   const {addToCart}=useCart()
   const navigate=useNavigate();
   //  const product = productContext.find((item) => item.id === id);
 //   const [quantity, setQuantity] = useState(1);
-  const [selectedImg, setSelectedImg] = useState(resolveSrc(products?.images?.[0] || ""));
+  const [selectedImg, setSelectedImg] = useState(resolveSrc(product?.images?.[0] || ""));
   // const [selectedColor, setSelectedColor] = useState("red"); 
   // const [selectedSize, setSelectedSize] = useState(product?.size?.[0] || '');
   
@@ -39,7 +39,7 @@ console.log("products in dtls page:", products);
       // setQuantity(1);
       navigate("/cart");
   }
-  if (!products) return <h2>Product not found{products.name}</h2>;
+  if (!product) return <h2>Product not found{product.name}</h2>;
 
   // useEffect(()=>{
   //   if(products?.images?.length>0){
@@ -52,7 +52,7 @@ console.log("products in dtls page:", products);
     <section className="max-w-6xl mx-auto p-6 grid md:grid-cols-2 gap-8">
        {/* Left: Product Image */}
       <div className="flex flex-col justify-center">
-       {console.log("products in dtls page from return :", products)}
+       {console.log("products in dtls page from return :", product)}
         <div>
               <img
           src={selectedImg}
@@ -83,17 +83,17 @@ console.log("products in dtls page:", products);
 
         {/* Right: Product Info */}
         <div className="flex flex-col justify-center space-y-6">
-          <h1 className="text-3xl font-bold text-gray-800">{products?.name}</h1>
+          <h1 className="text-3xl font-bold text-gray-800">{product?.name}</h1>
           <p className="text-gray-600 leading-relaxed">
-          {products?.description}
+          {product?.description}
          </p>
 
           {/* size */}
-            {products?.size && products?.size.length>0 && (
+            {product?.size && product?.size.length>0 && (
            <div>
          <h3 className="font-medium text-gray-700 mb-2">Size:</h3>
          <div className="flex gap-3">
-            {products?.size.map((s) => (
+            {product?.size.map((s) => (
              <button
                key={s}
                 // onClick={() => setSelectedSize(s)}
