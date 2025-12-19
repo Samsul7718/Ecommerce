@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-// import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 // import {useLocation, useParams } from "react-router-dom";
 import { useProduct } from "../../context/ProductContext";
 import { resolveSrc } from "../../config/api";
+import { useCart } from "../../context/CartContext";
 
 
 // const products = [...MenProducts, ...GirlProducts, ...GymProducts, ...KitchProducts, ...Toys,
@@ -17,8 +18,8 @@ const Product_dtls = () => {
 // const { products } = state || { products: [] };
 console.log("products in dtls page:", products);
 //  const productContext = selectedProduct;
-//   const {addToCart}=useCart()
-//   const navigate=useNavigate();
+  const {addToCart}=useCart()
+  const navigate=useNavigate();
   //  const product = productContext.find((item) => item.id === id);
 //   const [quantity, setQuantity] = useState(1);
   const [selectedImg, setSelectedImg] = useState(resolveSrc(products?.images?.[0] || ""));
@@ -33,11 +34,11 @@ console.log("products in dtls page:", products);
 //   const handleDecrease = () => setQuantity(quantity > 1 ? quantity - 1 : 1);
 //   const totalPrice=(basePrice * quantity).toFixed(2)
 
-//   const handleCartProduct=(product)=>{
-//       addToCart(product,quantity,selectedColor,selectedSize);
-//       setQuantity(1);
-//       navigate("/cart");
-//   }
+  const handleCartProduct=(product)=>{
+      addToCart(product);
+      // setQuantity(1);
+      navigate("/cart");
+  }
   if (!products) return <h2>Product not found{products.name}</h2>;
 
   // useEffect(()=>{
@@ -155,7 +156,7 @@ console.log("products in dtls page:", products);
         <div className="flex space-x-4">
             {/* <Link to="/cart"> */}
            <button
-          // onClick={()=>handleCartProduct(product)}
+          onClick={()=>handleCartProduct(product)}
           className="px-6 py-3 bg-sky-600 text-white rounded-xl shadow hover:bg-sky-700">
             Add to Cart
           </button> 
