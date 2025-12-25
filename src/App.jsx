@@ -1,4 +1,4 @@
-// import Deals1 from "./components/best deals/Deals1"
+import Deals1 from "./components/best deals/Deals1"
 // import Deals2 from "./components/best deals/Deals2"
 import Client from "./components/client card/Client"
 import Hero from "./components/home/Hero"
@@ -44,7 +44,7 @@ function App() {
           <>
         <Hero />
        <Client/>
-       {/* <Deals1/> */}
+       <Deals1/>
        {/* <Deals2/> */}
         {/* <Client2/> */}
          {/* <Deals3/> */}

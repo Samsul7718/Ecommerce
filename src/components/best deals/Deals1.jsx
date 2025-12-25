@@ -1,5 +1,5 @@
-import React, {useRef } from 'react'
-import { Link, useNavigate } from 'react-router-dom';
+import React, {useEffect, useRef, useState } from 'react'
+import { data, Link, useNavigate } from 'react-router-dom';
 // import {MenProducts} from '../../products/men fashion/MenFashion'
 // import { fson } from './Deals1_Img';
 
@@ -22,6 +22,13 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 //   {src:starx,link:"/fitness"},
 // ]
 const Deals1 = () => {
+  const [products,setProducts]=useState([]);
+  useEffect(()=>{
+      fetch(`${import.meta.env.VITE_API_URL}/api/products`)
+      .then(res=>res.json())
+      .then((data)=>setProducts(data))
+      .catch(err=>console.log(err));
+  },[])
   const containerRef = useRef(null);
   const navigate=useNavigate();
     // const product = products.find((item) => item.id === id);
@@ -52,7 +59,7 @@ const Deals1 = () => {
           className="flex gap-4 overflow-x-hidden scroll-smooth p-4"
           style={{ scrollSnapAlign: "start" }}
           >
-    {fson?.map((product, index) => (
+    {products?.map((product, index) => (
            <Link
            key={index}
            to={`item/${product.id}`}
