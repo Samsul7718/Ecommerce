@@ -1,28 +1,12 @@
 import React, {useEffect, useRef, useState } from 'react'
 import { data, Link, useNavigate } from 'react-router-dom';
-// import {MenProducts} from '../../products/men fashion/MenFashion'
-// import { fson } from './Deals1_Img';
-
-// import {images}from '../best deals/Deals1_Img'
-// import { shirt,pant,T_shirt,formal, dumble, starx} from '../../assets'
-// import { burkha,saree,kurti,long,cheast} from '../../assets'
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useProduct } from '../../context/ProductContext';
 
-// const images=[
-//   {src:shirt,link:"/fashion"},
-//   {src:pant,link:"/fashion"},
-//   {src:T_shirt,link:"/fashion"},
-//   {src:formal,link:"/fashion"},
-//   {src:burkha,link:"/fashion"},
-//   {src:saree,link:"/fashion"},
-//   {src:kurti,link:"/fashion"},
-//   {src:long,link:"/fashion"},
-//   {src:cheast,link:"/fitness"},
-//   {src:dumble,link:"/fitness"},
-//   {src:starx,link:"/fitness"},
-// ]
 const Deals1 = () => {
   const [products,setProducts]=useState([]);
+  const {setSelectedProduct}=useProduct();
+  
   useEffect(()=>{
       fetch(`${import.meta.env.VITE_API_URL}/api/products`)
       .then(res=>res.json())
@@ -63,6 +47,7 @@ const Deals1 = () => {
            <Link
            key={index}
            to={`item/${product.id}`}
+            onClick={()=>setSelectedProduct(product)}
            >
       <div
         key={index}
