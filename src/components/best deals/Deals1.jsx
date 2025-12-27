@@ -10,7 +10,11 @@ const Deals1 = () => {
   useEffect(()=>{
       fetch(`${import.meta.env.VITE_API_URL}/api/products`)
       .then(res=>res.json())
-      .then((data)=>setProducts(data))
+      .then((data)=>{
+        const fashionProducts=data.filter(item =>
+          item.category === "men" || 
+          item.category === "women"); 
+          setProducts(fashionProducts)})
       .catch(err=>console.log(err));
   },[])
   const containerRef = useRef(null);
