@@ -12,7 +12,7 @@ const Deals1 = () => {
       .then(res=>res.json())
       .then((data)=>{
         const fashionProducts=data.filter(item =>
-          item.category === "men-fashion"); 
+          item.category === "men-fashion" || item.category === "women-fashion"); 
           setProducts(fashionProducts)})
       .catch(err=>console.log(err));
   },[])
