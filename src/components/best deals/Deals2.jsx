@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 // import { images } from '../best deals/Deals2_Img'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useProduct } from '../../context/ProductContext'
