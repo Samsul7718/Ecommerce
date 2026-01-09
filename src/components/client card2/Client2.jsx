@@ -7,33 +7,33 @@ import React from 'react'
 
 const Client2 = () => {
   return (
-    <div>hellow world</div>
-//     <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 bg-sky-100 pt-6 p-4'>
-//          <ClientCard2
-//          title={"Laptop"}
-//          subTitle={"Introducing new arrival series"}
-//          items={Laptop}
-//          viewPage={'/laptop'}
-//          />
-//          <ClientCard2
-//          title={"Mobile"}
-//          subTitle={"Introducing new arrival series"}
-//          items={Mobile}
-//          viewPage={'/mobile'}
-//          />
-//          <ClientCard2
-//          title={"Vanity"}
-//          subTitle={"Best collection for your all festivals"}
-//          items={Vanity}
-//          viewPage={'/vanity'}
-//          />
-//          <ClientCard2
-//          title={"Electronic_daily"}
-//          subTitle={"Introducing new arrival series"}
-//          items={Electronic1}
-//          viewPage={'/electronic'}
-//          />
-//     </section>
+    
+    <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 bg-sky-100 pt-6 p-4'>
+         <ClientCard2
+         title={"Laptop"}
+         subTitle={"Introducing new arrival series"}
+         items={Laptop}
+         viewPage={'/laptop'}
+         />
+         <ClientCard2
+         title={"Mobile"}
+         subTitle={"Introducing new arrival series"}
+         items={Mobile}
+         viewPage={'/mobile'}
+         />
+         <ClientCard2
+         title={"Vanity"}
+         subTitle={"Best collection for your all festivals"}
+         items={Vanity}
+         viewPage={'/vanity'}
+         />
+         <ClientCard2
+         title={"Electronic_daily"}
+         subTitle={"Introducing new arrival series"}
+         items={Electronic1}
+         viewPage={'/electronic'}
+         />
+    </section>
   )
 }
 

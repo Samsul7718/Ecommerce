@@ -14,7 +14,7 @@ import KidsToy from "./components/page/KidsToy"
 import CartPage from "./components/page/CartPage"
 import Shoes from "./components/page/Shoes"
 import Beauty from "./components/page/Beauty"
-// import Client2 from "./components/client card2/Client2"
+import Client2 from "./components/client card2/Client2"
 import Mobile from "./components/page/Mobile"
 import Laptop from "./components/page/Laptop"
 import Login from "./components/page/Login"
@@ -46,7 +46,7 @@ function App() {
        <Client/>
        <Deals1/>
        <Deals2/>
-        {/* <Client2/> */}
+        <Client2/>
          {/* <Deals3/> */}
          {/* <Deals4/> */}
          {/* <Footer/> */}
