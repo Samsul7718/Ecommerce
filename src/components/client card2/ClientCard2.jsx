@@ -16,7 +16,7 @@ const ClientCard2 = ({title,subTitle,items,viewPage}) => {
                 to={`/item/${product.id}`}
                 className="text-decoration-none"
                 >
-                   {/* {console.log(product.images[1])} */}
+                   {console.log(product.images[1])}
                     
             <div className="p-2 rounded hover:shadow-md transition">
                 
