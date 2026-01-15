@@ -1,4 +1,4 @@
-import React, { use } from 'react'
+import React, { use, useEffect } from 'react'
 // import ClientCard2 from './ClientCard2'
 // import { Laptop } from '../../products/laptop/Laptop'
 // import { Mobile } from '../../products/mobile/Mobile'
@@ -7,7 +7,13 @@ import React, { use } from 'react'
 
 const Client2 = () => {
   const [prosucts,setProducts]=useState([]);
-  
+
+  useEffect(()=>{
+    fetch(`${import.meta.env.VITE_API_URL}/api/products`)
+    .then(res=>res.json())
+    .then(data=>setProducts(data))
+    .catch(err=>console.log(err));
+  })
   return (
     
     <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 bg-sky-100 pt-6 p-4'>
