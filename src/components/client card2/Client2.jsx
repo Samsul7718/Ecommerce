@@ -29,12 +29,12 @@ const Client2 = () => {
          items={Mobile}
          viewPage={'/mobile'}
          />
-         {/* <ClientCard2
+         <ClientCard2
          title={"Vanity"}
          subTitle={"Best collection for your all festivals"}
          items={Vanity}
          viewPage={'/vanity'}
-         /> */}
+         />
          {/* <ClientCard2
          title={"Electronic_daily"}
          subTitle={"Introducing new arrival series"}
