@@ -35,12 +35,12 @@ const Client2 = () => {
          items={Vanity}
          viewPage={'/vanity'}
          />
-         {/* <ClientCard2
+         <ClientCard2
          title={"Electronic_daily"}
          subTitle={"Introducing new arrival series"}
          items={Electronic1}
          viewPage={'/electronic'}
-         /> */}
+         />
     </section>
   )
 }
