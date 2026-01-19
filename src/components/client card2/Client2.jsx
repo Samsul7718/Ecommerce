@@ -25,7 +25,7 @@ const Client2 = () => {
          />
          <ClientCard2
          title={"Mobile"}
-         subTitle={"Introducing Brandnew series"}
+         subTitle={"Introducing Brand new updated version series"}
          items={Mobile}
          viewPage={'/mobile'}
          />
