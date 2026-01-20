@@ -1,5 +1,5 @@
-import React, { use, useEffect } from 'react'
-// import ClientCard2 from './ClientCard2'
+import React, { use, useEffect, useState } from 'react'
+import ClientCard2 from './ClientCard2'
 // import { Laptop } from '../../products/laptop/Laptop'
 // import { Mobile } from '../../products/mobile/Mobile'
 // import { Vanity } from '../../products/vanity/Vanity'
@@ -20,7 +20,7 @@ const Client2 = () => {
          <ClientCard2
          title={"Laptop"}
          subTitle={"Introducing updated new arrival series"}
-         items={Laptop}
+         items={prosucts.filter(p=>p.category==="laptop")}
          viewPage={'/laptop'}
          />
          <ClientCard2
@@ -29,18 +29,18 @@ const Client2 = () => {
          items={Mobile}
          viewPage={'/mobile'}
          />
-         <ClientCard2
+         {/* <ClientCard2
          title={"Vanity"}
          subTitle={"Best products for your all festivals"}
          items={Vanity}
          viewPage={'/vanity'}
-         />
-         <ClientCard2
+         /> */}
+         {/* <ClientCard2
          title={"Electronic_daily"}
          subTitle={"Introducing daily essential  arrival series"}
          items={Electronic1}
          viewPage={'/electronic'}
-         />
+         /> */}
     </section>
   )
 }
