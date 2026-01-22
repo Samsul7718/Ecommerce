@@ -41,6 +41,12 @@ const Client2 = () => {
          items={Electronic1}
          viewPage={'/electronic'}
          />
+          <ClientCard2
+         title={"Grocery"}
+         subTitle={"Introducing daily essential  arrival products"}
+         items={Electronic1}
+         viewPage={'/grocery'}
+         />
     </section>
   )
 }
