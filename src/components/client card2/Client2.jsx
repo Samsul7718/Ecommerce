@@ -19,7 +19,7 @@ const Client2 = () => {
     <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 bg-sky-100 pt-6 p-4'>
          <ClientCard2
          title={"Laptop"}
-         subTitle={"Introducing updated new arrival series"}
+         subTitle={"Discover the latest arrivals in laptop technology"}
          items={prosucts.filter(p=>p.category==="laptop")}
          viewPage={'/laptop'}
          />
