@@ -20,7 +20,7 @@ const Client2 = () => {
          <ClientCard2
          title={"Laptop"}
          subTitle={"Discover the latest arrivals in laptop technology"}
-         items={prosucts.filter(p=>p.category==="laptop")}
+         items={products.filter(p=>p.category==="laptop")}
          viewPage={'/laptop'}
          />
          <ClientCard2
