@@ -6,7 +6,7 @@ import ClientCard2 from './ClientCard2'
 // import { Electronic1 } from '../../products/electronic1/Electronic1'
 
 const Client2 = () => {
-  const [prosucts,setProducts]=useState([]);
+  const [products,setProducts]=useState([]);
 
   useEffect(()=>{
     fetch(`${import.meta.env.VITE_API_URL}/api/products`)
