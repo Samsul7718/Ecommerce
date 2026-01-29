@@ -55,7 +55,7 @@ const Client2 = () => {
          />
            <ClientCard2
          title={"Furniture"}
-         subTitle={"Introducing daily essential  arrival products"}
+         subTitle={"Introducing daily essential  arrival product"}
          items={Electronic1}
          viewPage={'/furniture'}
          />
