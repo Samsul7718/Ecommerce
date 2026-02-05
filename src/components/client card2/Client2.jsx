@@ -38,33 +38,33 @@ const Client2 = () => {
          <ClientCard2
          title={"Electronic_daily"}
          subTitle={"Introducing new electronic daily essential arrival products"}
-         items={Electronic1}
+         items={products.filter(p=>p.category==="electronic")}
          viewPage={'/electronic'}
          />
-          <ClientCard2
+          {/* <ClientCard2
          title={"Grocery"}
          subTitle={"Discover fresh grocery items for your daily need"}
          items={Electronic1}
          viewPage={'/grocery'}
-         />
-          <ClientCard2
+         /> */}
+          {/* <ClientCard2
          title={"Telecom"}
          subTitle={"Explore the latest telecom products and accessories"}
          items={Electronic1}
          viewPage={'/telecom'}
-         />
-           <ClientCard2
+         /> */}
+           {/* <ClientCard2
          title={"Furniture"}
          subTitle={"New designed  daily essential  arrival products"}
          items={Electronic1}
          viewPage={'/furniture'}
-         />
-            <ClientCard2
+         /> */}
+            {/* <ClientCard2
          title={"Juwelry"}
          subTitle={"Introducing daily essential  arrival products"}
          items={Electronic1}
          viewPage={'/juwelry'}
-         />
+         /> */}
     </section>
   )
 }
