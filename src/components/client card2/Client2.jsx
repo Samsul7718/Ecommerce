@@ -31,7 +31,7 @@ const Client2 = () => {
          />
          <ClientCard2
          title={"Vanity"}
-         subTitle={"Discover our collection of stylish vanity products"}
+         subTitle={"Discover our collection of stylish vanity product"}
          items={products.filter(p=>p.category==="vanity")}
          viewPage={'/vanity'}
          />
