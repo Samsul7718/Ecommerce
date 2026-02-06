@@ -37,7 +37,7 @@ const Client2 = () => {
          />
          <ClientCard2
          title={"Electronic_daily"}
-         subTitle={"Introducing new electronic daily essential arrival products"}
+         subTitle={"Introducing new electronic daily essential arrival product"}
          items={products.filter(p=>p.category==="electronic")}
          viewPage={'/electronic'}
          />
