@@ -35,12 +35,12 @@ const Client2 = () => {
          items={products.filter(p=>p.category==="vanity")}
          viewPage={'/vanity'}
          />
-         {/* <ClientCard2
+         <ClientCard2
          title={"Electronic_daily"}
          subTitle={"Introducing newly arrived electronic products for your daily essential"}
          items={products.filter(p=>p.category==="electronic")}
          viewPage={'/electronic'}
-         /> */}
+         />
           {/* <ClientCard2
          title={"Grocery"}
          subTitle={"Discover fresh and high-quality grocery products for your daily needs and culinary delight"}
