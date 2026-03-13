@@ -3,7 +3,7 @@ import ClientCard2 from './ClientCard2'
 // import { Laptop } from '../../products/laptop/Laptop'
 // import { Mobile } from '../../products/mobile/Mobile'
 // import { Vanity } from '../../products/vanity/Vanity'
-// import { Electronic1 } from '../../products/electronic1/Electronic1'
+// import { Electronic } from '../../products/electronics/Electronic'
 
 const Client2 = () => {
   const [products,setProducts]=useState([]);
@@ -35,24 +35,24 @@ const Client2 = () => {
          items={products.filter(p=>p.category==="vanity")}
          viewPage={'/vanity'}
          />
-         <ClientCard2
+         {/* <ClientCard2
          title={"Electronic_daily"}
          subTitle={"Introducing newly arrived electronic products for your daily essential"}
          items={products.filter(p=>p.category==="electronic")}
          viewPage={'/electronic'}
-         />
-          <ClientCard2
+         /> */}
+          {/* <ClientCard2
          title={"Grocery"}
          subTitle={"Discover fresh and high-quality grocery products for your daily needs and culinary delight"}
-         items={Electronic1}
+         items={Electronic}
          viewPage={'/grocery'}
-         />
-          <ClientCard2
+         /> */}
+          {/* <ClientCard2
          title={"Telecom"}
          subTitle={"Explore the latest telecom products and accessories for seamless connectivity"}
          items={Electronic1}
          viewPage={'/telecom'}
-         />
+         /> */}
            {/* <ClientCard2
          title={"Furniture"}
          subTitle={"New designed  daily essential  arrival products"}
