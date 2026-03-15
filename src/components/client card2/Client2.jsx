@@ -53,12 +53,12 @@ const Client2 = () => {
          items={Electronic1}
          viewPage={'/telecom'}
          />
-           {/* <ClientCard2
+           <ClientCard2
          title={"Furniture"}
          subTitle={"New designed  daily essential  arrival products"}
          items={Electronic1}
          viewPage={'/furniture'}
-         /> */}
+         />
             {/* <ClientCard2
          title={"Juwelry"}
          subTitle={"Introducing daily essential  arrival products"}
