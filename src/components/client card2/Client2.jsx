@@ -63,7 +63,7 @@ const Client2 = () => {
          title={"Jewellery"}
          subTitle={"Introducing daily essential  arrived juwelry products for your fashion and style"}
          items={Electronic1}
-         viewPage={'/juwelry'}
+         viewPage={'/jewellery'}
          />
     </section>
   )
