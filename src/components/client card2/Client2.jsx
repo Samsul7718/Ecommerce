@@ -25,7 +25,7 @@ const Client2 = () => {
          />
          <ClientCard2
          title={"Mobile"}
-         subTitle={"Explore the newest mobile phones with cutting-edge features designs and seamless connectivity for your daily communication needs"}
+         subTitle={"Explore the newest mobile phones with cutting-edge features design and seamless connectivity for your daily communication needs"}
          items={products.filter(p=>p.category==="mobile")}
          viewPage={'/mobile'}
          />
