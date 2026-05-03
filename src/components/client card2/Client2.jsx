@@ -17,54 +17,54 @@ const Client2 = () => {
   return (
     
     <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 bg-sky-100 pt-6 p-4'>
-         <ClientCard2
+         {/* <ClientCard2
          title={"Laptop"}
          subTitle={"Discover the latest laptop with powerful performance and sleeks design for work and entertainment"}
          items={products.filter(p=>p.category==="laptop")}
          viewPage={'/laptop'}
-         />
-         <ClientCard2
+         /> */}
+         {/* <ClientCard2
          title={"Mobile"}
          subTitle={"Explore the newest mobile phones with cutting-edge features design and seamless connectivity for your daily communication needs"}
          items={products.filter(p=>p.category==="mobile")}
          viewPage={'/mobile'}
-         />
-         <ClientCard2
+         /> */}
+         {/* <ClientCard2
          title={"Vanity"}
          subTitle={"Discover our collection of stylish vanity product to enhance yours beauty routines and self-care rituals"}
          items={products.filter(p=>p.category==="vanity")}
          viewPage={'/vanity'}
-         />
-         <ClientCard2
+         /> */}
+         {/* <ClientCard2
          title={"Electronic_daily"}
          subTitle={"Introducing newly arrived electronic products for your daily essential needs and lifestyle"}
-         items={products.filter(p=>p.category==="electronic")}
-         viewPage={'/electronic'}
-         />
-          <ClientCard2
+         items={products.filter(p=>p.category==="Electronic")}
+         viewPage={'/Electronic'}
+         /> */}
+          {/* <ClientCard2
          title={"Grocery"}
          subTitle={"Discover fresh and high-quality grocery products for yours daily needs"}
          items={Electronic}
          viewPage={'/grocery'}
-         />
-          <ClientCard2
+         /> */}
+          {/* <ClientCard2
          title={"Telecom"}
          subTitle={"Explore the latest telecom products and accessories for seamless connectivity and communication"}
          items={Electronic1}
          viewPage={'/telecom'}
-         />
-           <ClientCard2
+         /> */}
+           {/* <ClientCard2
          title={"Furniture"}
          subTitle={"New designed  daily essential furniture products for yours home and offices"}
          items={Electronic1}
          viewPage={'/furniture'}
-         />
-            <ClientCard2
+         /> */}
+            {/* <ClientCard2
          title={"Jewellery"}
          subTitle={"Introducing daily essential  arrived jewellery products for yours fashion and styles"}
          items={Electronic1}
          viewPage={'/jewellery'}
-         />
+         /> */}
     </section>
   )
 }
