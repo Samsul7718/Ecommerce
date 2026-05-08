@@ -31,7 +31,7 @@ const Client = () => {
        />
         <ClientCard
        title={"Gym"}
-       subTitle={"Get into your fitness world"}
+       subTitle={"Get into your fitness worlds with the best gym products"}
         items={products.filter(p => Number(p.id) >= 101 && Number(p.id) <= 150)}
         seeMorePage={"/gymfashion"}
        />
