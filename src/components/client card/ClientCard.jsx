@@ -47,7 +47,7 @@ const ClientCard = ({title,subTitle,items,seeMorePage}) => {
             >
              <button className="bg-gray-200 text-black px-2 py-2 rounded hover:bg-gray-700 hover:text-white
              px-1 py-1">
-                See More...
+                View More...
             </button>
             </Link>
         
