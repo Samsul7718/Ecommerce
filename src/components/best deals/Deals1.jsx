@@ -36,7 +36,7 @@ const Deals1 = () => {
     <section id ='102' className='relative w-full px-4 bg-sky-100'>
        
        <div className=" relative p-4 text-start">
-          <h2 className="text-xl md:text-2xl font-semibold text-gray-800">Best deal for this week | Up to 45% off on fashion</h2>
+          <h2 className="text-xl md:text-2xl font-semibold text-gray-800">Best deal for this Sesion | Up to 45% off on fashion</h2>
     
         </div>
 
