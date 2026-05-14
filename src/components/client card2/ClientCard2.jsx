@@ -34,7 +34,7 @@ const ClientCard2 = ({title,subTitle,items,viewPage}) => {
             >
              <button className="bg-gray-200 text-black px-2 py-2 rounded hover:bg-gray-700 hover:text-white
              px-1 py-1">
-                View Page..
+                View Page...
             </button>
             </Link>
         </div>
