@@ -31,7 +31,7 @@ const Footer = () => {
       <ul className="space-y-1">
         <li><a href="/privacy" className="hover:text-white">Privacy Policys</a></li>
         <li><a href="/terms" className="hover:text-white">Terms & Conditions</a></li>
-        <li><a href="/refund" className="hover:text-white">Refund Policys</a></li>
+        <li><a href="/refund" className="hover:text-white">Refund </a></li>
       </ul>
     </div> 
   </div>
