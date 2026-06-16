@@ -18,7 +18,7 @@ const Client = () => {
         
        <ClientCard
        title={"Mens Fashion"}
-       subTitle={"Discover the latest trends in"}
+       subTitle={"Discover the latest trends in men"}
        items={products.filter(p => Number(p.id) >= 1 && Number(p.id) <= 50)}
        seeMorePage={"/menfashion"}
       
