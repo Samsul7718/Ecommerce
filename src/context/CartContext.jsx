@@ -13,6 +13,10 @@ export const CartProvider=({children})=>{
       localStorage.setItem('cartItems',JSON.stringify(cartItems));
     },[cartItems])
 
+    useEffect(()=>{
+      
+    })
+
    const totalQuantity=cartItems.reduce((sum,item)=>sum+item.quantity,0);
 
   const addToCart = (product, quantity = 1, color = null, size = null) => {
