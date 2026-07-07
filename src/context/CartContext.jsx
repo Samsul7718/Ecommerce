@@ -15,7 +15,7 @@ export const CartProvider=({children})=>{
 
     useEffect(()=>{
       
-    })
+    },[])
 
    const totalQuantity=cartItems.reduce((sum,item)=>sum+item.quantity,0);
 
