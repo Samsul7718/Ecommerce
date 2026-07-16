@@ -24,7 +24,7 @@ const ClientCard = ({title,subTitle,items,seeMorePage}) => {
                 className="text-decoration-none"              
                 onClick={()=>setSelectedProduct(product)}
                 >
-                   {/* {console.log(product.images[1])} */}
+                   {console.log(product.images[1])}
                     
             <div 
             
