@@ -1,8 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useProduct } from '../../context/ProductContext'
 
 
-const ClientCard2 = ({title,subTitle,items,viewPage}) => {
+const ClientCard2 = ({title,subTitle,items,seeMorePage}) => {
+    const {setSelectedProduct}=useProduct();
   return (
     <section className="max-w-sm mx-auto bg-white rounded-lg shadow-md overflow-hidden">
         <div className="p-4 text-center">
@@ -11,12 +13,14 @@ const ClientCard2 = ({title,subTitle,items,viewPage}) => {
         </div>
         <div className="grid grid-cols-2 gap-3 p-4">
             {items.map((product)=>(
-                <Link
-                key={product.id}
-                to={`/item/${product.id}`}
-                className="text-decoration-none"
-                >
-                   {console.log(product.images[1])}
+
+                 <Link
+                   key={product.id}
+                   to={`/item/${product.id}`}
+                   className="text-decoration-none"              
+                   onClick={()=>setSelectedProduct(product)}
+                   >
+                 {console.log(product.images[1])}
                     
             <div className="p-2 rounded hover:shadow-md transition">
                 
@@ -30,7 +34,7 @@ const ClientCard2 = ({title,subTitle,items,viewPage}) => {
         </div>
         <div className='p-4 text-center space-between flex gap-20 justify-center'>
             <Link
-            to={viewPage}
+            to={seeMorePage}
             >
              <button className="bg-gray-200 text-black px-2 py-2 rounded hover:bg-gray-700 hover:text-white
              px-1 py-1">

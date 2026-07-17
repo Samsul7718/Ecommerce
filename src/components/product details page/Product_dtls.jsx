@@ -39,7 +39,7 @@ console.log("products in dtls page:", product);
       // setQuantity(1);
       navigate("/cart");
   }
-  if (!product) return <h2>Product not found{product.name}</h2>;
+  if (!product) return <h2>Product not found{product?.name}</h2>;
 
   // useEffect(()=>{
   //   if(products?.images?.length>0){
