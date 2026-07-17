@@ -8,6 +8,10 @@ const Client = () => {
   useEffect(()=>{
     fetch(`${import.meta.env.VITE_API_URL}/api/products`)
     .then(res=>res.json())
+    // .then(result=>{
+    //   console.log(result)
+    //   setProducts(result.data)
+    // })
     .then(data=>setProducts(data))
     .catch(err=>console.log(err));
   },[])

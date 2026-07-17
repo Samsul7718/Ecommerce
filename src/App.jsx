@@ -1,5 +1,5 @@
-// import Deals1 from "./components/best deals/Deals1"
-// import Deals2 from "./components/best deals/Deals2"
+import Deals1 from "./components/best deals/Deals1"
+import Deals2 from "./components/best deals/Deals2"
 import Client from "./components/client card/Client"
 import Hero from "./components/home/Hero"
 import Navbar from "./components/navbar/Navbar"
@@ -14,7 +14,7 @@ import KidsToy from "./components/page/KidsToy"
 import CartPage from "./components/page/CartPage"
 import Shoes from "./components/page/Shoes"
 import Beauty from "./components/page/Beauty"
-// import Client2 from "./components/client card2/Client2"
+import Client2 from "./components/client card2/Client2"
 import Mobile from "./components/page/Mobile"
 import Laptop from "./components/page/Laptop"
 import Login from "./components/page/Login"
@@ -44,9 +44,9 @@ function App() {
           <>
         <Hero />
        <Client/>
-       {/* <Deals1/> */}
-       {/* <Deals2/> */}
-        {/* <Client2/> */}
+       <Deals1/>
+       <Deals2/>
+        <Client2/>
          {/* <Deals3/> */}
          {/* <Deals4/> */}
          {/* <Footer/> */}
