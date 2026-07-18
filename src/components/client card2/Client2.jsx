@@ -23,7 +23,7 @@ const Client2 = () => {
          <ClientCard2
          title={"Laptop"}
          subTitle={"Discover the latest laptop with powerful performance"}
-         items={products.filter(p=>Number(p.id)>=801 && Number(p.id)<=850)}
+         items={products.filter(p=>Number(p.id)>=401 && Number(p.id)<=450)}
          seeMorePage={'/laptop'}
          /> 
          {/* <ClientCard2
