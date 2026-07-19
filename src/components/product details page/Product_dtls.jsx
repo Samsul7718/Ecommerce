@@ -11,6 +11,26 @@ import { useCart } from "../../context/CartContext";
 
 const Product_dtls = () => {
   const { selectedProduct:product } = useProduct();
+  
+  const [selectedColor, setSelectedColor] = useState(
+  product?.colors?.[0] || ""
+);
+
+const [selectedSize, setSelectedSize]=useState(
+  product?.size?.[0] || ""
+);
+
+useEffect(() => {
+  if (product?.colors?.length) {
+    setSelectedColor(product.colors[0]);
+  }
+}, [product]);
+
+useEffect(() => {
+ if (product?.size?.length) {
+    setSelectedSize(product.size[0]);
+  }
+}, [product]);
     // console.log("hello product");
     
   // const { id } = useParams();
@@ -96,13 +116,13 @@ console.log("products in dtls page:", product);
             {product?.size.map((s) => (
              <button
                key={s}
-                // onClick={() => setSelectedSize(s)}
-              //   className={`px-3 py-1 border rounded-lg ${
-              //    selectedSize === s
-              //      ? "border-sky-500 scale-110"
-              //      : "border-gray-300"
-              //  }`}
-             >
+                onClick={() => setSelectedSize(s)}
+                className={`px-3 py-1 border rounded-lg ${
+                 selectedSize === s
+                   ? "border-sky-500 scale-110"
+                   : "border-gray-300"
+               }`}
+              >
                 {s}
               </button>
            ))}
@@ -119,13 +139,13 @@ console.log("products in dtls page:", product);
            {product?.colors.map((color) => (
              <button
                key={color}
-              //  onClick={() => setSelectedColor(color)}
-              //  className={`w-6 h-6 rounded-full border-2 ${
-              //    selectedColor === color
-              //      ? "border-sky-500 scale-110"
-              //      : "border-gray-300"
-              // }`}
-              // style={{ backgroundColor: color }}
+               onClick={() => setSelectedColor(color)}
+               className={`w-6 h-6 rounded-full border-2 ${
+                 selectedColor === color
+                   ? "border-sky-500 scale-110"
+                   : "border-gray-300"
+              }`}
+              style={{ backgroundColor: color }}
             />
           ))}
         </div>
