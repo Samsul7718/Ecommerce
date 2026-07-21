@@ -26,12 +26,12 @@ const Client2 = () => {
          items={products.filter(p=>Number(p.id)>=401 && Number(p.id)<=450)}
          seeMorePage={'/laptop'}
          /> 
-         {/* <ClientCard2
+         <ClientCard2
          title={"Mobile"}
-         subTitle={"Explore the newest mobile phones with cutting-edge features design and seamless connectivity for your daily communication needs"}
-         items={products.filter(p=>p.category==="mobile")}
+         subTitle={"Explore the newest mobile phones with cutting-edge features design"}
+         items={products.filter(p=>Number(p.id)>=451 && Number(p.id)<=500)}
          viewPage={'/mobile'}
-         /> */}
+         />
          {/* <ClientCard2
          title={"Vanity"}
          subTitle={"Discover our collection of stylish vanity product to enhance yours beauty routines and self-care rituals"}
