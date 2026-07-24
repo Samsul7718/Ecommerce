@@ -32,12 +32,12 @@ const Client2 = () => {
          items={products.filter(p=>Number(p.id)>=451 && Number(p.id)<=500)}
          viewPage={'/mobile'}
          />
-         {/* <ClientCard2
+         <ClientCard2
          title={"Vanity"}
-         subTitle={"Discover our collection of stylish vanity product to enhance yours beauty routines and self-care rituals"}
-         items={products.filter(p=>p.category==="vanity")}
+         subTitle={"Discover our collection of stylish vanity product to enhance yours beauty"}
+         items={products.filter(p=>Number(p.id)>=501 && Number(p.id)<=550)}
          viewPage={'/vanity'}
-         /> */}
+         />
          {/* <ClientCard2
          title={"Electronic_daily"}
          subTitle={"Introducing newly arrived electronic products for your daily essential needs and lifestyle"}
