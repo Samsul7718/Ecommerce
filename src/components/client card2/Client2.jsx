@@ -22,7 +22,7 @@ const Client2 = () => {
     <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 bg-sky-100 pt-6 p-4'>
          <ClientCard2
          title={"Laptop"}
-         subTitle={"Discover the latest laptop with powerful performance"}
+         subTitle={"Discover the latest laptop with powerful performances"}
          items={products.filter(p=>Number(p.id)>=401 && Number(p.id)<=450)}
          seeMorePage={'/laptop'}
          /> 
